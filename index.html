@@ -1,0 +1,1139 @@
+<!DOCTYPE html>
+<!-- saved from url=(0101)https://preview.uxpin.com/75c2291ae0ca538515bf2badf6a5d892ad387d2f#/pages/93514602/simulate/no-panels -->
+<html class="gr__preview_uxpin_com">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <style type="text/css">
+    @charset "UTF-8";
+    [ng\:cloak],
+    [ng-cloak],
+    [data-ng-cloak],
+    [x-ng-cloak],
+    .ng-cloak,
+    .x-ng-cloak,
+    .ng-hide:not(.ng-hide-animate) {
+      display: none !important;
+    }
+
+    ng\:form {
+      display: block;
+    }
+
+    .ng-animate-shim {
+      visibility: hidden;
+    }
+
+    .ng-anchor {
+      position: absolute;
+    }
+  </style>
+
+
+  <title>Sell Your Car</title>
+
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no,minimal-ui">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+
+  <!--<base href="//preview.uxpin.com/75c2291ae0ca538515bf2badf6a5d892ad387d2f">-->
+  <base href=".">
+
+
+  <link rel="stylesheet" href="./index_files/Preview-7c8036cf.css">
+
+
+
+
+
+  <link rel="chrome-webstore-item" href="https://chrome.google.com/webstore/detail/bgibmbhbcdfckbcbdkihlclfildbaehc">
+
+</head>
+
+
+
+<body ng-controller="HomeController" class="chrome win zen-mode desktop-app--loaded" ng-class="{
+        &#39;loading&#39; : isLoading,
+        &#39;left-panel-active&#39;: leftPanelVisible,
+        &#39;right-panel-active&#39;: rightPanelVisible || isModeActive(PREVIEW_MODES.SPEC) || isModeActive(PREVIEW_MODES.DOCUMENTATION),
+        &#39;comments-visible&#39; : isPanelVisible(PREVIEW_PANELS.COMMENTS),
+        &#39;filters-visible&#39; : isPanelVisible(PREVIEW_PANELS.FILTERS),
+        &#39;sitemap-visible&#39; : isPanelVisible(PREVIEW_PANELS.SITEMAP),
+        &#39;tasks-visible&#39; : isPanelVisible(PREVIEW_PANELS.TASKS),
+        &#39;specification-visible&#39;: isModeActive(PREVIEW_MODES.SPEC),
+        &#39;documentation-visible right-panel-wide&#39;: isModeActive(PREVIEW_MODES.DOCUMENTATION),
+        &#39;layers-visible&#39;: isPanelVisible(PREVIEW_PANELS.LAYERS),
+        &#39;adding-comment&#39; : isModeActive(PREVIEW_MODES.COMMENT),
+        &#39;dragging&#39; : dragging,
+        &#39;crosshair-cursor&#39; : showCrosshairCursor,
+        &#39;no-comments&#39; : !isCommentsEnabled,
+        &#39;feature-spec-mode&#39;: canShowSpecMode,
+        &#39;feature-documentation&#39;: canShowDocumentationMode,
+        &#39;right-panel-expanded&#39;: isPanelExpanded(MAIN_PANELS.RIGHT),
+        &#39;left-panel-expanded&#39;: isPanelExpanded(MAIN_PANELS.LEFT),
+        [browser]: true,
+        [OS]: true,
+      }" ng-keydown="keyDown($event)" data-gr-c-s-loaded="true">
+
+  <div ui-view="specification">
+    <section class="right-panel aside-panel ng-hide" id="specification" ng-hide="!vm.isLoaded">
+      <section class="panel-container" ng-class="{&#39;with-parent-info&#39;: !!vm.activeElementDSInfo}">
+        <section class="scrolled-container">
+          <section class="scrolled-content">
+            <!---->
+            <div class="content" ng-if="vm.activeTab === vm.SPEC_TABS.PROPERTIES">
+              <canvas-data width="vm.width" height="vm.height" left="vm.left" top="vm.top" fixed="vm.fixed" name="vm.name" type="vm.currentObjectType"
+                angle="vm.angle" opacity="vm.opacity" mix-blend-mode="vm.mixBlendMode">
+                <section class="canvas-size data-section">
+                  <h3 class="section-title">
+                    <span class="ellipsis-helper">General</span>
+                    <unit-switcher class="unit-select">
+                      <cloud trigger-type="hover" offset="vm.offsetColorType" class="outline-info">
+                        <div ng-transclude="">
+                          <span data-trigger="" class="cloud-trigger icon-general-chevron">Pixels</span>
+
+                        </div>
+                      </cloud>
+                    </unit-switcher>
+                  </h3>
+                  <div class="data">
+                    <div class="double-ul-column">
+                      <ul class="canvas-data-list">
+                        <li>
+                          <h5 class="narrow">Width</h5>
+                          <p class="code allow-copying" clipboard-copy="" data-clipboard-text="">
+                            <span class="copy-helper"></span>
+                          </p>
+                        </li>
+                        <li>
+                          <h5 class="narrow">Height</h5>
+                          <p class="code allow-copying" clipboard-copy="" data-clipboard-text="">
+                            <span class="copy-helper"></span>
+                          </p>
+                        </li>
+                      </ul>
+                      <!---->
+                      <!---->
+                      <ul ng-if="vm.type === vm.SPEC_OBJECT_TYPES.CANVAS">
+                        <li>
+                          <h5 class="narrow">Canvas</h5>
+                          <p title="Custom">
+                            Custom
+                          </p>
+                        </li>
+                      </ul>
+                      <!---->
+                    </div>
+                    <!---->
+                  </div>
+                </section>
+              </canvas-data>
+
+              <!---->
+              <grid-data ng-if="vm.isActiveObject(vm.SPEC_OBJECT_TYPES.CANVAS)" grid="vm.grid">
+                <section class="grid-guides data-section">
+                  <h3 class="section-title">Grid</h3>
+                  <div class="data">
+                    <form class="options ng-pristine ng-valid">
+                      <fieldset>
+                        <input ng-model="vm.isGridVisible" ng-change="vm.setGridDisplay(vm.isGridVisible)" id="show-grid" class="state-helper ng-pristine ng-untouched ng-valid ng-empty"
+                          type="checkbox" ng-checked="vm.isGridVisible">
+                        <label for="show-grid" class="fake-choose-label fake-checkbox">Show grid</label>
+                      </fieldset>
+
+                      <!---->
+                      <fieldset ng-if="vm.areGuidesAvailable()">
+                        <input ng-model="vm.areGuidesVisible" ng-change="vm.setGuides(vm.areGuidesVisible)" id="show-guides" class="state-helper ng-pristine ng-untouched ng-valid ng-empty"
+                          type="checkbox" ng-checked="vm.areGuidesVisible">
+                        <label for="show-guides" class="fake-choose-label fake-checkbox">Show guides</label>
+                      </fieldset>
+                      <!---->
+                    </form>
+
+                    <div class="double-ul-column grid-data">
+                      <ul>
+                        <li>
+                          <h5>Columns</h5>
+                          <p class="code allow-copying" clipboard-copy="" data-clipboard-text="">
+                            <span class="copy-helper"></span>
+                          </p>
+                        </li>
+                        <li>
+                          <h5>Column width</h5>
+                          <p class="code allow-copying" clipboard-copy="" data-clipboard-text="">
+                            <span class="copy-helper"></span>
+                          </p>
+                        </li>
+                      </ul>
+                      <ul>
+                        <li>
+                          <h5>Gutter</h5>
+                          <p class="code allow-copying" clipboard-copy="" data-clipboard-text="">
+                            <span class="copy-helper"></span>
+                          </p>
+                        </li>
+                        <li>
+                          <h5>Margin</h5>
+                          <p class="code allow-copying" clipboard-copy="" data-clipboard-text="">
+                            <span class="copy-helper"></span>
+                          </p>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </section>
+              </grid-data>
+              <!---->
+
+              <colors-list colors="vm.colors" canvas-bg="vm.canvasBg" gradients="vm.gradients" type="vm.currentObjectType">
+                <!---->
+              </colors-list>
+
+              <fonts-list fonts="vm.fonts" type="vm.currentObjectType">
+                <section class="typography-data data-section ng-hide"
+                  ng-hide="!vm.fonts.length">
+                  <h3 class="section-title">Typography</h3>
+                  <div class="data">
+                    <!---->
+                    <ul ng-if="!vm.isElement()" class="fonts-list">
+                      <!---->
+                    </ul>
+                    <!---->
+
+                    <!---->
+                  </div>
+                </section>
+              </fonts-list>
+
+              <!---->
+
+              <!---->
+
+              <!---->
+
+              <!---->
+
+              <!---->
+
+              <!---->
+
+              <content-data value-trimmed="vm.textContentTrimmed" is-text-list="vm.isTextList">
+                <!---->
+              </content-data>
+
+              <!---->
+              <images-list ng-if="vm.isActiveObject(vm.SPEC_OBJECT_TYPES.ELEMENT) || vm.isActiveObject(vm.SPEC_OBJECT_TYPES.CANVAS) || vm.isActiveObject(vm.SPEC_OBJECT_TYPES.GROUP)"
+                images="vm.images" background="vm.background">
+                <!---->
+              </images-list>
+              <!---->
+            </div>
+            <!---->
+
+            <!---->
+            <!---->
+          </section>
+        </section>
+      </section>
+    </section>
+
+  </div>
+  <!---->
+  <div ui-view="comments">
+    <section class="right-panel aside-panel" id="comments-notes">
+      <!---->
+    </section>
+  </div>
+  <!---->
+  <div ui-view="filters">
+    <!---->
+  </div>
+  <!---->
+  <div ui-view="sitemap">
+    <script type="text/ng-template" id="node_template.html">
+    <input class="state-helper expander-state-helper"
+           ng-if="node.nodes.length"
+           type="checkbox"
+           id="{{::'node-' + node.id}}"
+           ng-model="minimized[node.id]"
+           ng-change="toggleMinimized(node.id)">
+    <label ng-class="{'expander': true, 'is-expanded': minimized[node.id]}" ng-if="node.nodes.length" for="{{::'node-' + node.id}}"></label>
+    <div class="option-name element-with-action-menu" ng-init="init(node.id)" ng-class="{'selected' : isActive(node.id)}" ng-click="onClick($event,node.id)">
+      <span ng-if="node.documentationExists" class="only-icon-font icon-general-documentation"></span>
+      <a class="action-context-menu-available" ng-href="">
+        <span class="option-name-text" highlight search-for="searchData.searchFor" input-text="::node.name"></span>
+      </a>
+    </div>
+    <ul ng-if="minimized[node.id]" class="branch">
+        <li ng-repeat="node in node.nodes | filter : filterSearch : comparatorSearch" ng-include="'node_template.html'"></li>
+    </ul>
+</script>
+
+    <!---->
+  </div>
+  <!---->
+  <div ui-view="documentation">
+    <!---->
+  </div>
+  <!---->
+  <div ui-view="layers">
+    <section class="left-panel aside-panel" id="layers">
+      <section id="layers-panel" class="panel-container">
+        <header>
+          <h2>Layers</h2>
+          <form action="https://preview.uxpin.com/75c2291ae0ca538515bf2badf6a5d892ad387d2f#" class="search ng-pristine ng-valid" ng-submit="$event.preventDefault()">
+            <label for="layers-search" class="icon-font-search only-icon-font" ng-click="onSearchClick($event)">Search</label>
+            <input type="text" placeholder="Type to search..." id="layers-search" ng-class="{&#39;active&#39; : vm.searchFor}" ng-model="vm.searchFor"
+              ng-change="vm.filterCollection()" ng-focus="vm.focusInput()" ng-keydown="vm.keyDown($event)" sync-focus-with="vm.focused"
+              autocomplete="off" class="ng-pristine ng-untouched ng-valid ng-empty">
+            <span class="reset-search" ng-click="vm.resetSearch()">Reset search</span>
+          </form>
+        </header>
+        <section class="scrolled-container section-layers">
+          <!---->
+        </section>
+      </section>
+    </section>
+  </div>
+  <!---->
+  <!---->
+  <div ui-view="canvas">
+    <main class="canvas-main-container no-logo" ng-class="{&#39;no-logo&#39;: firstTimeLoaded}">
+      <section class="scrolled-container">
+
+        <section id="canvas-wrapper" class="scrolled-content">
+          <section class="canvas-container" ng-style="dimensions" ng-class="{&#39;document-uxtest&#39;: isUXTestDocument}" style="width: 100%; height: 4020px;">
+            <!---->
+            <section class="preview-container" add-comment="" ng-click="highlightInteractions($event)">
+              <!---->
+
+              <!---->
+
+              <!---->
+              <div ng-if="!isDocument" overflowed-page="" class="ng-canvas-container" page-animation="" ng-style="overflow"
+                style="overflow: hidden;">
+                <div comment-tooltip="" class="ng-canvas" ng-mousedown="handleMouseDown($event)" data-id="canvas" style="z-index: auto; mix-blend-mode: normal; background-color: rgb(255, 255, 255); background-image: none; background-size: cover; background-repeat: repeat; background-position: center center;"><img
+                    class="ng-element el-image el-image-no-back" data-id="c9c185d486eb4f3e8babb14d5086e134" src="./index_files/Slide_3-3803b3.jpg"
+                    style="opacity: 1; display: none; mix-blend-mode: normal; border-radius: 0px; width: 100%; height: 805px; transform: rotate(0deg) translate(-3px, -124px) rotate(0deg);"><div
+                    class="el-group" data-id="ef21dadc659542f0a93cc3e156b1a988" style="opacity: 1; mix-blend-mode: normal;">
+                    <div
+                      class="ng-element el-box text-editor-light" data-id="fd5ff1696a824cff8792c498e0c13c6d" style="opacity: 0.5; mix-blend-mode: normal; padding: 0px; border-width: 0px; border-radius: 0px; border-color: rgb(102, 102, 102); border-style: solid; background-color: transparent; background-image: linear-gradient(rgb(183, 185, 189) 3%, rgb(230, 231, 232) 103%); background-size: cover; background-repeat: repeat; background-position: center center; width: 100%; height: 520px; transform: rotate(0deg) translate(-1px, 3500px) rotate(0deg);">
+                      <p id="Box7ad5964ca400422782ed879d49c6e593" data-id="fd5ff1696a824cff8792c498e0c13c6d" class="font-S-Arial-n4"
+                        style="color: rgb(0, 0, 0); font-size: 32px; text-align: left; font-weight: bold; font-style: normal; text-decoration: none;"><br></p>
+                    </div>
+                    <div class="el-group" data-id="d5d5bb4f5b244cc4bac2ec156507999f" style="opacity: 1; mix-blend-mode: normal;">
+                      <div class="ng-element el-box text-editor-light" data-id="2cf61e23ee8144868f8962eb64442595" style="opacity: 1; mix-blend-mode: normal; padding: 0px; border-width: 0px; border-radius: 0px; border-color: rgb(235, 235, 235); border-style: solid; background-color: transparent; background-image: linear-gradient(90deg, rgb(255, 94, 58) 2%, rgb(255, 43, 103) 102%); background-size: cover; background-repeat: no-repeat; background-position: center center; width: 317px; height: 81px; transform: rotate(0deg) translate(574px, 3913px) rotate(0deg);">
+                        <p id="Box734d5a4c080244aca78f495532441396" data-id="2cf61e23ee8144868f8962eb64442595" style="color: rgb(0, 0, 0); font-size: 14px; text-align: center; font-weight: normal; font-style: normal; font-family: Arial; text-decoration: none;"><br></p>
+                      </div>
+                      <div class="el-group" data-id="c3a5f3345e9d4826bd5e140cbde16348" style="opacity: 1; mix-blend-mode: normal;">
+                        <div id="TextElement16468ffdd78e487a85fed35f9868af54" class="ng-element el-text-2 empty-line-hack line-height-fix font-S-Arial-n4"
+                          data-id="5561bc77ea05462bbb360048c24c703e" style="opacity: 1; mix-blend-mode: normal; line-height: 115%; color: transparent; font-size: 32px; font-weight: normal; font-style: normal; text-decoration: none; text-align: left; width: 242px; height: 36px; transform: rotate(0deg) translate(609px, 3936px) rotate(0deg);">
+                          <p><span class="wysiwyg-font-type-tahoma wysiwyg-align-Center  wysiwyg-font-size-16 wysiwyg-color-ffffff"
+                              style="color: rgb(255, 255, 255);">Зв'яжіться зі мною</span></p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="el-group" data-id="c73b36e2d43741e3b73f6be7f3fd84f8" style="opacity: 1; mix-blend-mode: normal;">
+                      <div id="TextElement966a932c64844ac2a773aca2828a2ca1" class="ng-element el-text-2 empty-line-hack font-S-Arial-n4"
+                        data-id="dd7e376d41be456699fde6c6d92d5990" style="opacity: 1; mix-blend-mode: normal; color: rgb(0, 0, 0); font-size: 48px; font-weight: normal; font-style: normal; text-decoration: none; text-align: center; width: 721px; height: 55px; transform: rotate(0deg) translate(385px, 3523px) rotate(0deg);">
+                        <p>Бажаєте дізнатися більше?</p>
+                      </div>
+                      <div id="TextElement34129642af14483fa6594eea7c1095dc" class="ng-element el-text-2 empty-line-hack font-S-Arial-n4"
+                        data-id="986b22508a4b4848b9e789175929421f" style="opacity: 1; mix-blend-mode: normal; color: rgb(0, 0, 0); font-size: 24px; font-weight: normal; font-style: normal; text-decoration: none; text-align: left; width: 121px; height: 27px; transform: rotate(0deg) translate(494px, 3610px) rotate(0deg);">
+                        <p>Телефон</p>
+                      </div><input class="ng-element el-input-without-label font-S-Arial-n4" data-id="40d9a643d5404376a7dfa0e6fda4d2f1"
+                        type="text" style="opacity: 1; mix-blend-mode: normal; background-color: rgb(255, 255, 255); border-color: rgb(200, 200, 200); border-width: 1px; color: rgb(0, 0, 0); padding: 0px 10px; text-align: left; font-size: 24px; font-weight: normal; font-style: normal; border-radius: 0px; border-style: solid; background-image: none; background-size: cover; background-repeat: repeat; background-position: center center; width: 375px; height: 50px; transform: rotate(0deg) translate(645px, 3598px) rotate(0deg);"><div
+                        id="TextElement685f4969637f4cc7b74a800130ef049d" class="ng-element el-text-2 empty-line-hack font-S-Arial-n4"
+                        data-id="b267ad03e9904974978f28dd882b251c" style="opacity: 1; mix-blend-mode: normal; color: rgb(0, 0, 0); font-size: 24px; font-weight: normal; font-style: normal; text-decoration: none; text-align: left; width: 121px; height: 27px; transform: rotate(0deg) translate(494px, 3670px) rotate(0deg);">
+                        <p>Email</p>
+                      </div>
+                      <div id="TextElement08adee72a4794f20a54fd7b26c79976f" class="ng-element el-text-2 empty-line-hack font-S-Arial-n4"
+                        data-id="17a5ae4540ee48e8a582972f00f83e46" style="opacity: 1; mix-blend-mode: normal; color: rgb(0, 0, 0); font-size: 24px; font-weight: normal; font-style: normal; text-decoration: none; text-align: left; width: 135px; height: 27px; transform: rotate(0deg) translate(494px, 3730px) rotate(0deg);">
+                        <p>Модель авто</p>
+                      </div><input class="ng-element el-input-without-label font-S-Arial-n4" data-id="b75c499ad7e04aa4b16e9c6d4f237b3d"
+                        type="text" style="opacity: 1; mix-blend-mode: normal; background-color: rgb(255, 255, 255); border-color: rgb(200, 200, 200); border-width: 1px; color: rgb(0, 0, 0); padding: 0px 10px; text-align: left; font-size: 24px; font-weight: normal; font-style: normal; border-radius: 0px; border-style: solid; background-image: none; background-size: cover; background-repeat: repeat; background-position: center center; width: 375px; height: 50px; transform: rotate(0deg) translate(645px, 3718px) rotate(0deg);"><div
+                        id="TextElementa7aabeec1d7a47fb970dd53040fef215" class="ng-element el-text-2 empty-line-hack font-S-Arial-n4"
+                        data-id="811b9530d499472a94101bcddb28c40c" style="opacity: 1; mix-blend-mode: normal; color: rgb(0, 0, 0); font-size: 24px; font-weight: normal; font-style: normal; text-decoration: none; text-align: left; width: 135px; height: 27px; transform: rotate(0deg) translate(494px, 3790px) rotate(0deg);">
+                        <p>Пробіг</p>
+                      </div>
+                      <div id="TextElement49d10c71b369404d9533262de9c797c1" class="ng-element el-text-2 empty-line-hack font-S-Arial-n4"
+                        data-id="fd87571f73664e58b33349379ed9e3e7" style="opacity: 1; mix-blend-mode: normal; color: rgb(0, 0, 0); font-size: 24px; font-weight: normal; font-style: normal; text-decoration: none; text-align: left; width: 135px; height: 27px; transform: rotate(0deg) translate(494px, 3850px) rotate(0deg);">
+                        <p>Рік випуску</p>
+                      </div><input class="ng-element el-input-without-label font-S-Arial-n4" data-id="55e23cf5ba03468d911c206e636b3492"
+                        type="text" style="opacity: 1; mix-blend-mode: normal; background-color: rgb(255, 255, 255); border-color: rgb(200, 200, 200); border-width: 1px; color: rgb(0, 0, 0); padding: 0px 10px; text-align: left; font-size: 24px; font-weight: normal; font-style: normal; border-radius: 0px; border-style: solid; background-image: none; background-size: cover; background-repeat: repeat; background-position: center center; width: 375px; height: 50px; transform: rotate(0deg) translate(645px, 3838px) rotate(0deg);"><input
+                        class="ng-element el-input-without-label font-S-Arial-n4" data-id="fbdd927e617b4600a6bd4ef738069ded"
+                        type="text" style="opacity: 1; mix-blend-mode: normal; background-color: rgb(255, 255, 255); border-color: rgb(200, 200, 200); border-width: 1px; color: rgb(0, 0, 0); padding: 0px 10px; text-align: left; font-size: 24px; font-weight: normal; font-style: normal; border-radius: 0px; border-style: solid; background-image: none; background-size: cover; background-repeat: repeat; background-position: center center; width: 375px; height: 50px; transform: rotate(0deg) translate(645px, 3778px) rotate(0deg);"><input
+                        class="ng-element el-input-without-label font-S-Arial-n4" data-id="4c15fc089b894c26b04be3d6b5d46308"
+                        type="text" style="opacity: 1; mix-blend-mode: normal; background-color: rgb(255, 255, 255); border-color: rgb(200, 200, 200); border-width: 1px; color: rgb(0, 0, 0); padding: 0px 10px; text-align: left; font-size: 24px; font-weight: normal; font-style: normal; border-radius: 0px; border-style: solid; background-image: none; background-size: cover; background-repeat: repeat; background-position: center center; width: 375px; height: 50px; transform: rotate(0deg) translate(645px, 3658px) rotate(0deg);"></div>
+                  </div>
+                  <div class="el-group" data-id="e8076d57da294cd0a952444075cd9831" style="opacity: 1; mix-blend-mode: normal;"><img class="ng-element el-image el-image-no-back" data-id="13c2d0fa43814f8887efcb0c374c608e" src="./index_files/JobOpprotunitiesHeader-2e3e92.jpg"
+                      style="opacity: 1; mix-blend-mode: normal; border-radius: 0px; width: 100%; height: auto; transform: rotate(0deg) translate(108px, 2807px) rotate(0deg);"><div
+                      id="TextElement7e37554a527c470a95b8ebcc1f1b7156" class="ng-element el-text-2 empty-line-hack font-S-Arial-n4"
+                      data-id="b2b12e0a8e834128b8a2899d271408a1" style="opacity: 1; mix-blend-mode: normal; color: rgb(0, 0, 0); font-size: 48px; font-weight: normal; font-style: normal; text-decoration: none; text-align: center; width: 721px; height: 110px; transform: rotate(0deg) translate(372px, 2672px) rotate(0deg);">
+                      <p>Зустрічайте команду <span style="font-weight:bold;">Sell Your Car</span>&nbsp;</p>
+                      <p><span style="font-size:32px;">Сподіваємося на нашвидку зустріч в майбутньому!</span></p>
+                    </div>
+                  </div>
+                  <div class="el-group" data-id="06448b84d96845a2a51402d46cbf2de5" style="opacity: 1; mix-blend-mode: normal;">
+                    <div class="ng-element el-box text-editor-light" data-id="c41c9ada9b5243d88fba5b22bd98b62f" style="opacity: 1; mix-blend-mode: normal; padding: 0px; border-width: 0px; border-radius: 0px; border-color: rgb(102, 102, 102); border-style: solid; background-color: transparent; background-image: linear-gradient(90deg, rgb(109, 130, 252) 3%, rgb(95, 144, 250) 38%, rgb(120, 202, 235) 103%); background-size: cover; background-repeat: repeat; background-position: center center; width: 100px; height: 509px; transform: rotate(0deg) translate(2px, 2140px) rotate(0deg);">
+                      <p id="Boxd5050387cf214da1b7ca70a3325700ab" data-id="c41c9ada9b5243d88fba5b22bd98b62f" class="font-S-Arial-n4"
+                        style="color: rgb(0, 0, 0); font-size: 14px; text-align: center; font-weight: normal; font-style: normal; text-decoration: none;"></p>
+                    </div>
+                    <div id="TextElement4ab329abb00e493b8dcdf9b632a0c611" class="ng-element el-text-2 empty-line-hack font-S-Arial-n4"
+                      data-id="956a984bd35d45acad19060800266a5c" style="opacity: 1; mix-blend-mode: normal; color: rgb(0, 0, 0); font-size: 48px; font-weight: normal; font-style: normal; text-decoration: none; text-align: center; width: 721px; height: 55px; transform: rotate(0deg) translate(381px, 2165px) rotate(0deg);">
+                      <p>Як це працює?</p>
+                    </div>
+                    <div id="TextElement5ca43179e03e461d9a531e6dde2656c0" class="ng-element el-text-2 empty-line-hack font-S-Arial-n4"
+                      data-id="bb2fac70d01e4e389d62ce921b3b3bed" style="opacity: 1; mix-blend-mode: normal; color: rgb(0, 0, 0); font-size: 32px; font-weight: normal; font-style: normal; text-decoration: none; text-align: center; width: 185px; height: 36px; transform: rotate(0deg) translate(184px, 2403px) rotate(0deg);">
+                      <p>Перша зустріч</p>
+                    </div>
+                    <div id="TextElementbefbf341986e4489b0fb71a0c21a01ed" class="ng-element el-text-2 empty-line-hack font-S-Arial-n4"
+                      data-id="f5ffc4d5785f4ceaa77b3c104b9b1b5f" style="opacity: 1; mix-blend-mode: normal; color: rgb(0, 0, 0); font-size: 32px; font-weight: normal; font-style: normal; text-decoration: none; text-align: center; width: 221px; height: 36px; transform: rotate(0deg) translate(627px, 2404px) rotate(0deg);">
+                      <p>Рекламування</p>
+                    </div>
+                    <div id="TextElement26441e03f4be4f869c0c3f10263d14ee" class="ng-element el-text-2 empty-line-hack font-S-Arial-n4"
+                      data-id="a6f7a77f5eca405aab547bc445bf39b1" style="opacity: 1; mix-blend-mode: normal; color: rgb(0, 0, 0); font-size: 32px; font-weight: normal; font-style: normal; text-decoration: none; text-align: center; width: 267px; height: 36px; transform: rotate(0deg) translate(1047px, 2401px) rotate(0deg);">
+                      <p>Продаж та оплата</p>
+                    </div>
+                    <div id="TextElementcc33e080dcd94ab49bb9dfdead26bd12" class="ng-element el-text-2 empty-line-hack font-S-Arial-n4"
+                      data-id="bb219c48226b449e80018cfad009d83e" style="opacity: 1; mix-blend-mode: normal; color: rgb(0, 0, 0); font-size: 20px; font-weight: normal; font-style: normal; text-decoration: none; text-align: left; width: 416px; height: 139px; transform: rotate(0deg) translate(972px, 2460px) rotate(0deg);">
+                      <p>Зазвичай через 1-3 тижні ми телефонуємо та інформуємо що знайшли покупця! Мы домовляэмось про зустріч
+                        і показуємо авто покупцю. Якщо все добре, ми перераховуємо грощі. Переоформлення авто відбувається
+                        тільки <span style="font-style:italic;"><span style="font-weight:bold;">після</span></span> отримання
+                        грошей. Жодного ризику!</p>
+                    </div>
+                    <div id="TextElementb42df23a011344b7acf27eb93aa433e2" class="ng-element el-text-2 empty-line-hack font-S-Arial-n4"
+                      data-id="37db1c45d2d14b3dbca97df53f92ced7" style="opacity: 1; mix-blend-mode: normal; color: rgb(0, 0, 0); font-size: 20px; font-weight: normal; font-style: normal; text-decoration: none; text-align: left; width: 383px; height: 116px; transform: rotate(0deg) translate(544px, 2460px) rotate(0deg);">
+                      <p>Ми фотогражуємо авто та описуємо все важливе обладнання та історію авто. Потім створюємо рекламу на
+                        багатьох онлайн ресурсах. Максимальна помітність для вашого авто!</p>
+                    </div>
+                    <div id="TextElement4878cc37d393421293ec45f34838ac02" class="ng-element el-text-2 empty-line-hack font-S-Arial-n4"
+                      data-id="bcf3c52baddc4f9c91e83da98b3b49cb" style="opacity: 1; mix-blend-mode: normal; color: rgb(0, 0, 0); font-size: 20px; font-weight: normal; font-style: normal; text-decoration: none; text-align: left; width: 343px; height: 116px; transform: rotate(0deg) translate(116px, 2460px) rotate(0deg);">
+                      <p>Ми домовляємось про зустріч та приїзжаємо до вас. Чи біля будинку, чи біля офісу. Ми оцінюємо стан
+                        авто, потім <span style="font-style:italic;"><span style="font-weight:bold;"><span style="text-decoration:none;">ви</span></span></span>
+                        встановлюєте ціну і ми підписуємо договір. Ніяких прихованих витрат!</p>
+                    </div><svg version="1.2" preserveAspectRatio="none" viewBox="0 0 24 24" class="ng-element" style="opacity: 1; mix-blend-mode: normal; fill: rgb(0, 0, 0); width: 110px; height: 110px; transform: rotate(0deg) translate(240px, 2259px) rotate(0deg);"><g>
+                        <defs>
+                        </defs>
+                        <rect display="none" fill="#FFA400" width="24" height="24" style="fill: rgb(0, 0, 0);"></rect>
+                        <rect id="_x3C_Slice_x3E__126_" display="none" fill="none" width="24" height="24" style="fill: rgb(0, 0, 0);"></rect>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M17,2v3.509c0.148,0.043,0.294,0.085,0.445,0.128 c1.924,0.548,3.912,1.116,4.889,1.99c1.137,1.019,0.379,2.363-0.29,3.549C21.53,12.086,21,13.027,21,14h-1 c0-1.235,0.623-2.34,1.173-3.315c0.733-1.3,0.983-1.874,0.493-2.312c-0.804-0.721-2.765-1.28-4.494-1.773 C17.113,6.583,17.058,6.566,17,6.55V24l7-2V0L17,2z M23,19l-1,1l-1.5-1.5L19,20l-1-1l1.5-1.5L18,16l1-1l1.5,1.5L22,15l1,1l-1.5,1.5 L23,19z M8,16.246c0.742-0.404,1.617-0.568,2.658-0.221c0.685,0.229,0.89-0.037,0.976-0.15C12.016,15.375,12.106,15,12,15 c0.339,0,0.696,0.104,1,0c0,0.5-0.187,0.979-0.572,1.481c-0.27,0.354-0.901,0.887-2.086,0.493C9.425,16.67,8.682,16.92,8,17.456V22 l8,2V6.257c-0.854-0.255-1.633-0.514-2.224-0.81c-0.986-0.492-2.39-0.316-3.004,0.379c-0.528,0.598-0.213,1.361,0.144,1.896 C11.082,7.972,11.342,8.696,11.5,9c-0.336,0.068-0.715-0.171-1,0c-0.124-0.229-0.28-0.519-0.416-0.723 c-0.768-1.152-0.79-2.287-0.062-3.113c0.917-1.038,2.801-1.312,4.201-0.612C14.687,4.784,15.311,4.999,16,5.212V2L8,0V16.246z M12,10c1.104,0,2,0.896,2,2s-0.896,2-2,2s-2-0.896-2-2S10.896,10,12,10z M0,24l7-2v-3.5c-0.194,0.233-0.389,0.438-0.584,0.695 c-0.446,0.59-0.799,1.055-1.192,1.252c-0.232,0.116-0.47,0.167-0.706,0.167c-1.11,0-2.222-1.111-2.871-1.761 c-0.826-0.826-0.159-1.845,0.43-2.743C2.51,15.45,3,14.701,3,14v-4h1v4c0,1-0.577,1.881-1.087,2.659 c-0.572,0.871-0.775,1.271-0.56,1.487c0.812,0.812,1.821,1.71,2.423,1.406c0.185-0.092,0.534-0.554,0.842-0.961 C6,18.089,6.453,17.511,7,17V0L0,2V24z M3.5,6C4.328,6,5,6.671,5,7.5S4.328,9,3.5,9S2,8.329,2,7.5S2.672,6,3.5,6z"
+                          style="fill: rgb(0, 0, 0);"></path>
+                      </g></svg><svg version="1.2" preserveAspectRatio="none" viewBox="0 0 24 24" class="ng-element" style="opacity: 1; mix-blend-mode: normal; fill: rgb(0, 0, 0); width: 124px; height: 124px; transform: rotate(0deg) translate(1113px, 2272px) rotate(0deg);"><g>
+                        <path
+                          xmlns:default="http://www.w3.org/2000/svg" id="car" d="M5.86,14.84c-0.65,0.65-1.7,0.65-2.35,0c0,0,0,0,0,0c-0.65-0.66-0.64-1.72,0.02-2.36c0.31-0.3,0.72-0.47,1.15-0.48  c0.92-0.01,1.67,0.73,1.67,1.65C6.35,14.1,6.17,14.53,5.86,14.84z M7.65,6.62C7.67,6.55,7.73,6.48,7.8,6.44  c0.06-0.05,0.13-0.09,0.21-0.1h8c0.08,0.01,0.16,0.04,0.22,0.1c0.07,0.04,0.12,0.11,0.15,0.18l0.93,3.72H6.72L7.65,6.62z   M20.52,14.85c-0.65,0.65-1.7,0.64-2.35-0.01c-0.65-0.65-0.64-1.7,0.01-2.35c0.65-0.65,1.7-0.64,2.35,0.01  c0.31,0.31,0.48,0.73,0.48,1.17C21.01,14.11,20.83,14.53,20.52,14.85L20.52,14.85z M22.68,12.67c0-1.29-1.04-2.33-2.33-2.33h-0.34  L18.95,6c-0.35-1.35-1.55-2.3-2.94-2.33h-8c-0.68,0-1.33,0.24-1.86,0.66C5.6,4.74,5.22,5.33,5.07,6l-1.06,4.33H3.68  C3.05,10.31,2.44,10.55,2.01,11c-0.44,0.43-0.69,1.03-0.68,1.65v4c-0.01,0.18,0.13,0.32,0.31,0.33c0.01,0,0.01,0,0.02,0h1v1.33  c0,1.1,0.9,2,2,2s2-0.9,2-2V17h10.68v1.33c0,1.1,0.9,2,2,2s2-0.9,2-2V17h1c0.18,0.01,0.32-0.13,0.33-0.31c0-0.01,0-0.01,0-0.02v-4  l0,0L22.68,12.67z"
+                          style="fill: rgb(0, 0, 0);"></path>
+                      </g></svg><svg version="1.2" preserveAspectRatio="none" viewBox="0 0 28 28" class="ng-element" style="opacity: 1; mix-blend-mode: normal; fill: rgb(0, 0, 0); width: 32px; height: 32px; transform: rotate(0deg) translate(1225px, 2290px) rotate(0deg);"><g>
+                        <defs>
+                        </defs>
+                        <rect display="none" fill="#FFA400" width="28" height="28" style="fill: rgb(0, 0, 0);"></rect>
+                        <rect id="_x3C_Slice_x3E__81_" display="none" fill="none" width="28" height="28" style="fill: rgb(0, 0, 0);"></rect>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M21.487,17.262c-0.343-0.686-0.808-1.309-1.395-1.87 c-0.586-0.562-1.266-1.074-2.038-1.539c-0.773-0.464-1.595-0.907-2.466-1.328C15.38,12.439,15.196,12.36,15,12.278V5.224 c0.149-0.006,0.299-0.02,0.449-0.02C17.68,5.204,19.582,6.05,21,7V3c-1.196-0.551-3.243-1-5.857-1C15.094,2,15.049,2.008,15,2.008V0 h-2v2.175c-0.391,0.058-0.78,0.112-1.176,0.203c-1.104,0.254-2.088,0.643-2.953,1.166C8.005,4.067,7.308,4.731,6.779,5.536 S5.986,7.288,5.986,8.379c0,0.885,0.154,1.657,0.462,2.315c0.308,0.659,0.732,1.25,1.272,1.773c0.54,0.524,1.176,1.002,1.908,1.434 c0.731,0.432,1.521,0.858,2.37,1.279c0.345,0.146,0.676,0.288,1.001,0.429v7.178c-0.179,0.007-0.342,0.022-0.531,0.022 c-0.499,0-1.045-0.049-1.638-0.146c-0.593-0.097-1.185-0.234-1.777-0.413c-0.593-0.178-1.153-0.396-1.682-0.655 c-0.529-0.26-0.984-0.551-1.368-0.875L6,24.8c0.349,0.205,0.812,0.276,1.381,0.438s1.173,0.3,1.812,0.413 c0.639,0.113,1.263,0.2,1.873,0.259c0.609,0.06,1.372,0.09,1.791,0.09c0.05,0,0.094-0.003,0.143-0.004V28h2v-2.143 c0.385-0.053,0.771-0.115,1.181-0.198c1.127-0.227,2.123-0.593,2.989-1.101c0.865-0.508,1.554-1.166,2.064-1.977 c0.512-0.81,0.767-1.803,0.767-2.979C22.001,18.728,21.83,17.948,21.487,17.262z M11.711,10.646 c-0.447-0.312-0.787-0.658-1.02-1.036s-0.349-0.826-0.349-1.345c0-0.55,0.151-1.02,0.453-1.408c0.303-0.389,0.694-0.708,1.177-0.956 C12.284,5.739,12.634,5.619,13,5.518v5.866C12.512,11.143,12.07,10.897,11.711,10.646z M16.364,21.999 c-0.367,0.232-0.833,0.404-1.364,0.536v-6.012c0.37,0.191,0.719,0.385,1.024,0.585c0.511,0.335,0.908,0.704,1.193,1.109 c0.284,0.404,0.427,0.883,0.427,1.433C17.645,20.677,17.218,21.459,16.364,21.999z"
+                          style="fill: rgb(0, 0, 0);"></path>
+                      </g></svg><svg version="1.2" preserveAspectRatio="none" viewBox="0 -6.495123780945235 52 52" class="ng-element"
+                      style="opacity: 1; mix-blend-mode: normal; fill: rgb(0, 0, 0); width: 174px; height: 174px; transform: rotate(0deg) translate(653px, 2227px) rotate(0deg);"><g>
+                        <g>
+                          <path d="M48,6H34.4L31,0H20l-3.4,6H4c-2.2,0-4,1.8-4,4v25c0,2.2,1.8,4,4,4h44c2.2,0,4-1.8,4-4V10C52,7.8,50.2,6,48,6z M50,35    c0,1.1-0.9,2-2,2H4c-1.1,0-2-0.9-2-2V10c0-1.1,0.9-2,2-2h13.7l0.6-1l2.9-5h8.8l2.8,5l0.5,1H48c1.1,0,2,0.9,2,2V35z M5,5h8    c0.6,0,1-0.4,1-1c0-0.6-0.4-1-1-1H5C4.4,3,4,3.4,4,4C4,4.6,4.4,5,5,5z M43.1,11.8c-1.6,0-2.9,1.3-2.9,2.9c0,1.6,1.3,2.9,2.9,2.9    c1.6,0,2.9-1.3,2.9-2.9C46,13.1,44.7,11.8,43.1,11.8z M43.1,15.7c-0.5,0-0.9-0.4-0.9-0.9c0-0.5,0.4-0.9,0.9-0.9    c0.5,0,0.9,0.4,0.9,0.9C44,15.3,43.6,15.7,43.1,15.7z M24.8,9.7c-7,0-12.7,5.7-12.7,12.7S17.8,35,24.8,35c7,0,12.7-5.7,12.7-12.7    S31.7,9.7,24.8,9.7z M24.8,33c-5.9,0-10.7-4.8-10.7-10.7c0-5.9,4.8-10.7,10.7-10.7c5.9,0,10.7,4.8,10.7,10.7    C35.4,28.2,30.6,33,24.8,33z"
+                            style="fill: rgb(0, 0, 0);"></path>
+                        </g>
+                      </g>
+                      <g></g></svg><svg version="1.2" preserveAspectRatio="none" viewBox="0 0 28 28" class="ng-element" style="opacity: 1; mix-blend-mode: normal; fill: rgb(0, 0, 0); width: 32px; height: 32px; transform: rotate(0deg) translate(1082px, 2337px) rotate(0deg);"><g>
+                        <defs>
+                        </defs>
+                        <rect display="none" fill="#FFA400" width="28" height="28" style="fill: rgb(0, 0, 0);"></rect>
+                        <rect id="_x3C_Slice_x3E__81_" display="none" fill="none" width="28" height="28" style="fill: rgb(0, 0, 0);"></rect>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M21.487,17.262c-0.343-0.686-0.808-1.309-1.395-1.87 c-0.586-0.562-1.266-1.074-2.038-1.539c-0.773-0.464-1.595-0.907-2.466-1.328C15.38,12.439,15.196,12.36,15,12.278V5.224 c0.149-0.006,0.299-0.02,0.449-0.02C17.68,5.204,19.582,6.05,21,7V3c-1.196-0.551-3.243-1-5.857-1C15.094,2,15.049,2.008,15,2.008V0 h-2v2.175c-0.391,0.058-0.78,0.112-1.176,0.203c-1.104,0.254-2.088,0.643-2.953,1.166C8.005,4.067,7.308,4.731,6.779,5.536 S5.986,7.288,5.986,8.379c0,0.885,0.154,1.657,0.462,2.315c0.308,0.659,0.732,1.25,1.272,1.773c0.54,0.524,1.176,1.002,1.908,1.434 c0.731,0.432,1.521,0.858,2.37,1.279c0.345,0.146,0.676,0.288,1.001,0.429v7.178c-0.179,0.007-0.342,0.022-0.531,0.022 c-0.499,0-1.045-0.049-1.638-0.146c-0.593-0.097-1.185-0.234-1.777-0.413c-0.593-0.178-1.153-0.396-1.682-0.655 c-0.529-0.26-0.984-0.551-1.368-0.875L6,24.8c0.349,0.205,0.812,0.276,1.381,0.438s1.173,0.3,1.812,0.413 c0.639,0.113,1.263,0.2,1.873,0.259c0.609,0.06,1.372,0.09,1.791,0.09c0.05,0,0.094-0.003,0.143-0.004V28h2v-2.143 c0.385-0.053,0.771-0.115,1.181-0.198c1.127-0.227,2.123-0.593,2.989-1.101c0.865-0.508,1.554-1.166,2.064-1.977 c0.512-0.81,0.767-1.803,0.767-2.979C22.001,18.728,21.83,17.948,21.487,17.262z M11.711,10.646 c-0.447-0.312-0.787-0.658-1.02-1.036s-0.349-0.826-0.349-1.345c0-0.55,0.151-1.02,0.453-1.408c0.303-0.389,0.694-0.708,1.177-0.956 C12.284,5.739,12.634,5.619,13,5.518v5.866C12.512,11.143,12.07,10.897,11.711,10.646z M16.364,21.999 c-0.367,0.232-0.833,0.404-1.364,0.536v-6.012c0.37,0.191,0.719,0.385,1.024,0.585c0.511,0.335,0.908,0.704,1.193,1.109 c0.284,0.404,0.427,0.883,0.427,1.433C17.645,20.677,17.218,21.459,16.364,21.999z"
+                          style="fill: rgb(0, 0, 0);"></path>
+                      </g></svg><svg version="1.2" preserveAspectRatio="none" viewBox="0 0 28 28" class="ng-element" style="opacity: 1; mix-blend-mode: normal; fill: rgb(0, 0, 0); width: 32px; height: 32px; transform: rotate(0deg) translate(1101px, 2261px) rotate(0deg);"><g>
+                        <defs>
+                        </defs>
+                        <rect display="none" fill="#FFA400" width="28" height="28" style="fill: rgb(0, 0, 0);"></rect>
+                        <rect id="_x3C_Slice_x3E__81_" display="none" fill="none" width="28" height="28" style="fill: rgb(0, 0, 0);"></rect>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M21.487,17.262c-0.343-0.686-0.808-1.309-1.395-1.87 c-0.586-0.562-1.266-1.074-2.038-1.539c-0.773-0.464-1.595-0.907-2.466-1.328C15.38,12.439,15.196,12.36,15,12.278V5.224 c0.149-0.006,0.299-0.02,0.449-0.02C17.68,5.204,19.582,6.05,21,7V3c-1.196-0.551-3.243-1-5.857-1C15.094,2,15.049,2.008,15,2.008V0 h-2v2.175c-0.391,0.058-0.78,0.112-1.176,0.203c-1.104,0.254-2.088,0.643-2.953,1.166C8.005,4.067,7.308,4.731,6.779,5.536 S5.986,7.288,5.986,8.379c0,0.885,0.154,1.657,0.462,2.315c0.308,0.659,0.732,1.25,1.272,1.773c0.54,0.524,1.176,1.002,1.908,1.434 c0.731,0.432,1.521,0.858,2.37,1.279c0.345,0.146,0.676,0.288,1.001,0.429v7.178c-0.179,0.007-0.342,0.022-0.531,0.022 c-0.499,0-1.045-0.049-1.638-0.146c-0.593-0.097-1.185-0.234-1.777-0.413c-0.593-0.178-1.153-0.396-1.682-0.655 c-0.529-0.26-0.984-0.551-1.368-0.875L6,24.8c0.349,0.205,0.812,0.276,1.381,0.438s1.173,0.3,1.812,0.413 c0.639,0.113,1.263,0.2,1.873,0.259c0.609,0.06,1.372,0.09,1.791,0.09c0.05,0,0.094-0.003,0.143-0.004V28h2v-2.143 c0.385-0.053,0.771-0.115,1.181-0.198c1.127-0.227,2.123-0.593,2.989-1.101c0.865-0.508,1.554-1.166,2.064-1.977 c0.512-0.81,0.767-1.803,0.767-2.979C22.001,18.728,21.83,17.948,21.487,17.262z M11.711,10.646 c-0.447-0.312-0.787-0.658-1.02-1.036s-0.349-0.826-0.349-1.345c0-0.55,0.151-1.02,0.453-1.408c0.303-0.389,0.694-0.708,1.177-0.956 C12.284,5.739,12.634,5.619,13,5.518v5.866C12.512,11.143,12.07,10.897,11.711,10.646z M16.364,21.999 c-0.367,0.232-0.833,0.404-1.364,0.536v-6.012c0.37,0.191,0.719,0.385,1.024,0.585c0.511,0.335,0.908,0.704,1.193,1.109 c0.284,0.404,0.427,0.883,0.427,1.433C17.645,20.677,17.218,21.459,16.364,21.999z"
+                          style="fill: rgb(0, 0, 0);"></path>
+                      </g></svg><svg version="1.2" preserveAspectRatio="none" viewBox="0 0 24 24" class="ng-element" style="opacity: 1; mix-blend-mode: normal; fill: rgb(0, 0, 0); width: 73px; height: 73px; transform: rotate(0deg) translate(699px, 2284px) rotate(0deg);"><g>
+                        <path
+                          xmlns:default="http://www.w3.org/2000/svg" id="car" d="M5.86,14.84c-0.65,0.65-1.7,0.65-2.35,0c0,0,0,0,0,0c-0.65-0.66-0.64-1.72,0.02-2.36c0.31-0.3,0.72-0.47,1.15-0.48  c0.92-0.01,1.67,0.73,1.67,1.65C6.35,14.1,6.17,14.53,5.86,14.84z M7.65,6.62C7.67,6.55,7.73,6.48,7.8,6.44  c0.06-0.05,0.13-0.09,0.21-0.1h8c0.08,0.01,0.16,0.04,0.22,0.1c0.07,0.04,0.12,0.11,0.15,0.18l0.93,3.72H6.72L7.65,6.62z   M20.52,14.85c-0.65,0.65-1.7,0.64-2.35-0.01c-0.65-0.65-0.64-1.7,0.01-2.35c0.65-0.65,1.7-0.64,2.35,0.01  c0.31,0.31,0.48,0.73,0.48,1.17C21.01,14.11,20.83,14.53,20.52,14.85L20.52,14.85z M22.68,12.67c0-1.29-1.04-2.33-2.33-2.33h-0.34  L18.95,6c-0.35-1.35-1.55-2.3-2.94-2.33h-8c-0.68,0-1.33,0.24-1.86,0.66C5.6,4.74,5.22,5.33,5.07,6l-1.06,4.33H3.68  C3.05,10.31,2.44,10.55,2.01,11c-0.44,0.43-0.69,1.03-0.68,1.65v4c-0.01,0.18,0.13,0.32,0.31,0.33c0.01,0,0.01,0,0.02,0h1v1.33  c0,1.1,0.9,2,2,2s2-0.9,2-2V17h10.68v1.33c0,1.1,0.9,2,2,2s2-0.9,2-2V17h1c0.18,0.01,0.32-0.13,0.33-0.31c0-0.01,0-0.01,0-0.02v-4  l0,0L22.68,12.67z"
+                          style="fill: rgb(0, 0, 0);"></path>
+                      </g></svg></div>
+                  <div class="el-group" data-id="b289a957fbcc40318d1efac12209921e" style="opacity: 1; mix-blend-mode: normal;">
+                    <div class="ng-element el-box text-editor-light" data-id="fd98963ccd2446e081b7ee24c959a8a3" style="opacity: 0.5; mix-blend-mode: normal; padding: 0px; border-width: 0px; border-radius: 0px; border-color: rgb(102, 102, 102); border-style: solid; background-color: transparent; background-image: linear-gradient(rgb(162, 166, 171) 2%, rgb(218, 220, 221) 102%); background-size: cover; background-repeat: repeat; background-position: center center; width: 100%; height: 445px; transform: rotate(0deg) translate(0px, 1696px) rotate(0deg);">
+                      <p id="Box9ce86c542eb641df8a9ed889fbbcbf20" data-id="fd98963ccd2446e081b7ee24c959a8a3" class="font-S-Arial-n4"
+                        style="color: rgb(0, 0, 0); font-size: 14px; text-align: center; font-weight: normal; font-style: normal; text-decoration: none;"></p>
+                    </div><svg version="1.2" preserveAspectRatio="none" viewBox="0 0 24 24" class="ng-element" style="opacity: 1; mix-blend-mode: normal; fill: rgb(66, 133, 227); width: 48px; height: 48px; transform: rotate(0deg) translate(851px, 1846px) rotate(0deg);"><g>
+                        <path
+                          xmlns:default="http://www.w3.org/2000/svg" d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" style="fill: rgb(66, 133, 227);"></path>
+                      </g></svg><div id="TextElement512db3c113254cfaa3278ce80099e369" class="ng-element el-text-2 empty-line-hack font-S-Arial-n4"
+                      data-id="14c19ba39f1747ac871d9dcf8a4aef5b" style="opacity: 1; mix-blend-mode: normal; color: rgb(0, 0, 0); font-size: 32px; font-weight: normal; font-style: normal; text-decoration: none; text-align: center; width: 185px; height: 36px; transform: rotate(0deg) translate(131px, 1905px) rotate(0deg);">
+                      <p>Найбільший прибуток</p>
+                    </div>
+                    <div id="TextElemented7258dfac08477685e1c2d4499719c0" class="ng-element el-text-2 empty-line-hack font-S-Arial-n4"
+                      data-id="6a9fac85ee074e2dab5feff08380ca80" style="opacity: 1; mix-blend-mode: normal; color: rgb(0, 0, 0); font-size: 32px; font-weight: normal; font-style: normal; text-decoration: none; text-align: center; width: 149px; height: 36px; transform: rotate(0deg) translate(490px, 1906px) rotate(0deg);">
+                      <p>Не потрибує зусиль</p>
+                    </div>
+                    <div id="TextElementee720ee384f44ab595016c7aa0b11cd2" class="ng-element el-text-2 empty-line-hack font-S-Arial-n4"
+                      data-id="86e3bce3f3c64491ba01890b167ab28d" style="opacity: 1; mix-blend-mode: normal; color: rgb(0, 0, 0); font-size: 48px; font-weight: normal; font-style: normal; text-decoration: none; text-align: left; width: 772px; height: 55px; transform: rotate(0deg) translate(369px, 1731px) rotate(0deg);">
+                      <p>Що робить цей сервіс таким корисним?</p>
+                    </div>
+                    <div id="TextElement27204cf0f26a42b5a562ce91124e1eef" class="ng-element el-text-2 empty-line-hack font-S-Arial-n4"
+                      data-id="1d1ec7126e2c428da7c4b84f7a44d5fa" style="opacity: 1; mix-blend-mode: normal; color: rgb(0, 0, 0); font-size: 32px; font-weight: normal; font-style: normal; text-decoration: none; text-align: center; width: 102px; height: 36px; transform: rotate(0deg) translate(852px, 1906px) rotate(0deg);">
+                      <p>Швидко</p>
+                    </div>
+                    <div id="TextElementa4588f9478054f0e8b4322d150b787b6" class="ng-element el-text-2 empty-line-hack font-S-Arial-n4"
+                      data-id="61e7ad7581ae433ebca2430a3a3edba6" style="opacity: 1; mix-blend-mode: normal; color: rgb(0, 0, 0); font-size: 32px; font-weight: normal; font-style: normal; text-decoration: none; text-align: center; width: 102px; height: 36px; transform: rotate(0deg) translate(1170px, 1905px) rotate(0deg);">
+                      <p>Надійно</p>
+                    </div><svg version="1.2" preserveAspectRatio="none" viewBox="0 0 28 28" class="ng-element" style="opacity: 1; mix-blend-mode: normal; fill: rgb(66, 133, 227); width: 63px; height: 63px; transform: rotate(0deg) translate(192px, 1834px) rotate(0deg);"><g>
+                        <defs>
+                        </defs>
+                        <rect display="none" fill="#FFA400" width="28" height="28" style="fill: rgb(66, 133, 227);"></rect>
+                        <rect id="_x3C_Slice_x3E__81_" display="none" fill="none" width="28" height="28" style="fill: rgb(66, 133, 227);"></rect>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M21.487,17.262c-0.343-0.686-0.808-1.309-1.395-1.87 c-0.586-0.562-1.266-1.074-2.038-1.539c-0.773-0.464-1.595-0.907-2.466-1.328C15.38,12.439,15.196,12.36,15,12.278V5.224 c0.149-0.006,0.299-0.02,0.449-0.02C17.68,5.204,19.582,6.05,21,7V3c-1.196-0.551-3.243-1-5.857-1C15.094,2,15.049,2.008,15,2.008V0 h-2v2.175c-0.391,0.058-0.78,0.112-1.176,0.203c-1.104,0.254-2.088,0.643-2.953,1.166C8.005,4.067,7.308,4.731,6.779,5.536 S5.986,7.288,5.986,8.379c0,0.885,0.154,1.657,0.462,2.315c0.308,0.659,0.732,1.25,1.272,1.773c0.54,0.524,1.176,1.002,1.908,1.434 c0.731,0.432,1.521,0.858,2.37,1.279c0.345,0.146,0.676,0.288,1.001,0.429v7.178c-0.179,0.007-0.342,0.022-0.531,0.022 c-0.499,0-1.045-0.049-1.638-0.146c-0.593-0.097-1.185-0.234-1.777-0.413c-0.593-0.178-1.153-0.396-1.682-0.655 c-0.529-0.26-0.984-0.551-1.368-0.875L6,24.8c0.349,0.205,0.812,0.276,1.381,0.438s1.173,0.3,1.812,0.413 c0.639,0.113,1.263,0.2,1.873,0.259c0.609,0.06,1.372,0.09,1.791,0.09c0.05,0,0.094-0.003,0.143-0.004V28h2v-2.143 c0.385-0.053,0.771-0.115,1.181-0.198c1.127-0.227,2.123-0.593,2.989-1.101c0.865-0.508,1.554-1.166,2.064-1.977 c0.512-0.81,0.767-1.803,0.767-2.979C22.001,18.728,21.83,17.948,21.487,17.262z M11.711,10.646 c-0.447-0.312-0.787-0.658-1.02-1.036s-0.349-0.826-0.349-1.345c0-0.55,0.151-1.02,0.453-1.408c0.303-0.389,0.694-0.708,1.177-0.956 C12.284,5.739,12.634,5.619,13,5.518v5.866C12.512,11.143,12.07,10.897,11.711,10.646z M16.364,21.999 c-0.367,0.232-0.833,0.404-1.364,0.536v-6.012c0.37,0.191,0.719,0.385,1.024,0.585c0.511,0.335,0.908,0.704,1.193,1.109 c0.284,0.404,0.427,0.883,0.427,1.433C17.645,20.677,17.218,21.459,16.364,21.999z"
+                          style="fill: rgb(66, 133, 227);"></path>
+                      </g></svg><svg version="1.2" preserveAspectRatio="none" viewBox="0 0 28 28" class="ng-element" style="opacity: 1; mix-blend-mode: normal; fill: rgb(66, 133, 227); width: 45px; height: 45px; transform: rotate(0deg) translate(160px, 1852px) rotate(0deg);"><g>
+                        <defs>
+                        </defs>
+                        <rect display="none" fill="#FFA400" width="28" height="28" style="fill: rgb(66, 133, 227);"></rect>
+                        <rect id="_x3C_Slice_x3E__81_" display="none" fill="none" width="28" height="28" style="fill: rgb(66, 133, 227);"></rect>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M21.487,17.262c-0.343-0.686-0.808-1.309-1.395-1.87 c-0.586-0.562-1.266-1.074-2.038-1.539c-0.773-0.464-1.595-0.907-2.466-1.328C15.38,12.439,15.196,12.36,15,12.278V5.224 c0.149-0.006,0.299-0.02,0.449-0.02C17.68,5.204,19.582,6.05,21,7V3c-1.196-0.551-3.243-1-5.857-1C15.094,2,15.049,2.008,15,2.008V0 h-2v2.175c-0.391,0.058-0.78,0.112-1.176,0.203c-1.104,0.254-2.088,0.643-2.953,1.166C8.005,4.067,7.308,4.731,6.779,5.536 S5.986,7.288,5.986,8.379c0,0.885,0.154,1.657,0.462,2.315c0.308,0.659,0.732,1.25,1.272,1.773c0.54,0.524,1.176,1.002,1.908,1.434 c0.731,0.432,1.521,0.858,2.37,1.279c0.345,0.146,0.676,0.288,1.001,0.429v7.178c-0.179,0.007-0.342,0.022-0.531,0.022 c-0.499,0-1.045-0.049-1.638-0.146c-0.593-0.097-1.185-0.234-1.777-0.413c-0.593-0.178-1.153-0.396-1.682-0.655 c-0.529-0.26-0.984-0.551-1.368-0.875L6,24.8c0.349,0.205,0.812,0.276,1.381,0.438s1.173,0.3,1.812,0.413 c0.639,0.113,1.263,0.2,1.873,0.259c0.609,0.06,1.372,0.09,1.791,0.09c0.05,0,0.094-0.003,0.143-0.004V28h2v-2.143 c0.385-0.053,0.771-0.115,1.181-0.198c1.127-0.227,2.123-0.593,2.989-1.101c0.865-0.508,1.554-1.166,2.064-1.977 c0.512-0.81,0.767-1.803,0.767-2.979C22.001,18.728,21.83,17.948,21.487,17.262z M11.711,10.646 c-0.447-0.312-0.787-0.658-1.02-1.036s-0.349-0.826-0.349-1.345c0-0.55,0.151-1.02,0.453-1.408c0.303-0.389,0.694-0.708,1.177-0.956 C12.284,5.739,12.634,5.619,13,5.518v5.866C12.512,11.143,12.07,10.897,11.711,10.646z M16.364,21.999 c-0.367,0.232-0.833,0.404-1.364,0.536v-6.012c0.37,0.191,0.719,0.385,1.024,0.585c0.511,0.335,0.908,0.704,1.193,1.109 c0.284,0.404,0.427,0.883,0.427,1.433C17.645,20.677,17.218,21.459,16.364,21.999z"
+                          style="fill: rgb(66, 133, 227);"></path>
+                      </g></svg><svg version="1.2" preserveAspectRatio="none" viewBox="0 0 28 28" class="ng-element" style="opacity: 1; mix-blend-mode: normal; fill: rgb(66, 133, 227); width: 47px; height: 47px; transform: rotate(0deg) translate(241px, 1850px) rotate(0deg);"><g>
+                        <defs>
+                        </defs>
+                        <rect display="none" fill="#FFA400" width="28" height="28" style="fill: rgb(66, 133, 227);"></rect>
+                        <rect id="_x3C_Slice_x3E__81_" display="none" fill="none" width="28" height="28" style="fill: rgb(66, 133, 227);"></rect>
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M21.487,17.262c-0.343-0.686-0.808-1.309-1.395-1.87 c-0.586-0.562-1.266-1.074-2.038-1.539c-0.773-0.464-1.595-0.907-2.466-1.328C15.38,12.439,15.196,12.36,15,12.278V5.224 c0.149-0.006,0.299-0.02,0.449-0.02C17.68,5.204,19.582,6.05,21,7V3c-1.196-0.551-3.243-1-5.857-1C15.094,2,15.049,2.008,15,2.008V0 h-2v2.175c-0.391,0.058-0.78,0.112-1.176,0.203c-1.104,0.254-2.088,0.643-2.953,1.166C8.005,4.067,7.308,4.731,6.779,5.536 S5.986,7.288,5.986,8.379c0,0.885,0.154,1.657,0.462,2.315c0.308,0.659,0.732,1.25,1.272,1.773c0.54,0.524,1.176,1.002,1.908,1.434 c0.731,0.432,1.521,0.858,2.37,1.279c0.345,0.146,0.676,0.288,1.001,0.429v7.178c-0.179,0.007-0.342,0.022-0.531,0.022 c-0.499,0-1.045-0.049-1.638-0.146c-0.593-0.097-1.185-0.234-1.777-0.413c-0.593-0.178-1.153-0.396-1.682-0.655 c-0.529-0.26-0.984-0.551-1.368-0.875L6,24.8c0.349,0.205,0.812,0.276,1.381,0.438s1.173,0.3,1.812,0.413 c0.639,0.113,1.263,0.2,1.873,0.259c0.609,0.06,1.372,0.09,1.791,0.09c0.05,0,0.094-0.003,0.143-0.004V28h2v-2.143 c0.385-0.053,0.771-0.115,1.181-0.198c1.127-0.227,2.123-0.593,2.989-1.101c0.865-0.508,1.554-1.166,2.064-1.977 c0.512-0.81,0.767-1.803,0.767-2.979C22.001,18.728,21.83,17.948,21.487,17.262z M11.711,10.646 c-0.447-0.312-0.787-0.658-1.02-1.036s-0.349-0.826-0.349-1.345c0-0.55,0.151-1.02,0.453-1.408c0.303-0.389,0.694-0.708,1.177-0.956 C12.284,5.739,12.634,5.619,13,5.518v5.866C12.512,11.143,12.07,10.897,11.711,10.646z M16.364,21.999 c-0.367,0.232-0.833,0.404-1.364,0.536v-6.012c0.37,0.191,0.719,0.385,1.024,0.585c0.511,0.335,0.908,0.704,1.193,1.109 c0.284,0.404,0.427,0.883,0.427,1.433C17.645,20.677,17.218,21.459,16.364,21.999z"
+                          style="fill: rgb(66, 133, 227);"></path>
+                      </g></svg><svg version="1.2" preserveAspectRatio="none" viewBox="0 0 24 24" class="ng-element" style="opacity: 1; mix-blend-mode: normal; fill: rgb(66, 133, 227); filter: drop-shadow(rgba(0, 0, 0, 0.2) 0px 1px 1.16667px); width: 107px; height: 107px; transform: rotate(0deg) translate(510px, 1814px) rotate(0deg);"><g>
+                        <path
+                          xmlns:default="http://www.w3.org/2000/svg" id="bed" d="M4,13.33V6C3.99,5.63,3.7,5.34,3.33,5.33H2c-0.18,0-0.35,0.07-0.47,0.2C1.4,5.65,1.33,5.82,1.33,6v12.66H4V16h16  v2.67h2.67V14c-0.01-0.37-0.3-0.66-0.67-0.67H4z M10,10c0,1.47-1.2,2.67-2.67,2.67c-1.47-0.01-2.66-1.2-2.66-2.67  c0.01-1.47,1.2-2.66,2.67-2.66C8.81,7.35,9.99,8.53,10,10L10,10z M22.66,12.67h-12v-4c0.01-0.37,0.3-0.66,0.67-0.67h7.33  c2.21,0,4,1.79,4,4V12.67L22.66,12.67z"
+                          style="fill: rgb(66, 133, 227);"></path>
+                      </g></svg><svg version="1.2" preserveAspectRatio="none" viewBox="0 0 24 24" class="ng-element" style="opacity: 1; mix-blend-mode: normal; fill: rgb(66, 133, 227); width: 64px; height: 64px; transform: rotate(0deg) translate(890px, 1836px) rotate(0deg);"><g>
+                        <path
+                          xmlns:default="http://www.w3.org/2000/svg" d="M15 1H9v2h6V1zm-4 13h2V8h-2v6zm8.03-6.61l1.42-1.42c-.43-.51-.9-.99-1.41-1.41l-1.42 1.42C16.07 4.74 14.12 4 12 4c-4.97 0-9 4.03-9 9s4.02 9 9 9 9-4.03 9-9c0-2.12-.74-4.07-1.97-5.61zM12 20c-3.87 0-7-3.13-7-7s3.13-7 7-7 7 3.13 7 7-3.13 7-7 7z"
+                          style="fill: rgb(66, 133, 227);"></path>
+                      </g></svg><svg version="1.2" preserveAspectRatio="none" viewBox="0 0 24 24" class="ng-element" style="opacity: 1; mix-blend-mode: normal; fill: rgb(66, 133, 227); width: 90px; height: 90px; transform: rotate(0deg) translate(1176px, 1821px) rotate(0deg);"><g>
+                        <path
+                          xmlns:default="http://www.w3.org/2000/svg" id="shield" d="M16.66,12.67c0,1.22-0.82,2.47-2.45,3.75c-0.69,0.54-1.43,1.01-2.21,1.42V6h4.66v6.66l0,0V12.67z M18.66,4.67  C18.66,4.31,18.37,4.01,18,4H6C5.64,4,5.34,4.3,5.33,4.67v8c0,0.61,0.12,1.21,0.35,1.78C5.9,15,6.2,15.52,6.55,16  c0.37,0.48,0.78,0.93,1.23,1.33c0.42,0.38,0.86,0.74,1.32,1.07c0.4,0.29,0.82,0.56,1.26,0.81s0.75,0.43,0.93,0.52l0.44,0.21  c0.17,0.08,0.37,0.08,0.54,0l0.44-0.21c0.19-0.09,0.5-0.27,0.93-0.52c0.43-0.25,0.85-0.52,1.26-0.81c0.46-0.33,0.9-0.69,1.32-1.07  c0.45-0.4,0.86-0.85,1.23-1.33c0.36-0.48,0.64-1,0.86-1.56c0.23-0.57,0.35-1.17,0.35-1.78L18.66,4.67L18.66,4.67L18.66,4.67z"
+                          style="fill: rgb(66, 133, 227);"></path>
+                      </g></svg><div id="TextElementaab210863869436f9911bfd76ffebbbe" class="ng-element el-text-2 empty-line-hack font-S-Arial-n4"
+                      data-id="8ddeabcd36364219a7e6305ac887c920" style="opacity: 1; mix-blend-mode: normal; color: rgb(0, 0, 0); font-size: 20px; font-weight: normal; font-style: normal; text-decoration: none; text-align: left; width: 310px; height: 139px; transform: rotate(0deg) translate(85px, 1964px) rotate(0deg);">
+                      <p>Ми збільшуємо цінність авто, тому що працюємо як диллер. Покупець отримує гарантії, банковськи кредити,
+                        і таке інше. Ми беремо невеликий відсоток від продажу - меньше ніж ми додаємо вартості!</p>
+                    </div>
+                    <div id="TextElement824f2a35607e4b05b8c089c7b1c72274" class="ng-element el-text-2 empty-line-hack font-S-Arial-n4"
+                      data-id="27279901fb9e485e8a7f755725725f54" style="opacity: 1; mix-blend-mode: normal; color: rgb(0, 0, 0); font-size: 20px; font-weight: normal; font-style: normal; text-decoration: none; text-align: left; width: 310px; height: 116px; transform: rotate(0deg) translate(426px, 1964px) rotate(0deg);">
+                      <p>Ми приїзжаємо до вас! Зустріч триває декілька хвилин. Потім робим все що треба. Коли ми знаходим покупця
+                        ми беремо авто та оформлюємо угоду.</p>
+                    </div>
+                    <div id="TextElementc87a8eb4d31e44a3a647fda23eaa761e" class="ng-element el-text-2 empty-line-hack font-S-Arial-n4"
+                      data-id="2d668ecc9e7341e8b0357fb58e2e49f7" style="opacity: 1; mix-blend-mode: normal; color: rgb(0, 0, 0); font-size: 20px; font-weight: normal; font-style: normal; text-decoration: none; text-align: left; width: 310px; height: 116px; transform: rotate(0deg) translate(767px, 1963px) rotate(0deg);">
+                      <p>Завдяки сучасним методам рекламування та професійним продавцям ми в змозі продати ваше авто в двічи
+                        швидше ніж це потребує зазвичай! 4 із 5 автівок продаються на протязі 4 тижнів.</p>
+                    </div>
+                    <div id="TextElement19f727bc878e478fa04ee23b29c49794" class="ng-element el-text-2 empty-line-hack font-S-Arial-n4"
+                      data-id="fba697db9d264eb2ab2dbb4f13326b94" style="opacity: 1; mix-blend-mode: normal; color: rgb(0, 0, 0); font-size: 20px; font-weight: normal; font-style: normal; text-decoration: none; text-align: left; width: 299px; height: 139px; transform: rotate(0deg) translate(1101px, 1960px) rotate(0deg);">
+                      <p>Ми беремо відповідальність за ваше авто. Покупець з вами не спілкується. Ви не відповідальні за можливі
+                        майбутні проблеми з машиною. Надійна передача машини та отримання грошей.</p>
+                    </div>
+                  </div>
+                  <div class="el-group" data-id="67f226987cdc4f5298b7ca4a4e456c3f" style="opacity: 1; mix-blend-mode: normal;">
+                    <div class="el-group" data-id="d8ac5fb5ed2b4ab581a93880a61ace79" style="opacity: 1; mix-blend-mode: normal;"><img class="ng-element el-image el-image-no-back" data-id="4973762a14ed4acb88efde23eab655e5" src="./index_files/01-9a143b.jpg"
+                        style="opacity: 1; mix-blend-mode: normal; border-radius: 0px; width: 191px; height: 191px; transform: rotate(0deg) translate(214px, 1209px) rotate(0deg);"><div
+                        id="TextElementcc006c06dd1a4375a02579651079fe6d" class="ng-element el-text-2 empty-line-hack font-S-Arial-n4"
+                        data-id="ea82823ddf6c4e4ca9736906d97f8aed" style="opacity: 1; mix-blend-mode: normal; color: rgb(0, 0, 0); font-size: 20px; font-weight: normal; font-style: normal; text-decoration: none; text-align: center; width: 300px; height: 23px; transform: rotate(0deg) translate(160px, 1413px) rotate(0deg);">
+                        <p>Галина</p>
+                      </div>
+                      <div id="TextElement1316451288e64318a6e697747f2c6023" class="ng-element el-text-2 empty-line-hack font-S-Arial-n4"
+                        data-id="336d7129dc1e48208fcd17a95c70fcd2" style="opacity: 1; mix-blend-mode: normal; color: rgb(0, 0, 0); font-size: 20px; font-weight: normal; font-style: normal; text-decoration: none; text-align: left; width: 300px; height: 139px; transform: rotate(0deg) translate(169px, 1489px) rotate(0deg);">
+                        <p>Неймовірно. Я дуже рекомендую цей сервіс! Хлопці прийшли до моєї роботи і все підготували на місці.
+                          І меньш ніж за 2 тижні продали моє авто. Я отримала суттєво більше, ніж пропонували діллери.</p>
+                      </div>
+                      <div class="el-group" data-id="d34206ecc30449008bd0fda9d7f0091b" style="opacity: 1; mix-blend-mode: normal;"><svg version="1.2" preserveAspectRatio="none" viewBox="0 -1.9881291547958213 79 79" class="ng-element"
+                          style="opacity: 1; mix-blend-mode: normal; fill: rgb(240, 191, 114); width: 32px; height: 32px; transform: rotate(0deg) translate(204px, 1446px) rotate(0deg);"><g>
+                            <polygon
+                              xmlns:default="http://www.w3.org/2000/svg" id="Star_1_" points="39.1,0 50.1,25.9 78.2,28.4 57,46.9 63.3,74.4 39.1,59.9 14.9,74.4 21.3,46.9 0,28.4 28.1,25.9 "
+                              style="fill: rgb(240, 191, 114);"></polygon>
+                          </g></svg><svg version="1.2" preserveAspectRatio="none" viewBox="0 -1.9881291547958213 79 79" class="ng-element"
+                          style="opacity: 1; mix-blend-mode: normal; fill: rgb(240, 191, 114); width: 32px; height: 32px; transform: rotate(0deg) translate(247px, 1446px) rotate(0deg);"><g>
+                            <polygon
+                              xmlns:default="http://www.w3.org/2000/svg" id="Star_1_" points="39.1,0 50.1,25.9 78.2,28.4 57,46.9 63.3,74.4 39.1,59.9 14.9,74.4 21.3,46.9 0,28.4 28.1,25.9 "
+                              style="fill: rgb(240, 191, 114);"></polygon>
+                          </g></svg><svg version="1.2" preserveAspectRatio="none" viewBox="0 -1.9881291547958213 79 79" class="ng-element"
+                          style="opacity: 1; mix-blend-mode: normal; fill: rgb(240, 191, 114); width: 32px; height: 32px; transform: rotate(0deg) translate(289px, 1446px) rotate(0deg);"><g>
+                            <polygon
+                              xmlns:default="http://www.w3.org/2000/svg" id="Star_1_" points="39.1,0 50.1,25.9 78.2,28.4 57,46.9 63.3,74.4 39.1,59.9 14.9,74.4 21.3,46.9 0,28.4 28.1,25.9 "
+                              style="fill: rgb(240, 191, 114);"></polygon>
+                          </g></svg><svg version="1.2" preserveAspectRatio="none" viewBox="0 -1.9881291547958213 79 79" class="ng-element"
+                          style="opacity: 1; mix-blend-mode: normal; fill: rgb(240, 191, 114); width: 32px; height: 32px; transform: rotate(0deg) translate(331px, 1446px) rotate(0deg);"><g>
+                            <polygon
+                              xmlns:default="http://www.w3.org/2000/svg" id="Star_1_" points="39.1,0 50.1,25.9 78.2,28.4 57,46.9 63.3,74.4 39.1,59.9 14.9,74.4 21.3,46.9 0,28.4 28.1,25.9 "
+                              style="fill: rgb(240, 191, 114);"></polygon>
+                          </g></svg><svg version="1.2" preserveAspectRatio="none" viewBox="0 -1.9881291547958213 79 79" class="ng-element"
+                          style="opacity: 1; mix-blend-mode: normal; fill: rgb(240, 191, 114); width: 32px; height: 32px; transform: rotate(0deg) translate(373px, 1446px) rotate(0deg);"><g>
+                            <polygon
+                              xmlns:default="http://www.w3.org/2000/svg" id="Star_1_" points="39.1,0 50.1,25.9 78.2,28.4 57,46.9 63.3,74.4 39.1,59.9 14.9,74.4 21.3,46.9 0,28.4 28.1,25.9 "
+                              style="fill: rgb(240, 191, 114);"></polygon>
+                          </g></svg></div>
+                    </div>
+                    <div class="el-group" data-id="fab9c30739cd4731a1d7f47245fc9457" style="opacity: 1; mix-blend-mode: normal;"><img class="ng-element el-image el-image-no-back" data-id="78096d03b88c40d3af338cd3d57cb757" src="./index_files/02-807bcf.jpg"
+                        style="opacity: 1; mix-blend-mode: normal; border-radius: 0px; width: 190px; height: 190px; transform: rotate(0deg) translate(645px, 1210px) rotate(0deg);"><div
+                        id="TextElement4b22876c8be346e99aa139afd8a939b7" class="ng-element el-text-2 empty-line-hack font-S-Arial-n4"
+                        data-id="e44cba25746246f78491da59810bb71b" style="opacity: 1; mix-blend-mode: normal; color: rgb(0, 0, 0); font-size: 20px; font-weight: normal; font-style: normal; text-decoration: none; text-align: left; width: 363px; height: 162px; transform: rotate(0deg) translate(564px, 1489px) rotate(0deg);">
+                        <p>Два охайних чоловіки прийшли на зустріч біля мого будинку. Спочатку я був досить скептичний. Машина
+                          стояла перед моїм під'їздом більше року і потрібно було її продати. Але вони все ж таки заволоділи
+                          Моєю довірою. А через кілька тижнів забрали машину та перерахували гроші. Гарна робота!</p>
+                      </div>
+                      <div id="TextElement3a5fbe32d19a4e4d98695f449cf397c5" class="ng-element el-text-2 empty-line-hack font-S-Arial-n4"
+                        data-id="75925bca232d4f2b83fb69e73dbb905e" style="opacity: 1; mix-blend-mode: normal; color: rgb(0, 0, 0); font-size: 20px; font-weight: normal; font-style: normal; text-decoration: none; text-align: center; width: 300px; height: 23px; transform: rotate(0deg) translate(596px, 1413px) rotate(0deg);">
+                        <p>Іван</p>
+                      </div>
+                      <div class="el-group" data-id="43ea1631e8ef438ab2ef0cb2642028df" style="opacity: 1; mix-blend-mode: normal;"><svg version="1.2" preserveAspectRatio="none" viewBox="0 -1.9881291547958213 79 79" class="ng-element"
+                          style="opacity: 1; mix-blend-mode: normal; fill: rgb(240, 191, 114); width: 32px; height: 32px; transform: rotate(0deg) translate(640px, 1446px) rotate(0deg);"><g>
+                            <polygon
+                              xmlns:default="http://www.w3.org/2000/svg" id="Star_1_" points="39.1,0 50.1,25.9 78.2,28.4 57,46.9 63.3,74.4 39.1,59.9 14.9,74.4 21.3,46.9 0,28.4 28.1,25.9 "
+                              style="fill: rgb(240, 191, 114);"></polygon>
+                          </g></svg><svg version="1.2" preserveAspectRatio="none" viewBox="0 -1.9881291547958213 79 79" class="ng-element"
+                          style="opacity: 1; mix-blend-mode: normal; fill: rgb(240, 191, 114); width: 32px; height: 32px; transform: rotate(0deg) translate(683px, 1446px) rotate(0deg);"><g>
+                            <polygon
+                              xmlns:default="http://www.w3.org/2000/svg" id="Star_1_" points="39.1,0 50.1,25.9 78.2,28.4 57,46.9 63.3,74.4 39.1,59.9 14.9,74.4 21.3,46.9 0,28.4 28.1,25.9 "
+                              style="fill: rgb(240, 191, 114);"></polygon>
+                          </g></svg><svg version="1.2" preserveAspectRatio="none" viewBox="0 -1.9881291547958213 79 79" class="ng-element"
+                          style="opacity: 1; mix-blend-mode: normal; fill: rgb(240, 191, 114); width: 32px; height: 32px; transform: rotate(0deg) translate(725px, 1446px) rotate(0deg);"><g>
+                            <polygon
+                              xmlns:default="http://www.w3.org/2000/svg" id="Star_1_" points="39.1,0 50.1,25.9 78.2,28.4 57,46.9 63.3,74.4 39.1,59.9 14.9,74.4 21.3,46.9 0,28.4 28.1,25.9 "
+                              style="fill: rgb(240, 191, 114);"></polygon>
+                          </g></svg><svg version="1.2" preserveAspectRatio="none" viewBox="0 -1.9881291547958213 79 79" class="ng-element"
+                          style="opacity: 1; mix-blend-mode: normal; fill: rgb(240, 191, 114); width: 32px; height: 32px; transform: rotate(0deg) translate(767px, 1446px) rotate(0deg);"><g>
+                            <polygon
+                              xmlns:default="http://www.w3.org/2000/svg" id="Star_1_" points="39.1,0 50.1,25.9 78.2,28.4 57,46.9 63.3,74.4 39.1,59.9 14.9,74.4 21.3,46.9 0,28.4 28.1,25.9 "
+                              style="fill: rgb(240, 191, 114);"></polygon>
+                          </g></svg><svg version="1.2" preserveAspectRatio="none" viewBox="0 -1.9881291547958213 79 79" class="ng-element"
+                          style="opacity: 1; mix-blend-mode: normal; fill: rgb(240, 191, 114); width: 32px; height: 32px; transform: rotate(0deg) translate(809px, 1446px) rotate(0deg);"><g>
+                            <polygon
+                              xmlns:default="http://www.w3.org/2000/svg" id="Star_1_" points="39.1,0 50.1,25.9 78.2,28.4 57,46.9 63.3,74.4 39.1,59.9 14.9,74.4 21.3,46.9 0,28.4 28.1,25.9 "
+                              style="fill: rgb(240, 191, 114);"></polygon>
+                          </g></svg></div>
+                    </div>
+                    <div class="el-group" data-id="791826840bae417a83462ed1a0869d64" style="opacity: 1; mix-blend-mode: normal;"><img class="ng-element el-image el-image-no-back" data-id="9cb380384eb04df2884012647f2f03ad" src="./index_files/03-f4b59d.jpg"
+                        style="opacity: 1; mix-blend-mode: normal; border-radius: 0px; width: 191px; height: 191px; transform: rotate(0deg) translate(1075px, 1209px) rotate(0deg);"><div
+                        id="TextElement5d213bac6f524b4593dd3600d5d8ad4d" class="ng-element el-text-2 empty-line-hack font-S-Arial-n4"
+                        data-id="3cf5abad179042548ffd5d3058a30c8d" style="opacity: 1; mix-blend-mode: normal; color: rgb(0, 0, 0); font-size: 20px; font-weight: normal; font-style: normal; text-decoration: none; text-align: left; width: 351px; height: 116px; transform: rotate(0deg) translate(1009px, 1490px) rotate(0deg);">
+                        <p>Чудовий сервіс! Вони зробили все що потрібно. Я користувався машиною доки вони не знайшли покупця.
+                          Ось так і повинні працювати сучасні продажі! 5 зірочок від мене! Повернусь ще з наступним авто.</p>
+                      </div>
+                      <div id="TextElemente40529f68f0044708b1b2cb1dc52daab" class="ng-element el-text-2 empty-line-hack font-S-Arial-n4"
+                        data-id="553d24b5b6a94cbba4a3e9b81d578e68" style="opacity: 1; mix-blend-mode: normal; color: rgb(0, 0, 0); font-size: 20px; font-weight: normal; font-style: normal; text-decoration: none; text-align: center; width: 300px; height: 23px; transform: rotate(0deg) translate(1023px, 1412px) rotate(0deg);">
+                        <p>Степан</p>
+                      </div>
+                      <div class="el-group" data-id="1a0a1a5926d640e48f0f45b896214698" style="opacity: 1; mix-blend-mode: normal;"><svg version="1.2" preserveAspectRatio="none" viewBox="0 -1.9881291547958213 79 79" class="ng-element"
+                          style="opacity: 1; mix-blend-mode: normal; fill: rgb(240, 191, 114); width: 32px; height: 32px; transform: rotate(0deg) translate(1071px, 1445px) rotate(0deg);"><g>
+                            <polygon
+                              xmlns:default="http://www.w3.org/2000/svg" id="Star_1_" points="39.1,0 50.1,25.9 78.2,28.4 57,46.9 63.3,74.4 39.1,59.9 14.9,74.4 21.3,46.9 0,28.4 28.1,25.9 "
+                              style="fill: rgb(240, 191, 114);"></polygon>
+                          </g></svg><svg version="1.2" preserveAspectRatio="none" viewBox="0 -1.9881291547958213 79 79" class="ng-element"
+                          style="opacity: 1; mix-blend-mode: normal; fill: rgb(240, 191, 114); width: 32px; height: 32px; transform: rotate(0deg) translate(1114px, 1445px) rotate(0deg);"><g>
+                            <polygon
+                              xmlns:default="http://www.w3.org/2000/svg" id="Star_1_" points="39.1,0 50.1,25.9 78.2,28.4 57,46.9 63.3,74.4 39.1,59.9 14.9,74.4 21.3,46.9 0,28.4 28.1,25.9 "
+                              style="fill: rgb(240, 191, 114);"></polygon>
+                          </g></svg><svg version="1.2" preserveAspectRatio="none" viewBox="0 -1.9881291547958213 79 79" class="ng-element"
+                          style="opacity: 1; mix-blend-mode: normal; fill: rgb(240, 191, 114); width: 32px; height: 32px; transform: rotate(0deg) translate(1156px, 1445px) rotate(0deg);"><g>
+                            <polygon
+                              xmlns:default="http://www.w3.org/2000/svg" id="Star_1_" points="39.1,0 50.1,25.9 78.2,28.4 57,46.9 63.3,74.4 39.1,59.9 14.9,74.4 21.3,46.9 0,28.4 28.1,25.9 "
+                              style="fill: rgb(240, 191, 114);"></polygon>
+                          </g></svg><svg version="1.2" preserveAspectRatio="none" viewBox="0 -1.9881291547958213 79 79" class="ng-element"
+                          style="opacity: 1; mix-blend-mode: normal; fill: rgb(240, 191, 114); width: 32px; height: 32px; transform: rotate(0deg) translate(1198px, 1445px) rotate(0deg);"><g>
+                            <polygon
+                              xmlns:default="http://www.w3.org/2000/svg" id="Star_1_" points="39.1,0 50.1,25.9 78.2,28.4 57,46.9 63.3,74.4 39.1,59.9 14.9,74.4 21.3,46.9 0,28.4 28.1,25.9 "
+                              style="fill: rgb(240, 191, 114);"></polygon>
+                          </g></svg><svg version="1.2" preserveAspectRatio="none" viewBox="0 -1.9881291547958213 79 79" class="ng-element"
+                          style="opacity: 1; mix-blend-mode: normal; fill: rgb(240, 191, 114); width: 32px; height: 32px; transform: rotate(0deg) translate(1240px, 1445px) rotate(0deg);"><g>
+                            <polygon
+                              xmlns:default="http://www.w3.org/2000/svg" id="Star_1_" points="39.1,0 50.1,25.9 78.2,28.4 57,46.9 63.3,74.4 39.1,59.9 14.9,74.4 21.3,46.9 0,28.4 28.1,25.9 "
+                              style="fill: rgb(240, 191, 114);"></polygon>
+                          </g></svg></div>
+                    </div>
+                    <div id="TextElement4f28a9d3ff9d4b8489e00f4e83963b75" class="ng-element el-text-2 empty-line-hack font-S-Arial-n4"
+                      data-id="ab35d21f2c5740aca65cafbb24422bfd" style="opacity: 1; mix-blend-mode: normal; color: rgb(0, 0, 0); font-size: 48px; font-weight: normal; font-style: normal; text-decoration: none; text-align: center; width: 826px; height: 55px; transform: rotate(0deg) translate(347px, 1129px) rotate(0deg);">
+                      <p>Що кажуть наші 3,000+ клієнтів?</p>
+                    </div>
+                  </div><img class="ng-element el-image el-image-no-back" data-id="d416531ad5014c66ac17021e66d1ba67" src="./index_files/490130-46845288-47a732.jpg"
+                    style="opacity: 1; mix-blend-mode: normal; border-radius: 0px; height: auto; transform: rotate(0deg) translate(-7px, -72px) rotate(0deg); padding-top: 100px"><div
+                    class="el-group" data-id="8d5a5eacb0984aa9a681a4aad806469e" style="opacity: 1; mix-blend-mode: normal; filter: drop-shadow(rgba(0, 0, 0, 0.2) 0px 1px 1.16667px);">
+                    <div
+                      class="ng-element el-box text-editor-light" data-id="ac0a8beb2e14411993851332b5f50c40" style="opacity: 1; mix-blend-mode: normal; padding: 0px; border-width: 0px; border-radius: 0px; border-color: rgb(235, 235, 235); border-style: solid; background-color: rgb(176, 176, 176); background-image: none; background-size: cover; background-repeat: no-repeat; background-position: center center; width: 251px; height: 178px; transform: rotate(0deg) translate(149px, 457px) rotate(0deg);">
+                      <p id="Boxd0fcf6b849c24d2a816aa0d652ed0a54" data-id="ac0a8beb2e14411993851332b5f50c40" style="color: rgb(0, 0, 0); font-size: 14px; text-align: center; font-weight: normal; font-style: normal; font-family: Arial; text-decoration: none;"></p>
+                    </div>
+                    <div class="ng-element el-box text-editor-light" data-id="528894cb34294e27b6c1dd3237a6ad65" style="opacity: 1; mix-blend-mode: normal; padding: 0px; border-width: 0px; border-radius: 0px; border-color: rgb(235, 235, 235); border-style: solid; background-color: rgb(184, 184, 184); background-image: none; background-size: cover; background-repeat: no-repeat; background-position: center center; width: 261px; height: 178px; transform: rotate(0deg) translate(1040px, 457px) rotate(0deg);">
+                      <p id="Box82447835edbf467aa6ad26715a5a21b2" data-id="528894cb34294e27b6c1dd3237a6ad65" style="color: rgb(0, 0, 0); font-size: 14px; text-align: center; font-weight: normal; font-style: normal; font-family: Arial; text-decoration: none;"><br></p>
+                    </div>
+                    <div class="ng-element el-box text-editor-light" data-id="064f5c78eaed4a0dbcb11a2c06724c22" style="opacity: 1; mix-blend-mode: normal; padding: 0px; border-width: 1px; border-radius: 0px; border-color: rgb(138, 138, 138); border-style: solid; background-color: rgb(255, 255, 255); background-image: none; background-size: cover; background-repeat: no-repeat; background-position: center center; width: 261px; height: 396px; transform: rotate(0deg) translate(1040px, 635px) rotate(0deg);">
+                      <p id="Boxdb12a8d607604282a36167c116bfebb5" data-id="064f5c78eaed4a0dbcb11a2c06724c22" style="color: rgb(0, 0, 0); font-size: 14px; text-align: center; font-weight: normal; font-style: normal; font-family: Arial; text-decoration: none;"><br></p>
+                    </div>
+                    <div class="ng-element el-box text-editor-light" data-id="4837a59c4bb641dd92fac787251ebc84" style="opacity: 1; mix-blend-mode: normal; padding: 0px; border-width: 0px; border-radius: 0px; border-color: rgb(235, 235, 235); border-style: solid; background-color: transparent; background-image: linear-gradient(rgb(148, 210, 255) 1%, rgb(98, 162, 222) 101%); background-size: cover; background-repeat: no-repeat; background-position: center center; box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 2px 0px; width: 393px; height: 610px; transform: rotate(0deg) translate(651px, 439px) rotate(0deg);">
+                      <p id="Boxbb64528aaed4402fa19b53ef9bacbe51" data-id="4837a59c4bb641dd92fac787251ebc84" style="color: rgb(0, 0, 0); font-size: 14px; text-align: center; font-weight: normal; font-style: normal; font-family: Arial; text-decoration: none;"><br></p>
+                    </div>
+                    <div class="ng-element el-box text-editor-light" data-id="9753fa8c32b8428897f430c4e555364b" style="opacity: 1; mix-blend-mode: normal; padding: 0px; border-width: 0px; border-radius: 0px; border-color: rgb(235, 235, 235); border-style: solid; background-color: rgb(199, 199, 199); background-image: none; background-size: cover; background-repeat: no-repeat; background-position: center center; width: 252px; height: 181px; transform: rotate(0deg) translate(400px, 457px) rotate(0deg);">
+                      <p id="Box205e16508fc141a2ae25d44fbd7f9ca6" data-id="9753fa8c32b8428897f430c4e555364b" style="color: rgb(0, 0, 0); font-size: 14px; text-align: center; font-weight: normal; font-style: normal; font-family: Arial; text-decoration: none;"></p>
+                    </div>
+                    <div class="ng-element el-box text-editor-light" data-id="7b15696c2be641dd95522a7afd524a1e" style="opacity: 1; mix-blend-mode: normal; padding: 0px; border-width: 1px; border-radius: 0px; border-color: rgb(138, 138, 138); border-style: solid; background-color: rgb(255, 255, 255); background-image: none; background-size: cover; background-repeat: no-repeat; background-position: center center; width: 252px; height: 396px; transform: rotate(0deg) translate(149px, 635px) rotate(0deg);">
+                      <p id="Box27fa947e11634c30acb247ded4f84843" data-id="7b15696c2be641dd95522a7afd524a1e" style="color: rgb(0, 0, 0); font-size: 14px; text-align: center; font-weight: normal; font-style: normal; font-family: Arial; text-decoration: none;"></p>
+                    </div>
+                    <div class="ng-element el-box text-editor-light" data-id="93e83f096ba24a3ba76bebe4a5bea07a" style="opacity: 1; mix-blend-mode: normal; padding: 0px; border-width: 1px; border-radius: 0px; border-color: rgb(138, 138, 138); border-style: solid; background-color: rgb(255, 255, 255); background-image: none; background-size: cover; background-repeat: no-repeat; background-position: center center; width: 252px; height: 396px; transform: rotate(0deg) translate(400px, 635px) rotate(0deg);">
+                      <p id="Box109a3e72b21b4e2a8fe6993f82612dd1" data-id="93e83f096ba24a3ba76bebe4a5bea07a" style="color: rgb(0, 0, 0); font-size: 14px; text-align: center; font-weight: normal; font-style: normal; font-family: Arial; text-decoration: none;"></p>
+                    </div>
+                    <div id="TextElement43d9ae177c61467383eb6fda9b57e731" class="ng-element el-text-2 empty-line-hack line-height-fix font-S-Arial-n4"
+                      data-id="6c60e0e5cc594214a68680c18ef55be0" style="opacity: 1; mix-blend-mode: normal; line-height: 115%; color: transparent; font-size: 48px; font-weight: normal; font-style: normal; text-decoration: none; text-align: left; width: 131px; height: 55px; transform: rotate(0deg) translate(213px, 506px) rotate(0deg);">
+                      <p><span class="wysiwyg-font-type-tahoma wysiwyg-align-Center" style="color: rgb(255, 255, 255);">87%</span></p>
+                    </div>
+                    <div id="TextElementd454e4477c454c91ad670a3332c8dae4" class="ng-element el-text-2 empty-line-hack line-height-fix font-S-Arial-n4"
+                      data-id="1dbfc478d55141c7bbf4f82efe8f9367" style="opacity: 1; mix-blend-mode: normal; line-height: 115%; color: transparent; font-size: 48px; font-weight: normal; font-style: normal; text-decoration: none; text-align: left; width: 132px; height: 55px; transform: rotate(0deg) translate(464px, 506px) rotate(0deg);">
+                      <p><span class="wysiwyg-font-type-tahoma wysiwyg-align-Center" style="color: rgb(255, 255, 255);">90%</span></p>
+                    </div>
+                    <div id="TextElementdafe774ac1db4153a0cd08b6ba0bb378" class="ng-element el-text-2 empty-line-hack line-height-fix font-S-Arial-n4"
+                      data-id="5c449218b30e40548dbf51ce6246b7b0" style="opacity: 1; mix-blend-mode: normal; line-height: 115%; color: rgb(0, 0, 0); font-size: 16px; font-weight: normal; font-style: normal; text-decoration: none; text-align: left; width: 174px; height: 18px; transform: rotate(0deg) translate(770px, 519px) rotate(0deg);">
+                      <p><span class="wysiwyg-font-type-tahoma wysiwyg-align-Center" style="font-size: 60px;">107%</span></p>
+                    </div>
+                    <div id="TextElementa0ea8a69566042f48d76d37341675419" class="ng-element el-text-2 empty-line-hack line-height-fix font-S-Arial-n4"
+                      data-id="fb20571935674549971b4d7c5861d282" style="opacity: 1; mix-blend-mode: normal; line-height: 115%; color: transparent; font-size: 48px; font-weight: normal; font-style: normal; text-decoration: none; text-align: left; width: 131px; height: 55px; transform: rotate(0deg) translate(1108px, 506px) rotate(0deg);">
+                      <p><span class="wysiwyg-font-type-tahoma wysiwyg-align-Center" style="color: rgb(255, 255, 255);">100%</span></p>
+                    </div>
+                    <div id="TextElement1118b704ee0d4eecbcd7ad33a1236150" class="ng-element el-text-2 empty-line-hack line-height-fix font-S-Arial-n4"
+                      data-id="a99c90c9a84744a6a7ab4839be7f36f6" style="opacity: 1; mix-blend-mode: normal; line-height: 115%; color: transparent; font-size: 16px; font-weight: normal; font-style: normal; text-decoration: none; text-align: left; width: 201px; height: 18px; transform: rotate(0deg) translate(173px, 474px) rotate(0deg);">
+                      <p><span class="wysiwyg-font-type-tahoma wysiwyg-align-Center" style="color: rgb(255, 255, 255);">Сервіси
+                          "Купимо вашу машину"</span></p>
+                    </div>
+                    <div id="TextElementf3317d8303e74bcab3d5ca0456cc5b14" class="ng-element el-text-2 empty-line-hack line-height-fix font-S-Arial-n4"
+                      data-id="e33b6fdb1f3f4fd1bdc006562efd150a" style="opacity: 1; mix-blend-mode: normal; line-height: 115%; color: transparent; font-size: 16px; font-weight: normal; font-style: normal; text-decoration: none; text-align: left; width: 214px; height: 18px; transform: rotate(0deg) translate(421px, 470px) rotate(0deg);">
+                      <p><span class="wysiwyg-font-type-tahoma wysiwyg-align-Center" style="color: rgb(255, 255, 255);">Продаж
+                          діллерам</span></p>
+                    </div>
+                    <div id="TextElementba2a3a59b7f94fc3a91e96b06e020b37" class="ng-element el-text-2 empty-line-hack line-height-fix font-S-Arial-n4"
+                      data-id="db48c2e13d4d4dcc89302349e2d1e08f" style="opacity: 1; mix-blend-mode: normal; line-height: 115%; color: transparent; font-size: 16px; font-weight: normal; font-style: normal; text-decoration: none; text-align: left; width: 135px; height: 18px; transform: rotate(0deg) translate(1106px, 474px) rotate(0deg);">
+                      <p><span class="wysiwyg-font-type-tahoma wysiwyg-align-Center" style="color: rgb(255, 255, 255);">Самостійний
+                          продаж</span></p>
+                    </div>
+                    <div id="TextElement606769fcea3c4321b3ca213ac7b68f37" class="ng-element el-text-2 empty-line-hack line-height-fix font-S-Arial-n4"
+                      data-id="aec4bd7e20ae4152ac00610113b69eb2" style="opacity: 1; mix-blend-mode: normal; line-height: 115%; color: rgb(0, 0, 0); font-size: 20px; font-weight: bold; font-style: normal; text-decoration: none; text-align: left; width: 183px; height: 22px; transform: rotate(0deg) translate(759px, 463px) rotate(0deg);">
+                      <p><span class="wysiwyg-font-type-tahoma wysiwyg-align-Center">Sell Your Car</span></p>
+                    </div>
+                    <div class="ng-element el-box text-editor-light" data-id="5a018a8d37534e11aa658fa9f597e38e" style="opacity: 1; mix-blend-mode: normal; padding: 0px; border-width: 0px; border-radius: 0px; border-color: rgb(235, 235, 235); border-style: solid; background-color: rgb(138, 138, 138); background-image: none; background-size: cover; background-repeat: no-repeat; background-position: center center; width: 199px; height: 36px; transform: rotate(0deg) translate(1070px, 960px) rotate(0deg);">
+                      <p id="Box3755458d246a4eacad7363efca85d761" data-id="5a018a8d37534e11aa658fa9f597e38e" style="color: rgb(0, 0, 0); font-size: 14px; text-align: center; font-weight: normal; font-style: normal; font-family: Arial; text-decoration: none;"></p>
+                    </div>
+                    <div id="TextElement77ae8e4dee8e4f02adc0884392f23a6f" class="ng-element el-text-2 empty-line-hack line-height-fix font-S-Arial-n4"
+                      data-id="cfcc8bef51a84d73ac4c582fd6d06d37" style="opacity: 1; mix-blend-mode: normal; line-height: 115%; color: transparent; font-size: 16px; font-weight: normal; font-style: normal; text-decoration: none; text-align: left; width: 199px; height: 18px; transform: rotate(0deg) translate(1070px, 966px) rotate(0deg);">
+                      <p><span class="wysiwyg-font-type-tahoma wysiwyg-align-Center  wysiwyg-font-size-16 wysiwyg-color-ffffff"
+                          style="font-size: 16px; color: rgb(255, 255, 255);">Продати деінде</span></p>
+                    </div>
+                    <div class="ng-element el-box text-editor-light" data-id="b40af59ee7194f7e9f96258de2117d2b" style="opacity: 1; mix-blend-mode: normal; padding: 0px; border-width: 0px; border-radius: 0px; border-color: rgb(235, 235, 235); border-style: solid; background-color: rgb(138, 138, 138); background-image: none; background-size: cover; background-repeat: no-repeat; background-position: center center; width: 199px; height: 36px; transform: rotate(0deg) translate(426px, 960px) rotate(0deg);">
+                      <p id="Box43ce3bcd306f492dace8483760830541" data-id="b40af59ee7194f7e9f96258de2117d2b" style="color: rgb(0, 0, 0); font-size: 14px; text-align: center; font-weight: normal; font-style: normal; font-family: Arial; text-decoration: none;"><br></p>
+                    </div>
+                    <div id="TextElementa93ad8891c1d4e6ca7a1e0b18e97e59b" class="ng-element el-text-2 empty-line-hack line-height-fix font-S-Arial-n4"
+                      data-id="6a15183b5c444286b0bb74026268c3b0" style="opacity: 1; mix-blend-mode: normal; line-height: 115%; color: transparent; font-size: 16px; font-weight: normal; font-style: normal; text-decoration: none; text-align: left; width: 199px; height: 18px; transform: rotate(0deg) translate(426px, 966px) rotate(0deg);">
+                      <p><span class="wysiwyg-font-type-tahoma wysiwyg-align-Center  wysiwyg-font-size-16 wysiwyg-color-ffffff"
+                          style="font-size: 16px; color: rgb(255, 255, 255);">Продати деінде</span></p>
+                    </div>
+                    <div class="ng-element el-box text-editor-light" data-id="a978e2d7adaa45e4869ec275782a024d" style="opacity: 1; mix-blend-mode: normal; padding: 0px; border-width: 0px; border-radius: 0px; border-color: rgb(235, 235, 235); border-style: solid; background-color: transparent; background-image: linear-gradient(90deg, rgb(255, 94, 58) 2%, rgb(255, 43, 103) 102%); background-size: cover; background-repeat: no-repeat; background-position: center center; width: 266px; height: 57px; transform: rotate(0deg) translate(720px, 952px) rotate(0deg);">
+                      <p id="Box5682604ca6834e4c92c41a7a13b93694" data-id="a978e2d7adaa45e4869ec275782a024d" style="color: rgb(0, 0, 0); font-size: 14px; text-align: center; font-weight: normal; font-style: normal; font-family: Arial; text-decoration: none;"></p>
+                    </div>
+                    <div id="TextElement0dd3eefc86364e50a2f0a91e5604c9de" class="ng-element el-text-2 empty-line-hack line-height-fix font-S-Arial-n4"
+                      data-id="e9b76d1ee262454483579965445f187a" style="opacity: 1; mix-blend-mode: normal; line-height: 115%; color: transparent; font-size: 32px; font-weight: normal; font-style: normal; text-decoration: none; text-align: left; width: 173px; height: 36px; transform: rotate(0deg) translate(765px, 960px) rotate(0deg);">
+                      <p><span class="wysiwyg-font-type-tahoma wysiwyg-align-Center  wysiwyg-font-size-16 wysiwyg-color-ffffff"
+                          style="color: rgb(255, 255, 255);">Зв'яжіться зі мною</span></p>
+                    </div><svg version="1.2" preserveAspectRatio="none" viewBox="-2.4989999999999988 0 49 49" class="ng-element"
+                      style="opacity: 1; mix-blend-mode: normal; fill: rgb(0, 0, 0); width: 38px; height: 38px; transform: rotate(0deg) translate(157px, 725px) rotate(0deg);"><g>
+                        <path
+                          xmlns:default="http://www.w3.org/2000/svg" d="M35,0H43c0.6,0,1,0.4,1,1v29c0,0.6-0.5,1-1,1H35c-0.6,0-1-0.4-1-1V1C34,0.4,34.5,0,35,0z M42,2h-6v27h6V2z M18.2,2  C18.2,2,18.2,2,18.2,2c0.7,0,1.4,0,2.1,0c2.7,0.1,5.9,0.6,8.2,0.9c1.1,0.2,2.1,0.3,2.7,0.3c0.5,0,0.9,0.5,0.9,1v23.7  c0,0.4-0.3,0.8-0.6,0.9l-0.5,0.2c-2.3,0.8-7,2.6-9.4,5.2c-2.6,2.7-3.8,6.4-3.8,10.8c-0.1,1.4-0.9,4-3.6,4c-0.5,0-1.1-0.1-1.8-0.3  c-0.1,0-0.3-0.1-0.4-0.2c-1.1-1.1-4.7-7.6-1.3-17.5H5c0,0,0,0,0,0c-0.4,0-3.4-0.1-4.6-3.9c-0.2-0.5-1-2.6,0.8-5.2  c-0.5-0.9-1.3-2.8-0.4-4.8c0.1-0.2,0.5-1.4,1.3-2.2c-0.5-1.7-0.4-4.5,2-6.5c0.1-1.2,0.6-4,3-5C7.4,3.4,11.6,2,18.2,2z M30,5.1  c-0.5-0.1-1.2-0.2-1.9-0.3c-2.3-0.3-5.4-0.7-8-0.9C12.7,3.7,7.9,5.3,7.8,5.3C6.1,6,6.1,8.9,6.1,8.9c0,0.3-0.2,0.6-0.4,0.8  c-2.8,2-1.5,5-1.5,5.2c0.2,0.5,0,1-0.5,1.3c-0.4,0.2-0.9,1.1-1.1,1.6c-0.8,1.8,0.5,3.5,0.5,3.5c0.3,0.4,0.3,0.9,0,1.3  c-1.7,2-1,3.6-1,3.7c0,0,0,0.1,0.1,0.1C3,28.9,4.8,29,5,29h7.2c0.3,0,0.6,0.2,0.8,0.4c0.2,0.3,0.2,0.6,0.1,0.9  c-3.5,9.1-0.7,15.3,0.2,16.6c0.3,0.1,0.6,0.1,0.8,0.1c1.4,0,1.5-1.8,1.5-2c0-4.9,1.4-9,4.3-12.1c2.7-2.9,7.5-4.7,10-5.6V5.1z M39,4  c0.6,0,1,0.5,1,1c0,0.6-0.4,1-1,1s-1-0.5-1-1C38,4.5,38.5,4,39,4z"
+                          style="fill: rgb(0, 0, 0);"></path>
+                      </g></svg><svg version="1.2" preserveAspectRatio="none" viewBox="-2.4989999999999988 0 49 49" class="ng-element"
+                      style="opacity: 1; mix-blend-mode: normal; fill: rgb(0, 0, 0); width: 38px; height: 38px; transform: rotate(0deg) translate(159px, 658px) rotate(0deg);"><g>
+                        <path
+                          xmlns:default="http://www.w3.org/2000/svg" d="M9,49H1c-0.6,0-1-0.4-1-1V19c0-0.6,0.5-1,1-1H9c0.6,0,1,0.5,1,1v29C10,48.6,9.5,49,9,49z M2,47h6V20H2V47z M25.8,47  C25.8,47,25.8,47,25.8,47c-0.7,0-1.4,0-2.1,0c-2.7-0.1-5.9-0.6-8.2-0.9c-1.1-0.2-2.1-0.3-2.7-0.3c-0.5,0-0.9-0.5-0.9-1V21.1  c0-0.4,0.3-0.8,0.6-0.9l0.5-0.2c2.3-0.8,7-2.6,9.4-5.2c2.6-2.7,3.8-6.4,3.8-10.8c0.1-1.4,0.9-4,3.6-4c0.5,0,1.1,0.1,1.8,0.3  c0.1,0,0.3,0.1,0.4,0.2c1.1,1.1,4.7,7.6,1.3,17.5H39c0,0,0,0,0,0c0.4,0,3.4,0.1,4.6,3.9c0.2,0.5,1,2.6-0.8,5.2  c0.5,0.9,1.3,2.8,0.4,4.8c-0.1,0.2-0.5,1.4-1.3,2.2c0.5,1.7,0.4,4.5-2,6.5c-0.1,1.2-0.6,4-3,5C36.6,45.7,32.4,47,25.8,47z M14,43.9  c0.5,0.1,1.2,0.2,1.9,0.3c2.3,0.3,5.4,0.7,8,0.9c7.4,0.3,12.3-1.3,12.3-1.3c1.7-0.7,1.7-3.6,1.7-3.6c0-0.3,0.2-0.6,0.4-0.8  c2.8-2,1.5-5,1.5-5.2c-0.2-0.5,0-1,0.5-1.3c0.4-0.2,0.9-1.1,1.1-1.6c0.8-1.8-0.5-3.5-0.5-3.5c-0.3-0.4-0.3-0.9,0-1.3  c1.7-2,1-3.6,1-3.7c0,0,0-0.1-0.1-0.1C41,20.1,39.2,20,39.1,20h-7.2c-0.3,0-0.6-0.2-0.8-0.4c-0.2-0.3-0.2-0.6-0.1-0.9  c3.5-9.1,0.7-15.3-0.2-16.6C30.4,2,30.1,2,29.9,2c-1.4,0-1.5,1.8-1.5,2c0,4.9-1.4,9-4.3,12.1c-2.7,2.9-7.5,4.7-10,5.6V43.9z M5,45  c-0.6,0-1-0.4-1-1c0-0.6,0.5-1,1-1s1,0.5,1,1C6,44.6,5.5,45,5,45z"
+                          style="fill: rgb(0, 0, 0);"></path>
+                      </g></svg><svg version="1.2" preserveAspectRatio="none" viewBox="-2.4989999999999988 0 49 49" class="ng-element"
+                      style="opacity: 1; mix-blend-mode: normal; fill: rgb(0, 0, 0); width: 38px; height: 38px; transform: rotate(0deg) translate(1062px, 658px) rotate(0deg);"><g>
+                        <path
+                          xmlns:default="http://www.w3.org/2000/svg" d="M9,49H1c-0.6,0-1-0.4-1-1V19c0-0.6,0.5-1,1-1H9c0.6,0,1,0.5,1,1v29C10,48.6,9.5,49,9,49z M2,47h6V20H2V47z M25.8,47  C25.8,47,25.8,47,25.8,47c-0.7,0-1.4,0-2.1,0c-2.7-0.1-5.9-0.6-8.2-0.9c-1.1-0.2-2.1-0.3-2.7-0.3c-0.5,0-0.9-0.5-0.9-1V21.1  c0-0.4,0.3-0.8,0.6-0.9l0.5-0.2c2.3-0.8,7-2.6,9.4-5.2c2.6-2.7,3.8-6.4,3.8-10.8c0.1-1.4,0.9-4,3.6-4c0.5,0,1.1,0.1,1.8,0.3  c0.1,0,0.3,0.1,0.4,0.2c1.1,1.1,4.7,7.6,1.3,17.5H39c0,0,0,0,0,0c0.4,0,3.4,0.1,4.6,3.9c0.2,0.5,1,2.6-0.8,5.2  c0.5,0.9,1.3,2.8,0.4,4.8c-0.1,0.2-0.5,1.4-1.3,2.2c0.5,1.7,0.4,4.5-2,6.5c-0.1,1.2-0.6,4-3,5C36.6,45.7,32.4,47,25.8,47z M14,43.9  c0.5,0.1,1.2,0.2,1.9,0.3c2.3,0.3,5.4,0.7,8,0.9c7.4,0.3,12.3-1.3,12.3-1.3c1.7-0.7,1.7-3.6,1.7-3.6c0-0.3,0.2-0.6,0.4-0.8  c2.8-2,1.5-5,1.5-5.2c-0.2-0.5,0-1,0.5-1.3c0.4-0.2,0.9-1.1,1.1-1.6c0.8-1.8-0.5-3.5-0.5-3.5c-0.3-0.4-0.3-0.9,0-1.3  c1.7-2,1-3.6,1-3.7c0,0,0-0.1-0.1-0.1C41,20.1,39.2,20,39.1,20h-7.2c-0.3,0-0.6-0.2-0.8-0.4c-0.2-0.3-0.2-0.6-0.1-0.9  c3.5-9.1,0.7-15.3-0.2-16.6C30.4,2,30.1,2,29.9,2c-1.4,0-1.5,1.8-1.5,2c0,4.9-1.4,9-4.3,12.1c-2.7,2.9-7.5,4.7-10,5.6V43.9z M5,45  c-0.6,0-1-0.4-1-1c0-0.6,0.5-1,1-1s1,0.5,1,1C6,44.6,5.5,45,5,45z"
+                          style="fill: rgb(0, 0, 0);"></path>
+                      </g></svg><svg version="1.2" preserveAspectRatio="none" viewBox="-2.4989999999999988 0 49 49" class="ng-element"
+                      style="opacity: 1; mix-blend-mode: normal; fill: rgb(0, 0, 0); width: 38px; height: 38px; transform: rotate(0deg) translate(683px, 659px) rotate(0deg);"><g>
+                        <path
+                          xmlns:default="http://www.w3.org/2000/svg" d="M9,49H1c-0.6,0-1-0.4-1-1V19c0-0.6,0.5-1,1-1H9c0.6,0,1,0.5,1,1v29C10,48.6,9.5,49,9,49z M2,47h6V20H2V47z M25.8,47  C25.8,47,25.8,47,25.8,47c-0.7,0-1.4,0-2.1,0c-2.7-0.1-5.9-0.6-8.2-0.9c-1.1-0.2-2.1-0.3-2.7-0.3c-0.5,0-0.9-0.5-0.9-1V21.1  c0-0.4,0.3-0.8,0.6-0.9l0.5-0.2c2.3-0.8,7-2.6,9.4-5.2c2.6-2.7,3.8-6.4,3.8-10.8c0.1-1.4,0.9-4,3.6-4c0.5,0,1.1,0.1,1.8,0.3  c0.1,0,0.3,0.1,0.4,0.2c1.1,1.1,4.7,7.6,1.3,17.5H39c0,0,0,0,0,0c0.4,0,3.4,0.1,4.6,3.9c0.2,0.5,1,2.6-0.8,5.2  c0.5,0.9,1.3,2.8,0.4,4.8c-0.1,0.2-0.5,1.4-1.3,2.2c0.5,1.7,0.4,4.5-2,6.5c-0.1,1.2-0.6,4-3,5C36.6,45.7,32.4,47,25.8,47z M14,43.9  c0.5,0.1,1.2,0.2,1.9,0.3c2.3,0.3,5.4,0.7,8,0.9c7.4,0.3,12.3-1.3,12.3-1.3c1.7-0.7,1.7-3.6,1.7-3.6c0-0.3,0.2-0.6,0.4-0.8  c2.8-2,1.5-5,1.5-5.2c-0.2-0.5,0-1,0.5-1.3c0.4-0.2,0.9-1.1,1.1-1.6c0.8-1.8-0.5-3.5-0.5-3.5c-0.3-0.4-0.3-0.9,0-1.3  c1.7-2,1-3.6,1-3.7c0,0,0-0.1-0.1-0.1C41,20.1,39.2,20,39.1,20h-7.2c-0.3,0-0.6-0.2-0.8-0.4c-0.2-0.3-0.2-0.6-0.1-0.9  c3.5-9.1,0.7-15.3-0.2-16.6C30.4,2,30.1,2,29.9,2c-1.4,0-1.5,1.8-1.5,2c0,4.9-1.4,9-4.3,12.1c-2.7,2.9-7.5,4.7-10,5.6V43.9z M5,45  c-0.6,0-1-0.4-1-1c0-0.6,0.5-1,1-1s1,0.5,1,1C6,44.6,5.5,45,5,45z"
+                          style="fill: rgb(0, 0, 0);"></path>
+                      </g></svg><div id="TextElement540c75b18c754206b271f5eb2d99c172" class="ng-element el-text-2 empty-line-hack font-S-Arial-n4"
+                      data-id="42288ef882f749328eece72c2d41c3c8" style="opacity: 1; mix-blend-mode: normal; color: rgb(0, 0, 0); font-size: 16px; font-weight: normal; font-style: normal; text-decoration: none; text-align: left; width: 184px; height: 18px; transform: rotate(0deg) translate(206px, 670px) rotate(0deg);">
+                      <p>Гроші в той самий день.</p>
+                    </div>
+                    <div id="TextElementdee87e9ba89342f6962f88824344c56b" class="ng-element el-text-2 empty-line-hack font-S-Arial-n4"
+                      data-id="056ef0c53d7f4a3c8cdad68c09d75fc6" style="opacity: 1; mix-blend-mode: normal; color: rgb(255, 255, 255); font-size: 16px; font-weight: normal; font-style: normal; text-decoration: none; text-align: left; width: 160px; height: 18px; transform: rotate(0deg) translate(199px, 574px) rotate(0deg);">
+                      <p>Порівняно до самостійного продажу</p>
+                    </div>
+                    <div id="TextElementd561e0f818d645b989f80d6bc20df993" class="ng-element el-text-2 empty-line-hack font-S-Arial-n4"
+                      data-id="7450b372531c4dc9bab93bb1b8b0cb45" style="opacity: 1; mix-blend-mode: normal; color: rgb(255, 255, 255); font-size: 16px; font-weight: normal; font-style: normal; text-decoration: none; text-align: center; width: 184px; height: 18px; transform: rotate(0deg) translate(433px, 574px) rotate(0deg);">
+                      <p>Порівняно до самостійного продажу</p>
+                    </div>
+                    <div id="TextElement4c9455b8338a49fb97deab0901724511" class="ng-element el-text-2 empty-line-hack font-S-Arial-n4"
+                      data-id="d6e1cf0f142f4f67a2805babd688a129" style="opacity: 1; mix-blend-mode: normal; color: rgb(0, 0, 0); font-size: 16px; font-weight: normal; font-style: normal; text-decoration: none; text-align: left; width: 184px; height: 18px; transform: rotate(0deg) translate(778px, 576px) rotate(0deg);">
+                      <p>Порівняно до самостійного продажу</p>
+                    </div>
+                    <div id="TextElementfefd1d04343c4145b3eb55266035e913" class="ng-element el-text-2 empty-line-hack font-S-Arial-n4"
+                      data-id="c38204216d2f4b4baa1bb4551e88cef9" style="opacity: 1; mix-blend-mode: normal; color: rgb(255, 255, 255); font-size: 16px; font-weight: normal; font-style: normal; text-decoration: none; text-align: left; width: 184px; height: 18px; transform: rotate(0deg) translate(1099px, 574px) rotate(0deg);">
+                      <p>Порівняно до самостійного продажу</p>
+                    </div>
+                    <div id="TextElement362355aaa7c3401eac48d69c3896eea8" class="ng-element el-text-2 empty-line-hack font-S-Arial-n4"
+                      data-id="72e84eea4a0541058099ab61fbaa5be6" style="opacity: 1; mix-blend-mode: normal; color: rgb(0, 0, 0); font-size: 16px; font-weight: normal; font-style: normal; text-decoration: none; text-align: left; width: 167px; height: 18px; transform: rotate(0deg) translate(206px, 727px) rotate(0deg);">
+                      <p>Дуже дороге задоволення.</p>
+                    </div><svg version="1.2" preserveAspectRatio="none" viewBox="-2.4989999999999988 0 49 49" class="ng-element"
+                      style="opacity: 1; mix-blend-mode: normal; fill: rgb(0, 0, 0); width: 38px; height: 38px; transform: rotate(0deg) translate(412px, 733px) rotate(0deg);"><g>
+                        <path
+                          xmlns:default="http://www.w3.org/2000/svg" d="M35,0H43c0.6,0,1,0.4,1,1v29c0,0.6-0.5,1-1,1H35c-0.6,0-1-0.4-1-1V1C34,0.4,34.5,0,35,0z M42,2h-6v27h6V2z M18.2,2  C18.2,2,18.2,2,18.2,2c0.7,0,1.4,0,2.1,0c2.7,0.1,5.9,0.6,8.2,0.9c1.1,0.2,2.1,0.3,2.7,0.3c0.5,0,0.9,0.5,0.9,1v23.7  c0,0.4-0.3,0.8-0.6,0.9l-0.5,0.2c-2.3,0.8-7,2.6-9.4,5.2c-2.6,2.7-3.8,6.4-3.8,10.8c-0.1,1.4-0.9,4-3.6,4c-0.5,0-1.1-0.1-1.8-0.3  c-0.1,0-0.3-0.1-0.4-0.2c-1.1-1.1-4.7-7.6-1.3-17.5H5c0,0,0,0,0,0c-0.4,0-3.4-0.1-4.6-3.9c-0.2-0.5-1-2.6,0.8-5.2  c-0.5-0.9-1.3-2.8-0.4-4.8c0.1-0.2,0.5-1.4,1.3-2.2c-0.5-1.7-0.4-4.5,2-6.5c0.1-1.2,0.6-4,3-5C7.4,3.4,11.6,2,18.2,2z M30,5.1  c-0.5-0.1-1.2-0.2-1.9-0.3c-2.3-0.3-5.4-0.7-8-0.9C12.7,3.7,7.9,5.3,7.8,5.3C6.1,6,6.1,8.9,6.1,8.9c0,0.3-0.2,0.6-0.4,0.8  c-2.8,2-1.5,5-1.5,5.2c0.2,0.5,0,1-0.5,1.3c-0.4,0.2-0.9,1.1-1.1,1.6c-0.8,1.8,0.5,3.5,0.5,3.5c0.3,0.4,0.3,0.9,0,1.3  c-1.7,2-1,3.6-1,3.7c0,0,0,0.1,0.1,0.1C3,28.9,4.8,29,5,29h7.2c0.3,0,0.6,0.2,0.8,0.4c0.2,0.3,0.2,0.6,0.1,0.9  c-3.5,9.1-0.7,15.3,0.2,16.6c0.3,0.1,0.6,0.1,0.8,0.1c1.4,0,1.5-1.8,1.5-2c0-4.9,1.4-9,4.3-12.1c2.7-2.9,7.5-4.7,10-5.6V5.1z M39,4  c0.6,0,1,0.5,1,1c0,0.6-0.4,1-1,1s-1-0.5-1-1C38,4.5,38.5,4,39,4z"
+                          style="fill: rgb(0, 0, 0);"></path>
+                      </g></svg><svg version="1.2" preserveAspectRatio="none" viewBox="-2.4989999999999988 0 49 49" class="ng-element"
+                      style="opacity: 1; mix-blend-mode: normal; fill: rgb(0, 0, 0); width: 38px; height: 38px; transform: rotate(0deg) translate(413px, 658px) rotate(0deg);"><g>
+                        <path
+                          xmlns:default="http://www.w3.org/2000/svg" d="M9,49H1c-0.6,0-1-0.4-1-1V19c0-0.6,0.5-1,1-1H9c0.6,0,1,0.5,1,1v29C10,48.6,9.5,49,9,49z M2,47h6V20H2V47z M25.8,47  C25.8,47,25.8,47,25.8,47c-0.7,0-1.4,0-2.1,0c-2.7-0.1-5.9-0.6-8.2-0.9c-1.1-0.2-2.1-0.3-2.7-0.3c-0.5,0-0.9-0.5-0.9-1V21.1  c0-0.4,0.3-0.8,0.6-0.9l0.5-0.2c2.3-0.8,7-2.6,9.4-5.2c2.6-2.7,3.8-6.4,3.8-10.8c0.1-1.4,0.9-4,3.6-4c0.5,0,1.1,0.1,1.8,0.3  c0.1,0,0.3,0.1,0.4,0.2c1.1,1.1,4.7,7.6,1.3,17.5H39c0,0,0,0,0,0c0.4,0,3.4,0.1,4.6,3.9c0.2,0.5,1,2.6-0.8,5.2  c0.5,0.9,1.3,2.8,0.4,4.8c-0.1,0.2-0.5,1.4-1.3,2.2c0.5,1.7,0.4,4.5-2,6.5c-0.1,1.2-0.6,4-3,5C36.6,45.7,32.4,47,25.8,47z M14,43.9  c0.5,0.1,1.2,0.2,1.9,0.3c2.3,0.3,5.4,0.7,8,0.9c7.4,0.3,12.3-1.3,12.3-1.3c1.7-0.7,1.7-3.6,1.7-3.6c0-0.3,0.2-0.6,0.4-0.8  c2.8-2,1.5-5,1.5-5.2c-0.2-0.5,0-1,0.5-1.3c0.4-0.2,0.9-1.1,1.1-1.6c0.8-1.8-0.5-3.5-0.5-3.5c-0.3-0.4-0.3-0.9,0-1.3  c1.7-2,1-3.6,1-3.7c0,0,0-0.1-0.1-0.1C41,20.1,39.2,20,39.1,20h-7.2c-0.3,0-0.6-0.2-0.8-0.4c-0.2-0.3-0.2-0.6-0.1-0.9  c3.5-9.1,0.7-15.3-0.2-16.6C30.4,2,30.1,2,29.9,2c-1.4,0-1.5,1.8-1.5,2c0,4.9-1.4,9-4.3,12.1c-2.7,2.9-7.5,4.7-10,5.6V43.9z M5,45  c-0.6,0-1-0.4-1-1c0-0.6,0.5-1,1-1s1,0.5,1,1C6,44.6,5.5,45,5,45z"
+                          style="fill: rgb(0, 0, 0);"></path>
+                      </g></svg><div id="TextElementcc0631fc3fdf4d12baf050d82e9877df" class="ng-element el-text-2 empty-line-hack font-S-Arial-n4"
+                      data-id="5e5e4327c8694d33a936b648e494f985" style="opacity: 1; mix-blend-mode: normal; color: rgb(0, 0, 0); font-size: 16px; font-weight: normal; font-style: normal; text-decoration: none; text-align: left; width: 184px; height: 18px; transform: rotate(0deg) translate(461px, 669px) rotate(0deg);">
+                      <p>Гроші в той самий день.</p>
+                    </div>
+                    <div id="TextElement4b547e55cc4949f889ebc0eabf5aa04b" class="ng-element el-text-2 empty-line-hack font-S-Arial-n4"
+                      data-id="814a532229c24ad18684648ef9cf3ebe" style="opacity: 1; mix-blend-mode: normal; color: rgb(0, 0, 0); font-size: 20px; font-weight: normal; font-style: normal; text-decoration: none; text-align: left; width: 266px; height: 46px; transform: rotate(0deg) translate(740px, 654px) rotate(0deg);">
+                      <p>Найбільший прибуток - кращій за інші методі.</p>
+                    </div><svg version="1.2" preserveAspectRatio="none" viewBox="-2.4989999999999988 0 49 49" class="ng-element"
+                      style="opacity: 1; mix-blend-mode: normal; fill: rgb(0, 0, 0); width: 38px; height: 38px; transform: rotate(0deg) translate(684px, 720px) rotate(0deg);"><g>
+                        <path
+                          xmlns:default="http://www.w3.org/2000/svg" d="M9,49H1c-0.6,0-1-0.4-1-1V19c0-0.6,0.5-1,1-1H9c0.6,0,1,0.5,1,1v29C10,48.6,9.5,49,9,49z M2,47h6V20H2V47z M25.8,47  C25.8,47,25.8,47,25.8,47c-0.7,0-1.4,0-2.1,0c-2.7-0.1-5.9-0.6-8.2-0.9c-1.1-0.2-2.1-0.3-2.7-0.3c-0.5,0-0.9-0.5-0.9-1V21.1  c0-0.4,0.3-0.8,0.6-0.9l0.5-0.2c2.3-0.8,7-2.6,9.4-5.2c2.6-2.7,3.8-6.4,3.8-10.8c0.1-1.4,0.9-4,3.6-4c0.5,0,1.1,0.1,1.8,0.3  c0.1,0,0.3,0.1,0.4,0.2c1.1,1.1,4.7,7.6,1.3,17.5H39c0,0,0,0,0,0c0.4,0,3.4,0.1,4.6,3.9c0.2,0.5,1,2.6-0.8,5.2  c0.5,0.9,1.3,2.8,0.4,4.8c-0.1,0.2-0.5,1.4-1.3,2.2c0.5,1.7,0.4,4.5-2,6.5c-0.1,1.2-0.6,4-3,5C36.6,45.7,32.4,47,25.8,47z M14,43.9  c0.5,0.1,1.2,0.2,1.9,0.3c2.3,0.3,5.4,0.7,8,0.9c7.4,0.3,12.3-1.3,12.3-1.3c1.7-0.7,1.7-3.6,1.7-3.6c0-0.3,0.2-0.6,0.4-0.8  c2.8-2,1.5-5,1.5-5.2c-0.2-0.5,0-1,0.5-1.3c0.4-0.2,0.9-1.1,1.1-1.6c0.8-1.8-0.5-3.5-0.5-3.5c-0.3-0.4-0.3-0.9,0-1.3  c1.7-2,1-3.6,1-3.7c0,0,0-0.1-0.1-0.1C41,20.1,39.2,20,39.1,20h-7.2c-0.3,0-0.6-0.2-0.8-0.4c-0.2-0.3-0.2-0.6-0.1-0.9  c3.5-9.1,0.7-15.3-0.2-16.6C30.4,2,30.1,2,29.9,2c-1.4,0-1.5,1.8-1.5,2c0,4.9-1.4,9-4.3,12.1c-2.7,2.9-7.5,4.7-10,5.6V43.9z M5,45  c-0.6,0-1-0.4-1-1c0-0.6,0.5-1,1-1s1,0.5,1,1C6,44.6,5.5,45,5,45z"
+                          style="fill: rgb(0, 0, 0);"></path>
+                      </g></svg><div id="TextElementf22a91d449bc42c3a6bd6dbc22d5fe69" class="ng-element el-text-2 empty-line-hack font-S-Arial-n4"
+                      data-id="32f2e9070de34d62a3735e68247813b9" style="opacity: 1; mix-blend-mode: normal; color: rgb(0, 0, 0); font-size: 20px; font-weight: normal; font-style: normal; text-decoration: none; text-align: left; width: 266px; height: 46px; transform: rotate(0deg) translate(741px, 718px) rotate(0deg);">
+                      <p>Не потребує зусиль. Ми все зробимо.</p>
+                    </div><svg version="1.2" preserveAspectRatio="none" viewBox="-2.4989999999999988 0 49 49" class="ng-element"
+                      style="opacity: 1; mix-blend-mode: normal; fill: rgb(0, 0, 0); width: 38px; height: 38px; transform: rotate(0deg) translate(684px, 781px) rotate(0deg);"><g>
+                        <path
+                          xmlns:default="http://www.w3.org/2000/svg" d="M9,49H1c-0.6,0-1-0.4-1-1V19c0-0.6,0.5-1,1-1H9c0.6,0,1,0.5,1,1v29C10,48.6,9.5,49,9,49z M2,47h6V20H2V47z M25.8,47  C25.8,47,25.8,47,25.8,47c-0.7,0-1.4,0-2.1,0c-2.7-0.1-5.9-0.6-8.2-0.9c-1.1-0.2-2.1-0.3-2.7-0.3c-0.5,0-0.9-0.5-0.9-1V21.1  c0-0.4,0.3-0.8,0.6-0.9l0.5-0.2c2.3-0.8,7-2.6,9.4-5.2c2.6-2.7,3.8-6.4,3.8-10.8c0.1-1.4,0.9-4,3.6-4c0.5,0,1.1,0.1,1.8,0.3  c0.1,0,0.3,0.1,0.4,0.2c1.1,1.1,4.7,7.6,1.3,17.5H39c0,0,0,0,0,0c0.4,0,3.4,0.1,4.6,3.9c0.2,0.5,1,2.6-0.8,5.2  c0.5,0.9,1.3,2.8,0.4,4.8c-0.1,0.2-0.5,1.4-1.3,2.2c0.5,1.7,0.4,4.5-2,6.5c-0.1,1.2-0.6,4-3,5C36.6,45.7,32.4,47,25.8,47z M14,43.9  c0.5,0.1,1.2,0.2,1.9,0.3c2.3,0.3,5.4,0.7,8,0.9c7.4,0.3,12.3-1.3,12.3-1.3c1.7-0.7,1.7-3.6,1.7-3.6c0-0.3,0.2-0.6,0.4-0.8  c2.8-2,1.5-5,1.5-5.2c-0.2-0.5,0-1,0.5-1.3c0.4-0.2,0.9-1.1,1.1-1.6c0.8-1.8-0.5-3.5-0.5-3.5c-0.3-0.4-0.3-0.9,0-1.3  c1.7-2,1-3.6,1-3.7c0,0,0-0.1-0.1-0.1C41,20.1,39.2,20,39.1,20h-7.2c-0.3,0-0.6-0.2-0.8-0.4c-0.2-0.3-0.2-0.6-0.1-0.9  c3.5-9.1,0.7-15.3-0.2-16.6C30.4,2,30.1,2,29.9,2c-1.4,0-1.5,1.8-1.5,2c0,4.9-1.4,9-4.3,12.1c-2.7,2.9-7.5,4.7-10,5.6V43.9z M5,45  c-0.6,0-1-0.4-1-1c0-0.6,0.5-1,1-1s1,0.5,1,1C6,44.6,5.5,45,5,45z"
+                          style="fill: rgb(0, 0, 0);"></path>
+                      </g></svg><div id="TextElement1c5c4dc8414b46c5832538e7b4c12b3e" class="ng-element el-text-2 empty-line-hack font-S-Arial-n4"
+                      data-id="0a77a03edda1443c84884dfe49bfc426" style="opacity: 1; mix-blend-mode: normal; color: rgb(0, 0, 0); font-size: 20px; font-weight: normal; font-style: normal; text-decoration: none; text-align: left; width: 266px; height: 46px; transform: rotate(0deg) translate(741px, 776px) rotate(0deg);">
+                      <p>Швидко - ми продамо в два рази швидше від самостіного продажу.</p>
+                    </div><svg version="1.2" preserveAspectRatio="none" viewBox="-2.4989999999999988 0 49 49" class="ng-element"
+                      style="opacity: 1; mix-blend-mode: normal; fill: rgb(0, 0, 0); width: 38px; height: 38px; transform: rotate(0deg) translate(684px, 838px) rotate(0deg);"><g>
+                        <path
+                          xmlns:default="http://www.w3.org/2000/svg" d="M9,49H1c-0.6,0-1-0.4-1-1V19c0-0.6,0.5-1,1-1H9c0.6,0,1,0.5,1,1v29C10,48.6,9.5,49,9,49z M2,47h6V20H2V47z M25.8,47  C25.8,47,25.8,47,25.8,47c-0.7,0-1.4,0-2.1,0c-2.7-0.1-5.9-0.6-8.2-0.9c-1.1-0.2-2.1-0.3-2.7-0.3c-0.5,0-0.9-0.5-0.9-1V21.1  c0-0.4,0.3-0.8,0.6-0.9l0.5-0.2c2.3-0.8,7-2.6,9.4-5.2c2.6-2.7,3.8-6.4,3.8-10.8c0.1-1.4,0.9-4,3.6-4c0.5,0,1.1,0.1,1.8,0.3  c0.1,0,0.3,0.1,0.4,0.2c1.1,1.1,4.7,7.6,1.3,17.5H39c0,0,0,0,0,0c0.4,0,3.4,0.1,4.6,3.9c0.2,0.5,1,2.6-0.8,5.2  c0.5,0.9,1.3,2.8,0.4,4.8c-0.1,0.2-0.5,1.4-1.3,2.2c0.5,1.7,0.4,4.5-2,6.5c-0.1,1.2-0.6,4-3,5C36.6,45.7,32.4,47,25.8,47z M14,43.9  c0.5,0.1,1.2,0.2,1.9,0.3c2.3,0.3,5.4,0.7,8,0.9c7.4,0.3,12.3-1.3,12.3-1.3c1.7-0.7,1.7-3.6,1.7-3.6c0-0.3,0.2-0.6,0.4-0.8  c2.8-2,1.5-5,1.5-5.2c-0.2-0.5,0-1,0.5-1.3c0.4-0.2,0.9-1.1,1.1-1.6c0.8-1.8-0.5-3.5-0.5-3.5c-0.3-0.4-0.3-0.9,0-1.3  c1.7-2,1-3.6,1-3.7c0,0,0-0.1-0.1-0.1C41,20.1,39.2,20,39.1,20h-7.2c-0.3,0-0.6-0.2-0.8-0.4c-0.2-0.3-0.2-0.6-0.1-0.9  c3.5-9.1,0.7-15.3-0.2-16.6C30.4,2,30.1,2,29.9,2c-1.4,0-1.5,1.8-1.5,2c0,4.9-1.4,9-4.3,12.1c-2.7,2.9-7.5,4.7-10,5.6V43.9z M5,45  c-0.6,0-1-0.4-1-1c0-0.6,0.5-1,1-1s1,0.5,1,1C6,44.6,5.5,45,5,45z"
+                          style="fill: rgb(0, 0, 0);"></path>
+                      </g></svg><div id="TextElement22a442ec8da84415ade3a231ae703da6" class="ng-element el-text-2 empty-line-hack font-S-Arial-n4"
+                      data-id="0de83690238645c990a634d7012eb00a" style="opacity: 1; mix-blend-mode: normal; color: rgb(0, 0, 0); font-size: 20px; font-weight: normal; font-style: normal; text-decoration: none; text-align: left; width: 266px; height: 69px; transform: rotate(0deg) translate(741px, 833px) rotate(0deg);">
+                      <p>Надійно - ми беремо відповідальність за весь процес.</p>
+                    </div>
+                    <div id="TextElement8f132c42e1de43998892a9a048ad22a3" class="ng-element el-text-2 empty-line-hack font-S-Arial-n4"
+                      data-id="1f1d11bcdd36446791ef4ff267f24760" style="opacity: 1; mix-blend-mode: normal; color: rgb(0, 0, 0); font-size: 16px; font-weight: normal; font-style: normal; text-decoration: none; text-align: left; width: 158px; height: 55px; transform: rotate(0deg) translate(461px, 724px) rotate(0deg);">
+                      <p>Втрачаєте суттєву частку прибутку.</p>
+                    </div><svg version="1.2" preserveAspectRatio="none" viewBox="-2.4989999999999988 0 49 49" class="ng-element"
+                      style="opacity: 1; mix-blend-mode: normal; fill: rgb(0, 0, 0); width: 38px; height: 38px; transform: rotate(0deg) translate(412px, 807px) rotate(0deg);"><g>
+                        <path
+                          xmlns:default="http://www.w3.org/2000/svg" d="M35,0H43c0.6,0,1,0.4,1,1v29c0,0.6-0.5,1-1,1H35c-0.6,0-1-0.4-1-1V1C34,0.4,34.5,0,35,0z M42,2h-6v27h6V2z M18.2,2  C18.2,2,18.2,2,18.2,2c0.7,0,1.4,0,2.1,0c2.7,0.1,5.9,0.6,8.2,0.9c1.1,0.2,2.1,0.3,2.7,0.3c0.5,0,0.9,0.5,0.9,1v23.7  c0,0.4-0.3,0.8-0.6,0.9l-0.5,0.2c-2.3,0.8-7,2.6-9.4,5.2c-2.6,2.7-3.8,6.4-3.8,10.8c-0.1,1.4-0.9,4-3.6,4c-0.5,0-1.1-0.1-1.8-0.3  c-0.1,0-0.3-0.1-0.4-0.2c-1.1-1.1-4.7-7.6-1.3-17.5H5c0,0,0,0,0,0c-0.4,0-3.4-0.1-4.6-3.9c-0.2-0.5-1-2.6,0.8-5.2  c-0.5-0.9-1.3-2.8-0.4-4.8c0.1-0.2,0.5-1.4,1.3-2.2c-0.5-1.7-0.4-4.5,2-6.5c0.1-1.2,0.6-4,3-5C7.4,3.4,11.6,2,18.2,2z M30,5.1  c-0.5-0.1-1.2-0.2-1.9-0.3c-2.3-0.3-5.4-0.7-8-0.9C12.7,3.7,7.9,5.3,7.8,5.3C6.1,6,6.1,8.9,6.1,8.9c0,0.3-0.2,0.6-0.4,0.8  c-2.8,2-1.5,5-1.5,5.2c0.2,0.5,0,1-0.5,1.3c-0.4,0.2-0.9,1.1-1.1,1.6c-0.8,1.8,0.5,3.5,0.5,3.5c0.3,0.4,0.3,0.9,0,1.3  c-1.7,2-1,3.6-1,3.7c0,0,0,0.1,0.1,0.1C3,28.9,4.8,29,5,29h7.2c0.3,0,0.6,0.2,0.8,0.4c0.2,0.3,0.2,0.6,0.1,0.9  c-3.5,9.1-0.7,15.3,0.2,16.6c0.3,0.1,0.6,0.1,0.8,0.1c1.4,0,1.5-1.8,1.5-2c0-4.9,1.4-9,4.3-12.1c2.7-2.9,7.5-4.7,10-5.6V5.1z M39,4  c0.6,0,1,0.5,1,1c0,0.6-0.4,1-1,1s-1-0.5-1-1C38,4.5,38.5,4,39,4z"
+                          style="fill: rgb(0, 0, 0);"></path>
+                      </g></svg><div id="TextElement39c3de7fe94649f8a2da9e280a458bb1" class="ng-element el-text-2 empty-line-hack font-S-Arial-n4"
+                      data-id="23028065c7ea4d28b4736104519200c4" style="opacity: 1; mix-blend-mode: normal; color: rgb(0, 0, 0); font-size: 16px; font-weight: normal; font-style: normal; text-decoration: none; text-align: left; width: 158px; height: 73px; transform: rotate(0deg) translate(461px, 792px) rotate(0deg);">
+                      <p>Щоб знайти гарну ціну, потрібно поспілкуватися з декількома діллерами.</p>
+                    </div><svg version="1.2" preserveAspectRatio="none" viewBox="-2.4989999999999988 0 49 49" class="ng-element"
+                      style="opacity: 1; mix-blend-mode: normal; fill: rgb(0, 0, 0); width: 38px; height: 38px; transform: rotate(0deg) translate(1062px, 716px) rotate(0deg);"><g>
+                        <path
+                          xmlns:default="http://www.w3.org/2000/svg" d="M35,0H43c0.6,0,1,0.4,1,1v29c0,0.6-0.5,1-1,1H35c-0.6,0-1-0.4-1-1V1C34,0.4,34.5,0,35,0z M42,2h-6v27h6V2z M18.2,2  C18.2,2,18.2,2,18.2,2c0.7,0,1.4,0,2.1,0c2.7,0.1,5.9,0.6,8.2,0.9c1.1,0.2,2.1,0.3,2.7,0.3c0.5,0,0.9,0.5,0.9,1v23.7  c0,0.4-0.3,0.8-0.6,0.9l-0.5,0.2c-2.3,0.8-7,2.6-9.4,5.2c-2.6,2.7-3.8,6.4-3.8,10.8c-0.1,1.4-0.9,4-3.6,4c-0.5,0-1.1-0.1-1.8-0.3  c-0.1,0-0.3-0.1-0.4-0.2c-1.1-1.1-4.7-7.6-1.3-17.5H5c0,0,0,0,0,0c-0.4,0-3.4-0.1-4.6-3.9c-0.2-0.5-1-2.6,0.8-5.2  c-0.5-0.9-1.3-2.8-0.4-4.8c0.1-0.2,0.5-1.4,1.3-2.2c-0.5-1.7-0.4-4.5,2-6.5c0.1-1.2,0.6-4,3-5C7.4,3.4,11.6,2,18.2,2z M30,5.1  c-0.5-0.1-1.2-0.2-1.9-0.3c-2.3-0.3-5.4-0.7-8-0.9C12.7,3.7,7.9,5.3,7.8,5.3C6.1,6,6.1,8.9,6.1,8.9c0,0.3-0.2,0.6-0.4,0.8  c-2.8,2-1.5,5-1.5,5.2c0.2,0.5,0,1-0.5,1.3c-0.4,0.2-0.9,1.1-1.1,1.6c-0.8,1.8,0.5,3.5,0.5,3.5c0.3,0.4,0.3,0.9,0,1.3  c-1.7,2-1,3.6-1,3.7c0,0,0,0.1,0.1,0.1C3,28.9,4.8,29,5,29h7.2c0.3,0,0.6,0.2,0.8,0.4c0.2,0.3,0.2,0.6,0.1,0.9  c-3.5,9.1-0.7,15.3,0.2,16.6c0.3,0.1,0.6,0.1,0.8,0.1c1.4,0,1.5-1.8,1.5-2c0-4.9,1.4-9,4.3-12.1c2.7-2.9,7.5-4.7,10-5.6V5.1z M39,4  c0.6,0,1,0.5,1,1c0,0.6-0.4,1-1,1s-1-0.5-1-1C38,4.5,38.5,4,39,4z"
+                          style="fill: rgb(0, 0, 0);"></path>
+                      </g></svg><div id="TextElement80682dbf59bc4c40a1f616b2c0489b0f" class="ng-element el-text-2 empty-line-hack font-S-Arial-n4"
+                      data-id="1f1c9332ac47446bac3779c68141a618" style="opacity: 1; mix-blend-mode: normal; color: rgb(0, 0, 0); font-size: 16px; font-weight: normal; font-style: normal; text-decoration: none; text-align: left; width: 158px; height: 36px; transform: rotate(0deg) translate(1110px, 712px) rotate(0deg);">
+                      <p>Багато часу на рекламування.</p>
+                    </div><svg version="1.2" preserveAspectRatio="none" viewBox="-2.4989999999999988 0 49 49" class="ng-element"
+                      style="opacity: 1; mix-blend-mode: normal; fill: rgb(0, 0, 0); width: 38px; height: 38px; transform: rotate(0deg) translate(1062px, 771px) rotate(0deg);"><g>
+                        <path
+                          xmlns:default="http://www.w3.org/2000/svg" d="M35,0H43c0.6,0,1,0.4,1,1v29c0,0.6-0.5,1-1,1H35c-0.6,0-1-0.4-1-1V1C34,0.4,34.5,0,35,0z M42,2h-6v27h6V2z M18.2,2  C18.2,2,18.2,2,18.2,2c0.7,0,1.4,0,2.1,0c2.7,0.1,5.9,0.6,8.2,0.9c1.1,0.2,2.1,0.3,2.7,0.3c0.5,0,0.9,0.5,0.9,1v23.7  c0,0.4-0.3,0.8-0.6,0.9l-0.5,0.2c-2.3,0.8-7,2.6-9.4,5.2c-2.6,2.7-3.8,6.4-3.8,10.8c-0.1,1.4-0.9,4-3.6,4c-0.5,0-1.1-0.1-1.8-0.3  c-0.1,0-0.3-0.1-0.4-0.2c-1.1-1.1-4.7-7.6-1.3-17.5H5c0,0,0,0,0,0c-0.4,0-3.4-0.1-4.6-3.9c-0.2-0.5-1-2.6,0.8-5.2  c-0.5-0.9-1.3-2.8-0.4-4.8c0.1-0.2,0.5-1.4,1.3-2.2c-0.5-1.7-0.4-4.5,2-6.5c0.1-1.2,0.6-4,3-5C7.4,3.4,11.6,2,18.2,2z M30,5.1  c-0.5-0.1-1.2-0.2-1.9-0.3c-2.3-0.3-5.4-0.7-8-0.9C12.7,3.7,7.9,5.3,7.8,5.3C6.1,6,6.1,8.9,6.1,8.9c0,0.3-0.2,0.6-0.4,0.8  c-2.8,2-1.5,5-1.5,5.2c0.2,0.5,0,1-0.5,1.3c-0.4,0.2-0.9,1.1-1.1,1.6c-0.8,1.8,0.5,3.5,0.5,3.5c0.3,0.4,0.3,0.9,0,1.3  c-1.7,2-1,3.6-1,3.7c0,0,0,0.1,0.1,0.1C3,28.9,4.8,29,5,29h7.2c0.3,0,0.6,0.2,0.8,0.4c0.2,0.3,0.2,0.6,0.1,0.9  c-3.5,9.1-0.7,15.3,0.2,16.6c0.3,0.1,0.6,0.1,0.8,0.1c1.4,0,1.5-1.8,1.5-2c0-4.9,1.4-9,4.3-12.1c2.7-2.9,7.5-4.7,10-5.6V5.1z M39,4  c0.6,0,1,0.5,1,1c0,0.6-0.4,1-1,1s-1-0.5-1-1C38,4.5,38.5,4,39,4z"
+                          style="fill: rgb(0, 0, 0);"></path>
+                      </g></svg><div id="TextElement807b036a613a48f89719bbc03bc28554" class="ng-element el-text-2 empty-line-hack font-S-Arial-n4"
+                      data-id="8f98d8d864d843ad81b3f954eaac9a1e" style="opacity: 1; mix-blend-mode: normal; color: rgb(0, 0, 0); font-size: 16px; font-weight: normal; font-style: normal; text-decoration: none; text-align: left; width: 158px; height: 36px; transform: rotate(0deg) translate(1111px, 767px) rotate(0deg);">
+                      <p>Спілкування зі складними покупцями.</p>
+                    </div><svg version="1.2" preserveAspectRatio="none" viewBox="-2.4989999999999988 0 49 49" class="ng-element"
+                      style="opacity: 1; mix-blend-mode: normal; fill: rgb(0, 0, 0); width: 38px; height: 38px; transform: rotate(0deg) translate(1062px, 826px) rotate(0deg);"><g>
+                        <path
+                          xmlns:default="http://www.w3.org/2000/svg" d="M35,0H43c0.6,0,1,0.4,1,1v29c0,0.6-0.5,1-1,1H35c-0.6,0-1-0.4-1-1V1C34,0.4,34.5,0,35,0z M42,2h-6v27h6V2z M18.2,2  C18.2,2,18.2,2,18.2,2c0.7,0,1.4,0,2.1,0c2.7,0.1,5.9,0.6,8.2,0.9c1.1,0.2,2.1,0.3,2.7,0.3c0.5,0,0.9,0.5,0.9,1v23.7  c0,0.4-0.3,0.8-0.6,0.9l-0.5,0.2c-2.3,0.8-7,2.6-9.4,5.2c-2.6,2.7-3.8,6.4-3.8,10.8c-0.1,1.4-0.9,4-3.6,4c-0.5,0-1.1-0.1-1.8-0.3  c-0.1,0-0.3-0.1-0.4-0.2c-1.1-1.1-4.7-7.6-1.3-17.5H5c0,0,0,0,0,0c-0.4,0-3.4-0.1-4.6-3.9c-0.2-0.5-1-2.6,0.8-5.2  c-0.5-0.9-1.3-2.8-0.4-4.8c0.1-0.2,0.5-1.4,1.3-2.2c-0.5-1.7-0.4-4.5,2-6.5c0.1-1.2,0.6-4,3-5C7.4,3.4,11.6,2,18.2,2z M30,5.1  c-0.5-0.1-1.2-0.2-1.9-0.3c-2.3-0.3-5.4-0.7-8-0.9C12.7,3.7,7.9,5.3,7.8,5.3C6.1,6,6.1,8.9,6.1,8.9c0,0.3-0.2,0.6-0.4,0.8  c-2.8,2-1.5,5-1.5,5.2c0.2,0.5,0,1-0.5,1.3c-0.4,0.2-0.9,1.1-1.1,1.6c-0.8,1.8,0.5,3.5,0.5,3.5c0.3,0.4,0.3,0.9,0,1.3  c-1.7,2-1,3.6-1,3.7c0,0,0,0.1,0.1,0.1C3,28.9,4.8,29,5,29h7.2c0.3,0,0.6,0.2,0.8,0.4c0.2,0.3,0.2,0.6,0.1,0.9  c-3.5,9.1-0.7,15.3,0.2,16.6c0.3,0.1,0.6,0.1,0.8,0.1c1.4,0,1.5-1.8,1.5-2c0-4.9,1.4-9,4.3-12.1c2.7-2.9,7.5-4.7,10-5.6V5.1z M39,4  c0.6,0,1,0.5,1,1c0,0.6-0.4,1-1,1s-1-0.5-1-1C38,4.5,38.5,4,39,4z"
+                          style="fill: rgb(0, 0, 0);"></path>
+                      </g></svg><div id="TextElementfc8c664cc5d245189fc2aab77ff0cf61" class="ng-element el-text-2 empty-line-hack font-S-Arial-n4"
+                      data-id="fa6a2785d65a46738a04c4e0d476e3fa" style="opacity: 1; mix-blend-mode: normal; color: rgb(0, 0, 0); font-size: 16px; font-weight: normal; font-style: normal; text-decoration: none; text-align: left; width: 158px; height: 36px; transform: rotate(0deg) translate(1111px, 826px) rotate(0deg);">
+                      <p>Відповідальність за складнощі з автівкою після продажу.</p>
+                    </div><svg version="1.2" preserveAspectRatio="none" viewBox="-2.4989999999999988 0 49 49" class="ng-element"
+                      style="opacity: 1; mix-blend-mode: normal; fill: rgb(0, 0, 0); width: 38px; height: 38px; transform: rotate(0deg) translate(1062px, 884px) rotate(0deg);"><g>
+                        <path
+                          xmlns:default="http://www.w3.org/2000/svg" d="M35,0H43c0.6,0,1,0.4,1,1v29c0,0.6-0.5,1-1,1H35c-0.6,0-1-0.4-1-1V1C34,0.4,34.5,0,35,0z M42,2h-6v27h6V2z M18.2,2  C18.2,2,18.2,2,18.2,2c0.7,0,1.4,0,2.1,0c2.7,0.1,5.9,0.6,8.2,0.9c1.1,0.2,2.1,0.3,2.7,0.3c0.5,0,0.9,0.5,0.9,1v23.7  c0,0.4-0.3,0.8-0.6,0.9l-0.5,0.2c-2.3,0.8-7,2.6-9.4,5.2c-2.6,2.7-3.8,6.4-3.8,10.8c-0.1,1.4-0.9,4-3.6,4c-0.5,0-1.1-0.1-1.8-0.3  c-0.1,0-0.3-0.1-0.4-0.2c-1.1-1.1-4.7-7.6-1.3-17.5H5c0,0,0,0,0,0c-0.4,0-3.4-0.1-4.6-3.9c-0.2-0.5-1-2.6,0.8-5.2  c-0.5-0.9-1.3-2.8-0.4-4.8c0.1-0.2,0.5-1.4,1.3-2.2c-0.5-1.7-0.4-4.5,2-6.5c0.1-1.2,0.6-4,3-5C7.4,3.4,11.6,2,18.2,2z M30,5.1  c-0.5-0.1-1.2-0.2-1.9-0.3c-2.3-0.3-5.4-0.7-8-0.9C12.7,3.7,7.9,5.3,7.8,5.3C6.1,6,6.1,8.9,6.1,8.9c0,0.3-0.2,0.6-0.4,0.8  c-2.8,2-1.5,5-1.5,5.2c0.2,0.5,0,1-0.5,1.3c-0.4,0.2-0.9,1.1-1.1,1.6c-0.8,1.8,0.5,3.5,0.5,3.5c0.3,0.4,0.3,0.9,0,1.3  c-1.7,2-1,3.6-1,3.7c0,0,0,0.1,0.1,0.1C3,28.9,4.8,29,5,29h7.2c0.3,0,0.6,0.2,0.8,0.4c0.2,0.3,0.2,0.6,0.1,0.9  c-3.5,9.1-0.7,15.3,0.2,16.6c0.3,0.1,0.6,0.1,0.8,0.1c1.4,0,1.5-1.8,1.5-2c0-4.9,1.4-9,4.3-12.1c2.7-2.9,7.5-4.7,10-5.6V5.1z M39,4  c0.6,0,1,0.5,1,1c0,0.6-0.4,1-1,1s-1-0.5-1-1C38,4.5,38.5,4,39,4z"
+                          style="fill: rgb(0, 0, 0);"></path>
+                      </g></svg><div id="TextElemente5738b15fe864299b9575121af6da4ec" class="ng-element el-text-2 empty-line-hack font-S-Arial-n4"
+                      data-id="00a9ec8502cb486dba92b54a79b3c3a3" style="opacity: 1; mix-blend-mode: normal; color: rgb(0, 0, 0); font-size: 16px; font-weight: normal; font-style: normal; text-decoration: none; text-align: left; width: 158px; height: 18px; transform: rotate(0deg) translate(1111px, 666px) rotate(0deg);">
+                      <p>Гарний прибуток.</p>
+                    </div>
+                    <div id="TextElementb156912d5d1c465188e15cf7a763edfa" class="ng-element el-text-2 empty-line-hack font-S-Arial-n4"
+                      data-id="230e263a0c7a4434b6bf6ef9d7af2bd2" style="opacity: 1; mix-blend-mode: normal; color: rgb(0, 0, 0); font-size: 16px; font-weight: normal; font-style: normal; text-decoration: none; text-align: left; width: 166px; height: 36px; transform: rotate(0deg) translate(1111px, 881px) rotate(0deg);">
+                      <p>Відповідальність за складнощі з автівкою після продажу.</p>
+                    </div>
+                    <div class="ng-element el-box text-editor-light" data-id="5a17b0a9b2e740d28fce8fc500fb1d76" style="opacity: 1; mix-blend-mode: normal; padding: 0px; border-width: 0px; border-radius: 0px; border-color: rgb(235, 235, 235); border-style: solid; background-color: rgb(138, 138, 138); background-image: none; background-size: cover; background-repeat: no-repeat; background-position: center center; width: 199px; height: 36px; transform: rotate(0deg) translate(175px, 960px) rotate(0deg);">
+                      <p id="Box1ac6af3f599844339b983a2a39095a8e" data-id="5a17b0a9b2e740d28fce8fc500fb1d76" style="color: rgb(0, 0, 0); font-size: 14px; text-align: center; font-weight: normal; font-style: normal; font-family: Arial; text-decoration: none;"><br></p>
+                    </div>
+                    <div id="TextElementa4ab481558444603be100ab29b2a93e8" class="ng-element el-text-2 empty-line-hack line-height-fix font-S-Arial-n4"
+                      data-id="cb709c509df54699bef5962769335a3c" style="opacity: 1; mix-blend-mode: normal; line-height: 115%; color: transparent; font-size: 16px; font-weight: normal; font-style: normal; text-decoration: none; text-align: left; width: 199px; height: 18px; transform: rotate(0deg) translate(175px, 966px) rotate(0deg);">
+                      <p><span class="wysiwyg-font-type-tahoma wysiwyg-align-Center  wysiwyg-font-size-16 wysiwyg-color-ffffff"
+                          style="font-size: 16px; color: rgb(255, 255, 255);">Продати деінде</span></p>
+                    </div>
+                  </div>
+                  <div class="el-group" data-id="b641bab35e524183aca42c659a3f1927" style="opacity: 1; mix-blend-mode: normal;">
+                    <div class="ng-element el-box text-editor-light" data-id="42263a85501f45bfaf3346f9f1c8c8bf" style="opacity: 1; mix-blend-mode: normal; padding: 0px; border-width: 0px; border-radius: 0px; border-color: rgb(102, 102, 102); border-style: solid; background-color: transparent; background-image: linear-gradient(90deg, rgb(48, 188, 227) 3%, rgb(91, 133, 199) 103%); background-size: cover; background-repeat: repeat; background-position: center center; width: 100%; height: 100px; transform: rotate(0deg) translate(0px, 0px) rotate(0deg);">
+                      <p id="Box7bdba348d5a445dbab89ef5c873714c0" data-id="42263a85501f45bfaf3346f9f1c8c8bf" class="font-S-Arial-n4"
+                        style="color: rgb(0, 0, 0); font-size: 14px; text-align: center; font-weight: normal; font-style: normal; text-decoration: none;"><br></p>
+                    </div>
+                    <div id="TextElement5c54cf9d5a2c44feaa5f31ceaa8a38dd" class="ng-element el-text-2 empty-line-hack font-S-Arial-n4"
+                      data-id="5b4440b7fd2142cebaccbab89b1f061b" style="opacity: 1; mix-blend-mode: normal; color: rgb(255, 255, 255); font-size: 48px; font-weight: bold; font-style: normal; text-decoration: none; text-align: left; width: 351px; height: 55px; transform: rotate(0deg) translate(149px, 22px) rotate(0deg);">
+                      <p>Sell Your Car</p>
+                    </div>
+                    <div id="TextElement1050c95d3d64422da00dea00e1f5fee9" class="ng-element el-text-2 empty-line-hack font-S-Arial-n4"
+                      data-id="037e2a1bbb084a9e92cb9a7fac3c8d88" style="opacity: 1; mix-blend-mode: normal; color: rgb(255, 255, 255); font-size: 32px; font-weight: normal; font-style: normal; text-decoration: none; text-align: left; width: 269px; height: 36px; transform: rotate(0deg) translate(1039px, 33px) rotate(0deg);">
+                      <p></p>
+                    </div><img class="ng-element el-image el-image-no-back" data-id="aea371f7e50a42658b412d93887fb052"
+                      src="./index_files/Logo_02-82d795.png" style="opacity: 1; mix-blend-mode: normal; border-radius: 0px; width: 107px; height: 107px; transform: rotate(0deg) translate(17px, -7px) rotate(0deg);"></div>
+                </div>
+                <div class="ng-overlay" style="display: none;">
+                  <div class="ng-elements-overlay"></div>
+                  <div class="ng-grid grid-container" style="display: none;"></div>
+                  <div class="ng-elements-overlay ng-elements-overlay--abstract"></div>
+                </div>
+
+                <section class="comment-point pin ng-hide" ng-class="classes" ng-dblclick="onDblclick($event)" ng-style="getCommentPointStyle()"
+                  ng-show="addingComment" comment="" x="0" y="0" style="left: 0px; top: 0px;">
+
+                  <section class="comment-pin" ng-mousedown="startDrag($event)" ng-mouseup="endDrag($event)" toggleable=""></section>
+                </section>
+                <!---->
+              </div>
+              <!---->
+
+              <!---->
+
+              <!---->
+              <div class="ng-canvas-helper"></div>
+            </section>
+          </section>
+        </section>
+      </section>
+
+      <!---->
+    </main>
+  </div>
+
+  <video-stream is-usability-testing-session="isUsabilityTestingSession" is-host="!isParticipant">
+    <!---->
+    <!---->
+  </video-stream>
+
+  <!---->
+  <div ui-view="overlay"></div>
+  <div class="loader"></div>
+
+
+  <script type="text/javascript" async="" src="./index_files/68f9313d866df031326598d49a29feb2a560246d.1.js.download"></script>
+  <script
+    type="text/javascript" async="" src="./index_files/i.js.download"></script>
+  <script type="text/javascript">
+    window.ApplicationConfiguration = {
+      rollbar: { "postServerAccessToken": "41207a8115a54d37abe5ffacd0c7e4a4", "postClientAccessToken": "49dfce4d74984afea0b7e5261c5d6237", "options": { "exceptions": { "exitOnUncaughtException": true }, "reporter": { "verbose": true, "environment": "production", "root": "/var/www/uxpin-preview/releases/20181012121456/config/env" } } },
+      screencastify: { "appId": "5487136489340928" },
+      socketServerURL: 'https://pubsub.uxpin.com',
+      socketEditorServerURL: 'https://socket.uxpin.com',
+      loginPageURL: 'https://app.uxpin.com',
+      homepageURL: 'https://www.uxpin.com',
+      upgradePlanURL: 'https://app.uxpin.com/dms/Dashboard/Default?show_action=ba',
+      cookieDomain: '.uxpin.com',
+      userData: { "id_user": "707ca003d642fed9378a41c7458dbe8f21dcd75ffb9b93f64097", "name": "anonymous", "email": "", "avatar": "", "timezone": "", "is_trial": false, "is_anonymous": true, "plan_unique_name": "", "id_session": "707ca003d642fed9378a41c7458dbe8f21dcd75ffb9b93f64097", "is_in_projects_account": false, "is_owner": false },
+      permissions: {},
+      project: { "id_project": 7744652, "custom_font_css_url": "https://api.uxpin.com/fonts/custom/css/file?id=804916", "created_at": "2018-09-24T12:04:24+01:00", "custom_fonts_url": "http://api.uxpin/fonts/custom/css/?id=804916", "features": { "live_share": false, "user_testing": false, "password": false, "team_comments": false, "spec_mode": false, "spec_mode_no_login": true, "spec_mode_styleguide": false, "comments_assignment": false, "design_views": false, "docs": false }, "hash": "75c2291ae0ca538515bf2badf6a5d892ad387d2f", "id_account": 804916, "id_collection": 1952836, "id_original_project": null, "iteration_name": "", "iteration_number": null, "kit": {}, "name": "Sell Your Car.in.ua", "settings": { "grid": { "fixed_width_for_breakpoints": true, "resp0": { "cols_count": 17, "col_width": 63, "grid_on_top": true, "col_spacing": 20, "fixed_width": true, "margin": 20, "enabled": false } }, "guides": { "93514602": [] } }, "type": "W", "updated_at": "2018-09-26T09:32:07+01:00", "variables": {} },
+      uxpinApi: 'https://api.uxpin.com',
+      uxpinURL: 'https://app.uxpin.com',
+      userContentPrefix: 's3.amazonaws.com/upload.uxpin',
+      userContentPrefixCached: 'uc.uxpin.com',
+      staticContentPrefixCached: 'https://static.uxpincdn.com',
+      approval: "",
+      approvalRequest: "",
+      approvalRequestsCount: "",
+      clientSideCacheSize: 300,
+      stakeholder: "",
+      debugInfoEnabled: false,
+      enablePerformanceTestsMode: false,
+    };
+  </script>
+
+  <script type="text/javascript">
+    var isDesktopApp = navigator.userAgent.toLowerCase().indexOf('uxpin desktop') !== -1;
+    var desktopAppPrefix = isDesktopApp ? 'desktop-app-' : '';
+    window._rollbarConfig = {
+      accessToken: window.ApplicationConfiguration.rollbar.postClientAccessToken,
+      captureUncaught: true,
+      payload: {
+        environment: desktopAppPrefix + window.ApplicationConfiguration.rollbar.options.reporter.environment,
+      },
+    };
+  </script>
+
+
+
+  <script type="text/javascript" src="./index_files/engine-50ab3ddf.js.download"></script>
+  <script type="text/javascript" src="./index_files/vendors-5649e596.js.download"></script>
+  <script type="text/javascript" src="./index_files/app-1f6ff9de.js.download"></script>
+
+  <script defer="" type="text/javascript" src="./index_files/socket.io.min.js.download"></script>
+
+
+  <!---->
+
+
+  <!-- Google Analytics -->
+  <script>
+    window.ga = window.ga || function () {
+      (ga.q = ga.q || []).push(arguments)
+    };
+    ga.l = +new Date;
+    ga('create', 'UA-19584088-8', 'auto');
+  </script>
+  <script async="" src="./index_files/analytics.js.download"></script>
+  <!-- End Google Analytics -->
+
+
+
+
+  <script type="text/javascript">
+    var _kmq = _kmq || [];
+    var _kmk = _kmk || '68f9313d866df031326598d49a29feb2a560246d';
+    function _kms(u) {
+      setTimeout(function () {
+        var d = document, f = d.getElementsByTagName('script')[0],
+          s = d.createElement('script');
+        s.type = 'text/javascript'; s.async = true; s.src = u;
+        f.parentNode.insertBefore(s, f);
+      }, 1);
+    }
+    _kms('//i.kissmetrics.com/i.js');
+    _kms('//doug1izaerwt3.cloudfront.net/' + _kmk + '.1.js');
+  </script>
+
+
+
+
+
+
+
+  <div class="cfp-hotkeys-container fade" ng-class="{in: helpVisible}" style="display: none;">
+    <div class="cfp-hotkeys">
+      <!---->
+      <h4 class="cfp-hotkeys-title" ng-if="!header">Keyboard Shortcuts:</h4>
+      <!---->
+      <!---->
+      <table>
+        <tbody>
+          <!---->
+          <tr ng-repeat="hotkey in hotkeys | filter:{ description: &#39;!$$undefined$$&#39; }">
+            <td class="cfp-hotkeys-keys">
+              <!----><span ng-repeat="key in hotkey.format() track by $index" class="cfp-hotkeys-key">?</span>
+              <!---->
+            </td>
+            <td class="cfp-hotkeys-text">Show / hide this help menu</td>
+          </tr>
+          <!---->
+          <tr ng-repeat="hotkey in hotkeys | filter:{ description: &#39;!$$undefined$$&#39; }">
+            <td class="cfp-hotkeys-keys">
+              <!----><span ng-repeat="key in hotkey.format() track by $index" class="cfp-hotkeys-key">ctrl + 1</span>
+              <!---->
+            </td>
+            <td class="cfp-hotkeys-text">Open simulate mode</td>
+          </tr>
+          <!---->
+          <tr ng-repeat="hotkey in hotkeys | filter:{ description: &#39;!$$undefined$$&#39; }">
+            <td class="cfp-hotkeys-keys">
+              <!----><span ng-repeat="key in hotkey.format() track by $index" class="cfp-hotkeys-key">ctrl + 1</span>
+              <!---->
+            </td>
+            <td class="cfp-hotkeys-text">Open simulate mode</td>
+          </tr>
+          <!---->
+          <tr ng-repeat="hotkey in hotkeys | filter:{ description: &#39;!$$undefined$$&#39; }">
+            <td class="cfp-hotkeys-keys">
+              <!----><span ng-repeat="key in hotkey.format() track by $index" class="cfp-hotkeys-key">ctrl + 2</span>
+              <!---->
+            </td>
+            <td class="cfp-hotkeys-text">Open comments mode</td>
+          </tr>
+          <!---->
+          <tr ng-repeat="hotkey in hotkeys | filter:{ description: &#39;!$$undefined$$&#39; }">
+            <td class="cfp-hotkeys-keys">
+              <!----><span ng-repeat="key in hotkey.format() track by $index" class="cfp-hotkeys-key">ctrl + 2</span>
+              <!---->
+            </td>
+            <td class="cfp-hotkeys-text">Open comments mode</td>
+          </tr>
+          <!---->
+          <tr ng-repeat="hotkey in hotkeys | filter:{ description: &#39;!$$undefined$$&#39; }">
+            <td class="cfp-hotkeys-keys">
+              <!----><span ng-repeat="key in hotkey.format() track by $index" class="cfp-hotkeys-key">ctrl + 3</span>
+              <!---->
+            </td>
+            <td class="cfp-hotkeys-text">Open spec mode</td>
+          </tr>
+          <!---->
+          <tr ng-repeat="hotkey in hotkeys | filter:{ description: &#39;!$$undefined$$&#39; }">
+            <td class="cfp-hotkeys-keys">
+              <!----><span ng-repeat="key in hotkey.format() track by $index" class="cfp-hotkeys-key">ctrl + 3</span>
+              <!---->
+            </td>
+            <td class="cfp-hotkeys-text">Open spec mode</td>
+          </tr>
+          <!---->
+          <tr ng-repeat="hotkey in hotkeys | filter:{ description: &#39;!$$undefined$$&#39; }">
+            <td class="cfp-hotkeys-keys">
+              <!----><span ng-repeat="key in hotkey.format() track by $index" class="cfp-hotkeys-key">ctrl + 4</span>
+              <!---->
+            </td>
+            <td class="cfp-hotkeys-text">Open documentation mode</td>
+          </tr>
+          <!---->
+          <tr ng-repeat="hotkey in hotkeys | filter:{ description: &#39;!$$undefined$$&#39; }">
+            <td class="cfp-hotkeys-keys">
+              <!----><span ng-repeat="key in hotkey.format() track by $index" class="cfp-hotkeys-key">ctrl + 4</span>
+              <!---->
+            </td>
+            <td class="cfp-hotkeys-text">Open documentation mode</td>
+          </tr>
+          <!---->
+          <tr ng-repeat="hotkey in hotkeys | filter:{ description: &#39;!$$undefined$$&#39; }">
+            <td class="cfp-hotkeys-keys">
+              <!----><span ng-repeat="key in hotkey.format() track by $index" class="cfp-hotkeys-key">←</span>
+              <!---->
+            </td>
+            <td class="cfp-hotkeys-text">Go to previous page</td>
+          </tr>
+          <!---->
+          <tr ng-repeat="hotkey in hotkeys | filter:{ description: &#39;!$$undefined$$&#39; }">
+            <td class="cfp-hotkeys-keys">
+              <!----><span ng-repeat="key in hotkey.format() track by $index" class="cfp-hotkeys-key">→</span>
+              <!---->
+            </td>
+            <td class="cfp-hotkeys-text">Go to next page</td>
+          </tr>
+          <!---->
+        </tbody>
+      </table>
+      <!---->
+      <div class="cfp-hotkeys-close" ng-click="toggleCheatSheet()">×</div>
+    </div>
+  </div>
+</body>
+
+</html>
