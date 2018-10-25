@@ -1,33 +1,7 @@
 <!DOCTYPE html>
-<html class="gr__preview_uxpin_com">
 
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <style type="text/css">
-    @charset "UTF-8";
-    [ng\:cloak],
-    [ng-cloak],
-    [data-ng-cloak],
-    [x-ng-cloak],
-    .ng-cloak,
-    .x-ng-cloak,
-    .ng-hide:not(.ng-hide-animate) {
-      display: none !important;
-    }
-
-    ng\:form {
-      display: block;
-    }
-
-    .ng-animate-shim {
-      visibility: hidden;
-    }
-
-    .ng-anchor {
-      position: absolute;
-    }
-  </style>
-
 
   <title>Sell Your Car</title>
 
@@ -76,228 +50,6 @@
         [OS]: true,
       }" ng-keydown="keyDown($event)" data-gr-c-s-loaded="true">
 
-  <div ui-view="specification">
-    <section class="right-panel aside-panel ng-hide" id="specification" ng-hide="!vm.isLoaded">
-      <section class="panel-container" ng-class="{&#39;with-parent-info&#39;: !!vm.activeElementDSInfo}">
-        <section class="scrolled-container">
-          <section class="scrolled-content">
-            <!---->
-            <div class="content" ng-if="vm.activeTab === vm.SPEC_TABS.PROPERTIES">
-              <canvas-data width="vm.width" height="vm.height" left="vm.left" top="vm.top" fixed="vm.fixed" name="vm.name" type="vm.currentObjectType"
-                angle="vm.angle" opacity="vm.opacity" mix-blend-mode="vm.mixBlendMode">
-                <section class="canvas-size data-section">
-                  <h3 class="section-title">
-                    <span class="ellipsis-helper">General</span>
-                    <unit-switcher class="unit-select">
-                      <cloud trigger-type="hover" offset="vm.offsetColorType" class="outline-info">
-                        <div ng-transclude="">
-                          <span data-trigger="" class="cloud-trigger icon-general-chevron">Pixels</span>
-
-                        </div>
-                      </cloud>
-                    </unit-switcher>
-                  </h3>
-                  <div class="data">
-                    <div class="double-ul-column">
-                      <ul class="canvas-data-list">
-                        <li>
-                          <h5 class="narrow">Width</h5>
-                          <p class="code allow-copying" clipboard-copy="" data-clipboard-text="">
-                            <span class="copy-helper"></span>
-                          </p>
-                        </li>
-                        <li>
-                          <h5 class="narrow">Height</h5>
-                          <p class="code allow-copying" clipboard-copy="" data-clipboard-text="">
-                            <span class="copy-helper"></span>
-                          </p>
-                        </li>
-                      </ul>
-                      <!---->
-                      <!---->
-                      <ul ng-if="vm.type === vm.SPEC_OBJECT_TYPES.CANVAS">
-                        <li>
-                          <h5 class="narrow">Canvas</h5>
-                          <p title="Custom">
-                            Custom
-                          </p>
-                        </li>
-                      </ul>
-                      <!---->
-                    </div>
-                    <!---->
-                  </div>
-                </section>
-              </canvas-data>
-
-              <!---->
-              <grid-data ng-if="vm.isActiveObject(vm.SPEC_OBJECT_TYPES.CANVAS)" grid="vm.grid">
-                <section class="grid-guides data-section">
-                  <h3 class="section-title">Grid</h3>
-                  <div class="data">
-                    <form class="options ng-pristine ng-valid">
-                      <fieldset>
-                        <input ng-model="vm.isGridVisible" ng-change="vm.setGridDisplay(vm.isGridVisible)" id="show-grid" class="state-helper ng-pristine ng-untouched ng-valid ng-empty"
-                          type="checkbox" ng-checked="vm.isGridVisible">
-                        <label for="show-grid" class="fake-choose-label fake-checkbox">Show grid</label>
-                      </fieldset>
-
-                      <!---->
-                      <fieldset ng-if="vm.areGuidesAvailable()">
-                        <input ng-model="vm.areGuidesVisible" ng-change="vm.setGuides(vm.areGuidesVisible)" id="show-guides" class="state-helper ng-pristine ng-untouched ng-valid ng-empty"
-                          type="checkbox" ng-checked="vm.areGuidesVisible">
-                        <label for="show-guides" class="fake-choose-label fake-checkbox">Show guides</label>
-                      </fieldset>
-                      <!---->
-                    </form>
-
-                    <div class="double-ul-column grid-data">
-                      <ul>
-                        <li>
-                          <h5>Columns</h5>
-                          <p class="code allow-copying" clipboard-copy="" data-clipboard-text="">
-                            <span class="copy-helper"></span>
-                          </p>
-                        </li>
-                        <li>
-                          <h5>Column width</h5>
-                          <p class="code allow-copying" clipboard-copy="" data-clipboard-text="">
-                            <span class="copy-helper"></span>
-                          </p>
-                        </li>
-                      </ul>
-                      <ul>
-                        <li>
-                          <h5>Gutter</h5>
-                          <p class="code allow-copying" clipboard-copy="" data-clipboard-text="">
-                            <span class="copy-helper"></span>
-                          </p>
-                        </li>
-                        <li>
-                          <h5>Margin</h5>
-                          <p class="code allow-copying" clipboard-copy="" data-clipboard-text="">
-                            <span class="copy-helper"></span>
-                          </p>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </section>
-              </grid-data>
-              <!---->
-
-              <colors-list colors="vm.colors" canvas-bg="vm.canvasBg" gradients="vm.gradients" type="vm.currentObjectType">
-                <!---->
-              </colors-list>
-
-              <fonts-list fonts="vm.fonts" type="vm.currentObjectType">
-                <section class="typography-data data-section ng-hide"
-                  ng-hide="!vm.fonts.length">
-                  <h3 class="section-title">Typography</h3>
-                  <div class="data">
-                    <!---->
-                    <ul ng-if="!vm.isElement()" class="fonts-list">
-                      <!---->
-                    </ul>
-                    <!---->
-
-                    <!---->
-                  </div>
-                </section>
-              </fonts-list>
-
-              <!---->
-
-              <!---->
-
-              <!---->
-
-              <!---->
-
-              <!---->
-
-              <!---->
-
-              <content-data value-trimmed="vm.textContentTrimmed" is-text-list="vm.isTextList">
-                <!---->
-              </content-data>
-
-              <!---->
-              <images-list ng-if="vm.isActiveObject(vm.SPEC_OBJECT_TYPES.ELEMENT) || vm.isActiveObject(vm.SPEC_OBJECT_TYPES.CANVAS) || vm.isActiveObject(vm.SPEC_OBJECT_TYPES.GROUP)"
-                images="vm.images" background="vm.background">
-                <!---->
-              </images-list>
-              <!---->
-            </div>
-            <!---->
-
-            <!---->
-            <!---->
-          </section>
-        </section>
-      </section>
-    </section>
-
-  </div>
-  <!---->
-  <div ui-view="comments">
-    <section class="right-panel aside-panel" id="comments-notes">
-      <!---->
-    </section>
-  </div>
-  <!---->
-  <div ui-view="filters">
-    <!---->
-  </div>
-  <!---->
-  <div ui-view="sitemap">
-    <script type="text/ng-template" id="node_template.html">
-    <input class="state-helper expander-state-helper"
-           ng-if="node.nodes.length"
-           type="checkbox"
-           id="{{::'node-' + node.id}}"
-           ng-model="minimized[node.id]"
-           ng-change="toggleMinimized(node.id)">
-    <label ng-class="{'expander': true, 'is-expanded': minimized[node.id]}" ng-if="node.nodes.length" for="{{::'node-' + node.id}}"></label>
-    <div class="option-name element-with-action-menu" ng-init="init(node.id)" ng-class="{'selected' : isActive(node.id)}" ng-click="onClick($event,node.id)">
-      <span ng-if="node.documentationExists" class="only-icon-font icon-general-documentation"></span>
-      <a class="action-context-menu-available" ng-href="">
-        <span class="option-name-text" highlight search-for="searchData.searchFor" input-text="::node.name"></span>
-      </a>
-    </div>
-    <ul ng-if="minimized[node.id]" class="branch">
-        <li ng-repeat="node in node.nodes | filter : filterSearch : comparatorSearch" ng-include="'node_template.html'"></li>
-    </ul>
-</script>
-
-    <!---->
-  </div>
-  <!---->
-  <div ui-view="documentation">
-    <!---->
-  </div>
-  <!---->
-  <div ui-view="layers">
-    <section class="left-panel aside-panel" id="layers">
-      <section id="layers-panel" class="panel-container">
-        <header>
-          <h2>Layers</h2>
-          <form action="https://preview.uxpin.com/75c2291ae0ca538515bf2badf6a5d892ad387d2f#" class="search ng-pristine ng-valid" ng-submit="$event.preventDefault()">
-            <label for="layers-search" class="icon-font-search only-icon-font" ng-click="onSearchClick($event)">Search</label>
-            <input type="text" placeholder="Type to search..." id="layers-search" ng-class="{&#39;active&#39; : vm.searchFor}" ng-model="vm.searchFor"
-              ng-change="vm.filterCollection()" ng-focus="vm.focusInput()" ng-keydown="vm.keyDown($event)" sync-focus-with="vm.focused"
-              autocomplete="off" class="ng-pristine ng-untouched ng-valid ng-empty">
-            <span class="reset-search" ng-click="vm.resetSearch()">Reset search</span>
-          </form>
-        </header>
-        <section class="scrolled-container section-layers">
-          <!---->
-        </section>
-      </section>
-    </section>
-  </div>
-  <!---->
-  <!---->
   <div ui-view="canvas">
     <main class="canvas-main-container no-logo" ng-class="{&#39;no-logo&#39;: firstTimeLoaded}">
       <section class="scrolled-container">
@@ -328,9 +80,9 @@
                       </div>
                       <div class="el-group" data-id="c3a5f3345e9d4826bd5e140cbde16348" style="opacity: 1; mix-blend-mode: normal;">
                         <div id="TextElement16468ffdd78e487a85fed35f9868af54" class="ng-element el-text-2 empty-line-hack line-height-fix font-S-Arial-n4"
-                          data-id="5561bc77ea05462bbb360048c24c703e" style="opacity: 1; mix-blend-mode: normal; line-height: 115%; color: transparent; font-size: 32px; font-weight: normal; font-style: normal; text-decoration: none; text-align: left; width: 242px; height: 36px; transform: rotate(0deg) translate(609px, 3936px) rotate(0deg);">
+                          data-id="5561bc77ea05462bbb360048c24c703e" style="opacity: 1; mix-blend-mode: normal; line-height: 115%; color: transparent; font-size: 26px; font-weight: normal; font-style: normal; text-decoration: none; text-align: left; width: 242px; height: 26px; transform: rotate(0deg) translate(609px, 3925px) rotate(0deg);">
                           <p><span class="wysiwyg-font-type-tahoma wysiwyg-align-Center  wysiwyg-font-size-16 wysiwyg-color-ffffff"
-                              style="color: rgb(255, 255, 255);">Зв'яжіться зі мною</span></p>
+                              style="color: rgb(255, 255, 255);">Зателефонуйте мені</span></p>
                         </div>
                       </div>
                     </div>
@@ -465,23 +217,23 @@
                         <path
                           xmlns:default="http://www.w3.org/2000/svg" d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z" style="fill: rgb(66, 133, 227);"></path>
                       </g></svg><div id="TextElement512db3c113254cfaa3278ce80099e369" class="ng-element el-text-2 empty-line-hack font-S-Arial-n4"
-                      data-id="14c19ba39f1747ac871d9dcf8a4aef5b" style="opacity: 1; mix-blend-mode: normal; color: rgb(0, 0, 0); font-size: 32px; font-weight: normal; font-style: normal; text-decoration: none; text-align: center; width: 185px; height: 36px; transform: rotate(0deg) translate(131px, 1905px) rotate(0deg);">
+                      data-id="14c19ba39f1747ac871d9dcf8a4aef5b" style="opacity: 1; mix-blend-mode: normal; color: rgb(0, 0, 0); font-size: 26px; font-weight: normal; font-style: normal; text-decoration: none; text-align: center; width: 185px; height: 36px; transform: rotate(0deg) translate(131px, 1905px) rotate(0deg);">
                       <p>Найбільший прибуток</p>
                     </div>
                     <div id="TextElemented7258dfac08477685e1c2d4499719c0" class="ng-element el-text-2 empty-line-hack font-S-Arial-n4"
-                      data-id="6a9fac85ee074e2dab5feff08380ca80" style="opacity: 1; mix-blend-mode: normal; color: rgb(0, 0, 0); font-size: 32px; font-weight: normal; font-style: normal; text-decoration: none; text-align: center; width: 149px; height: 36px; transform: rotate(0deg) translate(490px, 1906px) rotate(0deg);">
+                      data-id="6a9fac85ee074e2dab5feff08380ca80" style="opacity: 1; mix-blend-mode: normal; color: rgb(0, 0, 0); font-size: 26px; font-weight: normal; font-style: normal; text-decoration: none; text-align: center; width: 200px; height: 36px; transform: rotate(0deg) translate(490px, 1906px) rotate(0deg);">
                       <p>Не потрибує зусиль</p>
                     </div>
                     <div id="TextElementee720ee384f44ab595016c7aa0b11cd2" class="ng-element el-text-2 empty-line-hack font-S-Arial-n4"
-                      data-id="86e3bce3f3c64491ba01890b167ab28d" style="opacity: 1; mix-blend-mode: normal; color: rgb(0, 0, 0); font-size: 48px; font-weight: normal; font-style: normal; text-decoration: none; text-align: left; width: 772px; height: 55px; transform: rotate(0deg) translate(369px, 1731px) rotate(0deg);">
+                      data-id="86e3bce3f3c64491ba01890b167ab28d" style="opacity: 1; mix-blend-mode: normal; color: rgb(0, 0, 0); font-size: 48px; font-weight: normal; font-style: normal; text-decoration: none; text-align: left; width: 1000px; height: 55px; transform: rotate(0deg) translate(369px, 1731px) rotate(0deg);">
                       <p>Що робить цей сервіс таким корисним?</p>
                     </div>
                     <div id="TextElement27204cf0f26a42b5a562ce91124e1eef" class="ng-element el-text-2 empty-line-hack font-S-Arial-n4"
-                      data-id="1d1ec7126e2c428da7c4b84f7a44d5fa" style="opacity: 1; mix-blend-mode: normal; color: rgb(0, 0, 0); font-size: 32px; font-weight: normal; font-style: normal; text-decoration: none; text-align: center; width: 102px; height: 36px; transform: rotate(0deg) translate(852px, 1906px) rotate(0deg);">
+                      data-id="1d1ec7126e2c428da7c4b84f7a44d5fa" style="opacity: 1; mix-blend-mode: normal; color: rgb(0, 0, 0); font-size: 26px; font-weight: normal; font-style: normal; text-decoration: none; text-align: center; width: 102px; height: 36px; transform: rotate(0deg) translate(852px, 1906px) rotate(0deg);">
                       <p>Швидко</p>
                     </div>
                     <div id="TextElementa4588f9478054f0e8b4322d150b787b6" class="ng-element el-text-2 empty-line-hack font-S-Arial-n4"
-                      data-id="61e7ad7581ae433ebca2430a3a3edba6" style="opacity: 1; mix-blend-mode: normal; color: rgb(0, 0, 0); font-size: 32px; font-weight: normal; font-style: normal; text-decoration: none; text-align: center; width: 102px; height: 36px; transform: rotate(0deg) translate(1170px, 1905px) rotate(0deg);">
+                      data-id="61e7ad7581ae433ebca2430a3a3edba6" style="opacity: 1; mix-blend-mode: normal; color: rgb(0, 0, 0); font-size: 26px; font-weight: normal; font-style: normal; text-decoration: none; text-align: center; width: 102px; height: 36px; transform: rotate(0deg) translate(1170px, 1905px) rotate(0deg);">
                       <p>Надійно</p>
                     </div><svg version="1.2" preserveAspectRatio="none" viewBox="0 0 28 28" class="ng-element" style="opacity: 1; mix-blend-mode: normal; fill: rgb(66, 133, 227); width: 63px; height: 63px; transform: rotate(0deg) translate(192px, 1834px) rotate(0deg);"><g>
                         <defs>
@@ -654,7 +406,7 @@
                           </g></svg></div>
                     </div>
                     <div id="TextElement4f28a9d3ff9d4b8489e00f4e83963b75" class="ng-element el-text-2 empty-line-hack font-S-Arial-n4"
-                      data-id="ab35d21f2c5740aca65cafbb24422bfd" style="opacity: 1; mix-blend-mode: normal; color: rgb(0, 0, 0); font-size: 48px; font-weight: normal; font-style: normal; text-decoration: none; text-align: center; width: 826px; height: 55px; transform: rotate(0deg) translate(347px, 1129px) rotate(0deg);">
+                      data-id="ab35d21f2c5740aca65cafbb24422bfd" style="opacity: 1; mix-blend-mode: normal; color: rgb(0, 0, 0); font-size: 48px; font-weight: normal; font-style: normal; text-decoration: none; text-align: center; width: 100%; transform: rotate(0deg) translate(0px, 1129px) rotate(0deg);">
                       <p>Що кажуть наші 3,000+ клієнтів?</p>
                     </div>
                   </div><img class="ng-element el-image el-image-no-back" data-id="d416531ad5014c66ac17021e66d1ba67" src="./index_files/490130-46845288-47a732.jpg"
@@ -700,8 +452,7 @@
                     </div>
                     <div id="TextElement1118b704ee0d4eecbcd7ad33a1236150" class="ng-element el-text-2 empty-line-hack line-height-fix font-S-Arial-n4"
                       data-id="a99c90c9a84744a6a7ab4839be7f36f6" style="opacity: 1; mix-blend-mode: normal; line-height: 115%; color: transparent; font-size: 16px; font-weight: normal; font-style: normal; text-decoration: none; text-align: left; width: 201px; height: 18px; transform: rotate(0deg) translate(173px, 474px) rotate(0deg);">
-                      <p><span class="wysiwyg-font-type-tahoma wysiwyg-align-Center" style="color: rgb(255, 255, 255);">Сервіси
-                          "Купимо вашу машину"</span></p>
+                      <p><span class="wysiwyg-font-type-tahoma wysiwyg-align-Center" style="color: rgb(255, 255, 255);">Сервіси<br/>"Купимо вашу машину"</span></p>
                     </div>
                     <div id="TextElementf3317d8303e74bcab3d5ca0456cc5b14" class="ng-element el-text-2 empty-line-hack line-height-fix font-S-Arial-n4"
                       data-id="e33b6fdb1f3f4fd1bdc006562efd150a" style="opacity: 1; mix-blend-mode: normal; line-height: 115%; color: transparent; font-size: 16px; font-weight: normal; font-style: normal; text-decoration: none; text-align: left; width: 214px; height: 18px; transform: rotate(0deg) translate(421px, 470px) rotate(0deg);">
@@ -737,9 +488,9 @@
                       <p id="Box5682604ca6834e4c92c41a7a13b93694" data-id="a978e2d7adaa45e4869ec275782a024d" style="color: rgb(0, 0, 0); font-size: 14px; text-align: center; font-weight: normal; font-style: normal; font-family: Arial; text-decoration: none;"></p>
                     </div>
                     <div id="TextElement0dd3eefc86364e50a2f0a91e5604c9de" class="ng-element el-text-2 empty-line-hack line-height-fix font-S-Arial-n4"
-                      data-id="e9b76d1ee262454483579965445f187a" style="opacity: 1; mix-blend-mode: normal; line-height: 115%; color: transparent; font-size: 32px; font-weight: normal; font-style: normal; text-decoration: none; text-align: left; width: 173px; height: 36px; transform: rotate(0deg) translate(765px, 960px) rotate(0deg);">
+                      data-id="e9b76d1ee262454483579965445f187a" style="opacity: 1; mix-blend-mode: normal; line-height: 115%; color: transparent; font-size: 24px; font-weight: normal; font-style: normal; text-decoration: none; text-align: left; width: 173px; height: 24px; transform: rotate(0deg) translate(765px, 955px) rotate(0deg);">
                       <p><span class="wysiwyg-font-type-tahoma wysiwyg-align-Center  wysiwyg-font-size-16 wysiwyg-color-ffffff"
-                          style="color: rgb(255, 255, 255);">Зв'яжіться зі мною</span></p>
+                          style="color: rgb(255, 255, 255);">Зателефонуйте мені</span></p>
                     </div><svg version="1.2" preserveAspectRatio="none" viewBox="-2.4989999999999988 0 49 49" class="ng-element"
                       style="opacity: 1; mix-blend-mode: normal; fill: rgb(0, 0, 0); width: 38px; height: 38px; transform: rotate(0deg) translate(157px, 725px) rotate(0deg);"><g>
                         <path
@@ -765,7 +516,7 @@
                       <p>Гроші в той самий день.</p>
                     </div>
                     <div id="TextElementdee87e9ba89342f6962f88824344c56b" class="ng-element el-text-2 empty-line-hack font-S-Arial-n4"
-                      data-id="056ef0c53d7f4a3c8cdad68c09d75fc6" style="opacity: 1; mix-blend-mode: normal; color: rgb(255, 255, 255); font-size: 16px; font-weight: normal; font-style: normal; text-decoration: none; text-align: left; width: 160px; height: 18px; transform: rotate(0deg) translate(199px, 574px) rotate(0deg);">
+                      data-id="056ef0c53d7f4a3c8cdad68c09d75fc6" style="opacity: 1; mix-blend-mode: normal; color: rgb(255, 255, 255); font-size: 16px; font-weight: normal; font-style: normal; text-decoration: none; text-align: center; width: 184px; height: 18px; transform: rotate(0deg) translate(199px, 574px) rotate(0deg);">
                       <p>Порівняно до самостійного продажу</p>
                     </div>
                     <div id="TextElementd561e0f818d645b989f80d6bc20df993" class="ng-element el-text-2 empty-line-hack font-S-Arial-n4"
@@ -773,11 +524,11 @@
                       <p>Порівняно до самостійного продажу</p>
                     </div>
                     <div id="TextElement4c9455b8338a49fb97deab0901724511" class="ng-element el-text-2 empty-line-hack font-S-Arial-n4"
-                      data-id="d6e1cf0f142f4f67a2805babd688a129" style="opacity: 1; mix-blend-mode: normal; color: rgb(0, 0, 0); font-size: 16px; font-weight: normal; font-style: normal; text-decoration: none; text-align: left; width: 184px; height: 18px; transform: rotate(0deg) translate(778px, 576px) rotate(0deg);">
+                      data-id="d6e1cf0f142f4f67a2805babd688a129" style="opacity: 1; mix-blend-mode: normal; color: rgb(0, 0, 0); font-size: 16px; font-weight: normal; font-style: normal; text-decoration: none; text-align: center; width: 184px; height: 18px; transform: rotate(0deg) translate(778px, 576px) rotate(0deg);">
                       <p>Порівняно до самостійного продажу</p>
                     </div>
                     <div id="TextElementfefd1d04343c4145b3eb55266035e913" class="ng-element el-text-2 empty-line-hack font-S-Arial-n4"
-                      data-id="c38204216d2f4b4baa1bb4551e88cef9" style="opacity: 1; mix-blend-mode: normal; color: rgb(255, 255, 255); font-size: 16px; font-weight: normal; font-style: normal; text-decoration: none; text-align: left; width: 184px; height: 18px; transform: rotate(0deg) translate(1099px, 574px) rotate(0deg);">
+                      data-id="c38204216d2f4b4baa1bb4551e88cef9" style="opacity: 1; mix-blend-mode: normal; color: rgb(255, 255, 255); font-size: 16px; font-weight: normal; font-style: normal; text-decoration: none; text-align: center; width: 184px; height: 18px; transform: rotate(0deg) translate(1099px, 574px) rotate(0deg);">
                       <p>Порівняно до самостійного продажу</p>
                     </div>
                     <div id="TextElement362355aaa7c3401eac48d69c3896eea8" class="ng-element el-text-2 empty-line-hack font-S-Arial-n4"
@@ -817,12 +568,12 @@
                       data-id="0a77a03edda1443c84884dfe49bfc426" style="opacity: 1; mix-blend-mode: normal; color: rgb(0, 0, 0); font-size: 20px; font-weight: normal; font-style: normal; text-decoration: none; text-align: left; width: 266px; height: 46px; transform: rotate(0deg) translate(741px, 776px) rotate(0deg);">
                       <p>Швидко - ми продамо в два рази швидше від самостіного продажу.</p>
                     </div><svg version="1.2" preserveAspectRatio="none" viewBox="-2.4989999999999988 0 49 49" class="ng-element"
-                      style="opacity: 1; mix-blend-mode: normal; fill: rgb(0, 0, 0); width: 38px; height: 38px; transform: rotate(0deg) translate(684px, 838px) rotate(0deg);"><g>
+                      style="opacity: 1; mix-blend-mode: normal; fill: rgb(0, 0, 0); width: 38px; height: 38px; transform: rotate(0deg) translate(684px, 850px) rotate(0deg);"><g>
                         <path
                           xmlns:default="http://www.w3.org/2000/svg" d="M9,49H1c-0.6,0-1-0.4-1-1V19c0-0.6,0.5-1,1-1H9c0.6,0,1,0.5,1,1v29C10,48.6,9.5,49,9,49z M2,47h6V20H2V47z M25.8,47  C25.8,47,25.8,47,25.8,47c-0.7,0-1.4,0-2.1,0c-2.7-0.1-5.9-0.6-8.2-0.9c-1.1-0.2-2.1-0.3-2.7-0.3c-0.5,0-0.9-0.5-0.9-1V21.1  c0-0.4,0.3-0.8,0.6-0.9l0.5-0.2c2.3-0.8,7-2.6,9.4-5.2c2.6-2.7,3.8-6.4,3.8-10.8c0.1-1.4,0.9-4,3.6-4c0.5,0,1.1,0.1,1.8,0.3  c0.1,0,0.3,0.1,0.4,0.2c1.1,1.1,4.7,7.6,1.3,17.5H39c0,0,0,0,0,0c0.4,0,3.4,0.1,4.6,3.9c0.2,0.5,1,2.6-0.8,5.2  c0.5,0.9,1.3,2.8,0.4,4.8c-0.1,0.2-0.5,1.4-1.3,2.2c0.5,1.7,0.4,4.5-2,6.5c-0.1,1.2-0.6,4-3,5C36.6,45.7,32.4,47,25.8,47z M14,43.9  c0.5,0.1,1.2,0.2,1.9,0.3c2.3,0.3,5.4,0.7,8,0.9c7.4,0.3,12.3-1.3,12.3-1.3c1.7-0.7,1.7-3.6,1.7-3.6c0-0.3,0.2-0.6,0.4-0.8  c2.8-2,1.5-5,1.5-5.2c-0.2-0.5,0-1,0.5-1.3c0.4-0.2,0.9-1.1,1.1-1.6c0.8-1.8-0.5-3.5-0.5-3.5c-0.3-0.4-0.3-0.9,0-1.3  c1.7-2,1-3.6,1-3.7c0,0,0-0.1-0.1-0.1C41,20.1,39.2,20,39.1,20h-7.2c-0.3,0-0.6-0.2-0.8-0.4c-0.2-0.3-0.2-0.6-0.1-0.9  c3.5-9.1,0.7-15.3-0.2-16.6C30.4,2,30.1,2,29.9,2c-1.4,0-1.5,1.8-1.5,2c0,4.9-1.4,9-4.3,12.1c-2.7,2.9-7.5,4.7-10,5.6V43.9z M5,45  c-0.6,0-1-0.4-1-1c0-0.6,0.5-1,1-1s1,0.5,1,1C6,44.6,5.5,45,5,45z"
                           style="fill: rgb(0, 0, 0);"></path>
                       </g></svg><div id="TextElement22a442ec8da84415ade3a231ae703da6" class="ng-element el-text-2 empty-line-hack font-S-Arial-n4"
-                      data-id="0de83690238645c990a634d7012eb00a" style="opacity: 1; mix-blend-mode: normal; color: rgb(0, 0, 0); font-size: 20px; font-weight: normal; font-style: normal; text-decoration: none; text-align: left; width: 266px; height: 69px; transform: rotate(0deg) translate(741px, 833px) rotate(0deg);">
+                      data-id="0de83690238645c990a634d7012eb00a" style="opacity: 1; mix-blend-mode: normal; color: rgb(0, 0, 0); font-size: 20px; font-weight: normal; font-style: normal; text-decoration: none; text-align: left; width: 266px; height: 69px; transform: rotate(0deg) translate(741px, 850px) rotate(0deg);">
                       <p>Надійно - ми беремо відповідальність за весь процес.</p>
                     </div>
                     <div id="TextElement8f132c42e1de43998892a9a048ad22a3" class="ng-element el-text-2 empty-line-hack font-S-Arial-n4"
@@ -884,8 +635,6 @@
                   </div>
                   <div class="el-group" data-id="b641bab35e524183aca42c659a3f1927" style="opacity: 1; mix-blend-mode: normal;">
                     <div class="ng-element el-box text-editor-light" data-id="42263a85501f45bfaf3346f9f1c8c8bf" style="opacity: 1; mix-blend-mode: normal; padding: 0px; border-width: 0px; border-radius: 0px; border-color: rgb(102, 102, 102); border-style: solid; background-color: transparent; background-image: linear-gradient(90deg, rgb(48, 188, 227) 3%, rgb(91, 133, 199) 103%); background-size: cover; background-repeat: repeat; background-position: center center; width: 100%; height: 100px; transform: rotate(0deg) translate(0px, 0px) rotate(0deg);">
-                      <p id="Box7bdba348d5a445dbab89ef5c873714c0" data-id="42263a85501f45bfaf3346f9f1c8c8bf" class="font-S-Arial-n4"
-                        style="color: rgb(0, 0, 0); font-size: 14px; text-align: center; font-weight: normal; font-style: normal; text-decoration: none;"><br></p>
                     </div>
                     <div id="TextElement5c54cf9d5a2c44feaa5f31ceaa8a38dd" class="ng-element el-text-2 empty-line-hack font-S-Arial-n4"
                       data-id="5b4440b7fd2142cebaccbab89b1f061b" style="opacity: 1; mix-blend-mode: normal; color: rgb(255, 255, 255); font-size: 48px; font-weight: bold; font-style: normal; text-decoration: none; text-align: left; width: 351px; height: 55px; transform: rotate(0deg) translate(149px, 22px) rotate(0deg);">
@@ -903,19 +652,8 @@
                   <div class="ng-elements-overlay ng-elements-overlay--abstract"></div>
                 </div>
 
-                <section class="comment-point pin ng-hide" ng-class="classes" ng-dblclick="onDblclick($event)" ng-style="getCommentPointStyle()"
-                  ng-show="addingComment" comment="" x="0" y="0" style="left: 0px; top: 0px;">
-
-                  <section class="comment-pin" ng-mousedown="startDrag($event)" ng-mouseup="endDrag($event)" toggleable=""></section>
-                </section>
                 <!---->
               </div>
-              <!---->
-
-              <!---->
-
-              <!---->
-              <div class="ng-canvas-helper"></div>
             </section>
           </section>
         </section>
